@@ -1,0 +1,7 @@
+SYON WORKS v2.6.1
+
+- Pretty URL 유지
+- 내부 링크/리소스 경로를 상대경로로 변경
+- 무료체험 신청: ./contact/?type=free-trial#inquiry-area
+- 로컬 미리보기, GitHub Pages 프로젝트 경로, 커스텀 도메인에서 모두 동작하도록 보완
+- canonical/OG/sitemap의 공개 도메인은 https://syonworks.com 유지

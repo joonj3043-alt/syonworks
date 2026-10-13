@@ -12,9 +12,19 @@ if(nav&&menu){
  window.addEventListener('resize',()=>{if(innerWidth>1020)closeMenu();});
 }
 
-// Current page state
-const current=(location.pathname.split('/').pop()||'index.html');
-if(nav)nav.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')===current)a.setAttribute('aria-current','page');});
+// Current page state — supports Pretty URLs (/services/, /projects/, etc.)
+function normalizeNavPath(pathname){
+ let p=pathname.replace(/\/index\.html$/i,'/').replace(/\.html$/i,'/');
+ if(!p.endsWith('/'))p+='/';
+ return p.replace(/\/{2,}/g,'/');
+}
+const currentPath=normalizeNavPath(location.pathname);
+if(nav)nav.querySelectorAll('a').forEach(a=>{
+ try{
+  const linkPath=normalizeNavPath(new URL(a.getAttribute('href'),location.href).pathname);
+  if(linkPath===currentPath)a.setAttribute('aria-current','page');
+ }catch{}
+});
 
 // Concept project filter / modal only where present
 const filters=$$('[data-filter]'),projects=$$('[data-category]');
@@ -33,9 +43,11 @@ if(validPhone)contactLink('전화 상담 ↗','tel:'+phone);if(kakao)contactLink
 // Inquiry form: no server persistence; opens user's own messaging/mail app only when configured
 const form=$('#inquiry'),prepared=$('#prepared-message'),canSend=validPhone||validEmail;
 if(form&&prepared){
- const notice=$('#form-notice'),foot=$('#form-foot');
+ const params=new URLSearchParams(location.search),freeTrialContext=params.get('type')==='free-trial'||document.body.dataset.page==='free-project';
+ const notice=$('#form-notice'),foot=$('#form-foot'),formTitle=$('#form-title'),submitButton=$('#submit-button');
+ if(freeTrialContext){if(formTitle)formTitle.textContent='무료체험 신청';if(submitButton)submitButton.innerHTML='무료체험 신청 내용 작성하기 <span>→</span>';}
  if(canSend){if(notice)notice.textContent='작성 후 문자 앱에서 내용을 확인하고 직접 전송해주세요. 이 홈페이지에는 문의 내용을 저장하지 않습니다.';if(foot)foot.textContent='문자 앱으로 이동한 뒤 전송을 완료해주세요.';}
- form.addEventListener('submit',e=>{e.preventDefault();const company=form.elements.company.value.trim();if(!company){form.elements.company.setCustomValidity('이름 또는 업체명을 입력해주세요.');form.elements.company.reportValidity();return;}const digits=form.elements.phone.value.replace(/\D/g,'');if(digits.length<8||digits.length>15){form.elements.phone.setCustomValidity('연락 가능한 전화번호를 확인해주세요.');form.elements.phone.reportValidity();return;}const data=new FormData(form);const freePage=document.body.dataset.page==='free-project';const title=freePage?'SYON WORKS FREE PROJECT 신청':'SYON WORKS 프로젝트 문의';const message=`[${title}]\n이름/업체명: ${company}\n연락처: ${String(data.get('phone')).trim()}\n업종: ${data.get('industry')}\n현재 홈페이지: ${data.get('website')}\n원하는 홈페이지: ${String(data.get('message')).trim()||'상담을 통해 정하고 싶습니다.'}`;prepared.value=message;const result=$('#inquiry-result');if(result)result.hidden=false;const status=$('#copy-status');if(status)status.textContent='문의 내용을 준비했습니다. 문자 앱에서 전송을 완료해주세요.';const send=$('#send-inquiry');if(send&&canSend){send.hidden=false;send.textContent=validPhone?'문자 상담 열기 ↗':'이메일 문의 열기 ↗';send.href=validPhone?`sms:${phone}${/iPad|iPhone|iPod/.test(navigator.userAgent)?'&':'?'}body=${encodeURIComponent(message)}`:`mailto:${email}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(message)}`;}prepared.focus();});
+ form.addEventListener('submit',e=>{e.preventDefault();const company=form.elements.company.value.trim();if(!company){form.elements.company.setCustomValidity('이름 또는 업체명을 입력해주세요.');form.elements.company.reportValidity();return;}const digits=form.elements.phone.value.replace(/\D/g,'');if(digits.length<8||digits.length>15){form.elements.phone.setCustomValidity('연락 가능한 전화번호를 확인해주세요.');form.elements.phone.reportValidity();return;}const data=new FormData(form);const title=freeTrialContext?'SYON WORKS 무료체험 신청':'SYON WORKS 프로젝트 문의';const message=`[${title}]\n이름/업체명: ${company}\n연락처: ${String(data.get('phone')).trim()}\n업종: ${data.get('industry')}\n현재 홈페이지: ${data.get('website')}\n원하는 홈페이지: ${String(data.get('message')).trim()||'상담을 통해 정하고 싶습니다.'}`;prepared.value=message;const result=$('#inquiry-result');if(result)result.hidden=false;const status=$('#copy-status');if(status)status.textContent='문의 내용을 준비했습니다. 문자 앱에서 전송을 완료해주세요.';const send=$('#send-inquiry');if(send&&canSend){send.hidden=false;send.textContent=validPhone?'문자 상담 열기 ↗':'이메일 문의 열기 ↗';send.href=validPhone?`sms:${phone}${/iPad|iPhone|iPod/.test(navigator.userAgent)?'&':'?'}body=${encodeURIComponent(message)}`:`mailto:${email}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(message)}`;}prepared.focus();});
  ['company','phone'].forEach(name=>form.elements[name]?.addEventListener('input',()=>form.elements[name].setCustomValidity('')));
  form.addEventListener('input',()=>{const result=$('#inquiry-result');if(result&&!result.hidden){result.hidden=true;prepared.value='';}});
  const copy=$('#copy');if(copy)copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(prepared.value);$('#copy-status').textContent='내용을 복사했습니다. 원하시는 연락 수단으로 전송해주세요.';}catch{prepared.focus();prepared.select();$('#copy-status').textContent='내용을 선택했습니다. 기기의 복사 기능으로 복사해주세요.';}});
