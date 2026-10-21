@@ -391,6 +391,20 @@
       .hero-right{min-height:0}
       .restaurant-mockup{width:110%;transform:translateX(-2%)}
     }
+
+    /* v2.6.3: the baked-in badge at the lower-left of the showcase photo
+       duplicates the real benefit row; hide only that image corner,
+       keeping the bottom of the phone mockup intact. */
+    .restaurant-mockup{
+      clip-path:polygon(0 0,100% 0,100% 100%,69% 100%,69% 86%,0 86%);
+    }
+    /* Center the three icon + description groups on narrow phones.
+       Desktop and tablet layouts are intentionally unchanged. */
+    @media (max-width:520px){
+      .hero-points{display:flex;flex-direction:column;align-items:center;gap:14px}
+      .hero-point{width:264px;max-width:100%;margin-inline:auto;justify-content:flex-start;text-align:left}
+      .hero-point > div:last-child{flex:1;min-width:0}
+    }
   </style>
 </head>
 <body>
