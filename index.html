@@ -376,34 +376,123 @@
     @media(max-width:820px){.benefits{padding:0 20px 55px;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.benefit{min-height:242px;padding:28px 15px 25px}.benefit h3{font-size:18px}.benefit p{font-size:14px}}
     @media(max-width:520px){.section-intro{padding:42px 16px 27px}.section-kicker{font-size:15px}.section-title{font-size:clamp(27px,7.5vw,35px)}.benefits{padding:0 14px 48px;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.benefit{min-height:228px;padding:24px 10px 20px;border-radius:18px}.icon-circle{width:61px;height:61px;margin-bottom:18px}.icon-circle svg{width:35px;height:35px}.benefit h3{font-size:15px;margin-bottom:12px}.benefit p{font-size:12px;line-height:1.6}.benefit p br{display:none}}
 
-    /* Updated restaurant website showcase mockup */
-    .hero-right{min-height:570px;display:flex;align-items:center;justify-content:center;overflow:visible}
-    .restaurant-mockup{display:block;width:118%;max-width:none;height:auto;mix-blend-mode:multiply;object-fit:contain;transform:translate(-1%, 1%);filter:drop-shadow(0 8px 14px rgba(43,69,101,.05))}
+    /* v2.6.5 — hero showcase: blend the example image into the layout more naturally */
+    .hero-inner{align-items:center}
+    .hero-right{
+      min-height:570px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:visible;
+      position:relative;
+      isolation:isolate;
+    }
+    .hero-right::before{
+      content:"";
+      position:absolute;
+      inset:9% 7% 13% 8%;
+      background:radial-gradient(circle at 50% 42%, rgba(255,255,255,.96) 0%, rgba(243,248,255,.92) 42%, rgba(228,237,250,.58) 73%, rgba(228,237,250,0) 100%);
+      filter:blur(16px);
+      z-index:0;
+      pointer-events:none;
+    }
+    .hero-right::after{
+      content:"";
+      position:absolute;
+      left:12%;
+      right:12%;
+      bottom:5%;
+      height:34px;
+      border-radius:999px;
+      background:radial-gradient(circle at center, rgba(68,92,130,.18) 0%, rgba(68,92,130,.09) 38%, rgba(68,92,130,0) 74%);
+      filter:blur(11px);
+      z-index:0;
+      pointer-events:none;
+    }
+    .restaurant-mockup{
+      position:relative;
+      z-index:1;
+      display:block;
+      width:118%;
+      max-width:none;
+      height:auto;
+      object-fit:contain;
+      transform:translate(-1%, 1%);
+      mix-blend-mode:normal;
+      filter:drop-shadow(0 20px 30px rgba(45,65,102,.085));
+      /* Transparent/feathered artwork replaces the old hard-edged crop. */
+    }
     @media (max-width:1100px) and (min-width:821px){
       .hero-right{min-height:475px}
       .restaurant-mockup{width:125%;transform:translate(0,0)}
+      .hero-right::before{inset:10% 6% 13% 6%}
+      .hero-right::after{left:10%;right:10%;bottom:4%}
     }
     @media (max-width:820px){
       .hero-right{min-height:0;max-width:610px;width:100%;margin:0 auto}
       .restaurant-mockup{width:100%;transform:none}
-    }
-    @media (max-width:520px){
-      .hero-right{min-height:0}
-      .restaurant-mockup{width:110%;transform:translateX(-2%)}
+      .hero-right::before{inset:7% 5% 10% 5%;filter:blur(13px)}
+      .hero-right::after{left:9%;right:9%;bottom:4%;height:28px}
     }
 
-    /* v2.6.3: the baked-in badge at the lower-left of the showcase photo
-       duplicates the real benefit row; hide only that image corner,
-       keeping the bottom of the phone mockup intact. */
-    .restaurant-mockup{
-      clip-path:polygon(0 0,100% 0,100% 100%,69% 100%,69% 86%,0 86%);
-    }
-    /* Center the three icon + description groups on narrow phones.
-       Desktop and tablet layouts are intentionally unchanged. */
+    /* v2.6.5 — mobile hero points: truly centered groups, while keeping desktop/tablet unchanged. */
     @media (max-width:520px){
-      .hero-points{display:flex;flex-direction:column;align-items:center;gap:14px}
-      .hero-point{width:264px;max-width:100%;margin-inline:auto;justify-content:flex-start;text-align:left}
-      .hero-point > div:last-child{flex:1;min-width:0}
+      /* Mobile: three equal-width columns, as in the requested screenshot. */
+      .hero-points{
+        width:100%;
+        margin:20px auto 0;
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        align-items:start;
+        justify-items:center;
+        gap:8px;
+      }
+      .hero-point{
+        box-sizing:border-box;
+        width:100%;
+        min-width:0;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
+        gap:8px;
+        text-align:center;
+        transform:none;
+      }
+      .hero-point > div:last-child{
+        width:100%;
+        min-width:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+      }
+      .hero-point-icon{
+        width:48px;
+        height:48px;
+        flex:0 0 48px;
+        margin:0 auto 2px;
+      }
+      .hero-point-icon svg{width:23px;height:23px}
+      .hero-point strong{
+        display:block;
+        font-size:clamp(11px,3vw,14px);
+        line-height:1.35;
+        margin-bottom:4px;
+        word-break:keep-all;
+      }
+      .hero-point span{
+        display:block;
+        font-size:clamp(10px,2.6vw,12px);
+        line-height:1.4;
+        word-break:keep-all;
+      }
+      .hero-inner{row-gap:0}
+      .hero-right{margin-top:8px;min-height:0}
+      .hero-right::before{inset:7% 3% 11% 3%;filter:blur(12px)}
+      .hero-right::after{left:7%;right:7%;bottom:4%;height:24px}
+      .restaurant-mockup{width:110%;transform:translateX(-2%)}
     }
   </style>
 </head>
@@ -461,7 +550,7 @@
             </div>
           </div>
           <div class="hero-right" aria-hidden="true">
-            <img class="restaurant-mockup" src="./assets/restaurant-mockup.jpg" alt="" loading="eager" decoding="async" />
+            <img class="restaurant-mockup" src="./assets/restaurant-mockup-blended.png" alt="" loading="eager" decoding="async" />
           </div>
         </div>
       </section>
