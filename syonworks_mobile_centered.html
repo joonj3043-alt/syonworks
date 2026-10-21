@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYON WORKS | 무료 홈페이지 체험</title>
+  <meta name="description" content="SYON WORKS 무료 홈페이지 체험. 홈페이지 제작, 먼저 무료로 경험해보세요." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://syonworks.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="SYON WORKS" />
+  <meta property="og:title" content="SYON WORKS | 무료 홈페이지 체험" />
+  <meta property="og:description" content="홈페이지 제작, 먼저 무료로 경험해보세요. 제작비 부담 없이 PC·모바일 홈페이지를 시작할 수 있습니다." />
+  <meta property="og:url" content="https://syonworks.com/" />
+  <meta property="og:image" content="https://syonworks.com/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SYON WORKS | 무료 홈페이지 체험" />
+  <meta name="twitter:description" content="홈페이지 제작, 먼저 무료로 경험해보세요." />
+  <meta name="twitter:image" content="https://syonworks.com/assets/og.png" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"SYON WORKS","founder":{"@type":"Person","name":"손성준"},"telephone":"+82-10-4968-5078","address":{"@type":"PostalAddress","streetAddress":"남원로 648","addressLocality":"원주시","addressRegion":"강원특별자치도","addressCountry":"KR"},"url":"https://syonworks.com/"}</script>
+  <style>
+    :root{
+      --blue:#1265f3;
+      --blue2:#0b56dc;
+      --ink:#080b10;
+      --text:#353c49;
+      --muted:#657080;
+      --line:#e7edf7;
+      --soft:#f5f9ff;
+      --soft2:#eef6ff;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#fff;
+      font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;
+      letter-spacing:-.035em;
+    }
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+
+    /* INTRO - 기존 인트로 유지 */
+    #intro{
+      position:fixed;
+      inset:0;
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#0d0d0d;
+      color:#fff;
+      transition:opacity .75s ease,visibility .75s ease;
+    }
+    #intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .intro-inner{text-align:center;padding:24px;animation:introUp 1.15s ease both}
+    .intro-logo{font-size:clamp(34px,5vw,68px);font-weight:800;letter-spacing:.18em;margin-left:.18em}
+    .intro-copy{margin-top:18px;font-size:clamp(18px,2.2vw,30px);font-weight:400;opacity:.9;letter-spacing:-.035em}
+    .intro-skip{
+      position:absolute;right:28px;bottom:24px;border:0;background:none;color:#bbb;
+      cursor:pointer;font-size:13px;letter-spacing:.06em
+    }
+    @keyframes introUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    /* LANDING */
+    .page{min-height:100vh;background:#fff}
+    .topbar{
+      width:min(100%,1160px);
+      margin:0 auto;
+      padding:27px 34px 18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand-wrap{display:block}
+    .brand{font-weight:900;font-size:27px;letter-spacing:-.04em;line-height:1}
+    .brand-sub{margin-top:6px;color:#697386;font-size:14px;font-weight:500}
+    .nav{display:flex;align-items:center;gap:38px;font-size:16px;font-weight:700}
+    .nav a{padding:4px 0;white-space:nowrap}
+    .nav .active{color:var(--blue);border-bottom:3px solid var(--blue);padding-bottom:10px}
+
+    .hero{
+      width:min(100%,1400px);
+      margin:10px auto 0;
+      padding:40px 42px 34px;
+      background:linear-gradient(180deg,#fdfefe 0%, #f6faff 100%);
+      border:1px solid #e9eff8;
+      border-radius:36px;
+      box-shadow:0 20px 50px rgba(20,55,110,.06);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 26%, rgba(31,111,255,.08), transparent 18%), radial-gradient(circle at 3% 66%, rgba(31,111,255,.05), transparent 12%), radial-gradient(circle at 82% 86%, rgba(31,111,255,.04), transparent 14%);pointer-events:none;}
+    .hero>*{position:relative;z-index:1}
+    .hero-inner{display:grid;grid-template-columns:minmax(0, 1.12fr) minmax(0, .88fr);align-items:center;gap:18px}
+    .hero-left{padding:30px 0 14px 18px;text-align:left}
+    .eyebrow{font-size:22px;font-weight:800;color:var(--blue);margin:0 0 22px;letter-spacing:-.02em;word-break:keep-all}
+    h1{margin:0;font-size:clamp(56px,5.05vw,80px);line-height:1.04;font-weight:950;letter-spacing:-.07em;word-break:keep-all}
+    h1 .accent{color:var(--blue)}
+    .hero-line1{display:inline-block;white-space:nowrap}
+    .hero-copy{margin:20px 0 0;color:#5a6574;font-size:clamp(19px,1.6vw,26px);line-height:1.52;font-weight:600;letter-spacing:-.035em}
+    .main-cta{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-width:450px;min-height:86px;margin-top:28px;margin-bottom:16px;padding:0 44px;border-radius:999px;background:linear-gradient(135deg,var(--blue),#1674ff);color:white;font-size:24px;font-weight:850;box-shadow:0 16px 34px rgba(18,101,243,.22);transition:.2s ease}
+    .main-cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(18,101,243,.28)}
+    .main-cta .arrow{font-size:35px;line-height:0;margin-top:-3px}
+    .hero-note{margin:0;width:450px;max-width:100%;text-align:center;color:#6b7482;font-size:16px;line-height:1.6;font-weight:600}
+    .hero-points{margin-top:26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 20px}
+    .hero-point{display:flex;align-items:center;gap:14px}
+    .hero-point-icon{width:64px;height:64px;border-radius:50%;background:#edf5ff;display:grid;place-items:center;flex:0 0 64px;color:var(--blue)}
+    .hero-point-icon svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .hero-point strong{display:block;margin:0 0 2px;font-size:15px;font-weight:900;letter-spacing:-.03em;color:#0f1620}
+    .hero-point span{display:block;font-size:15px;line-height:1.45;color:#66707d;font-weight:600}
+    .hero-right{position:relative;min-height:620px}
+    .hero-visual{position:absolute;inset:8px 0 0 0}
+    .hero-plant{position:absolute;left:10px;bottom:74px;width:110px;height:140px}
+    .hero-plant .pot{position:absolute;left:20px;bottom:0;width:72px;height:62px;border-radius:10px 10px 18px 18px;background:linear-gradient(180deg,#fafafa,#eaeff6);box-shadow:0 8px 18px rgba(0,0,0,.08)}
+    .hero-plant .stem{position:absolute;bottom:44px;width:4px;height:56px;background:#7ca36c;border-radius:999px}
+    .hero-plant .stem.one{left:42px;transform:rotate(-8deg)}
+    .hero-plant .stem.two{left:56px;height:62px;transform:rotate(8deg)}
+    .hero-plant .leaf{position:absolute;width:34px;height:22px;background:linear-gradient(135deg,#73ad6f,#4d8d4e);border-radius:100% 0 100% 0/100% 0 100% 0;transform-origin:center}
+    .hero-plant .leaf.l1{left:12px;bottom:88px;transform:rotate(-36deg)}
+    .hero-plant .leaf.l2{left:24px;bottom:108px;transform:rotate(-12deg)}
+    .hero-plant .leaf.l3{left:50px;bottom:84px;transform:scaleX(-1) rotate(-32deg)}
+    .hero-plant .leaf.l4{left:58px;bottom:108px;transform:scaleX(-1) rotate(-8deg)}
+    .hero-plant .leaf.l5{left:36px;bottom:124px;transform:rotate(-22deg)}
+    .hero-laptop{position:absolute;right:88px;bottom:94px;width:560px;background:#1f2734;border-radius:24px 24px 12px 12px;padding:16px 16px 0;box-shadow:0 22px 44px rgba(12,36,73,.24);transform:rotate(-3.5deg)}
+    .hero-laptop-screen{background:#fff;border-radius:16px 16px 0 0;overflow:hidden}
+    .hero-mock-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:13px;color:#556173;border-bottom:1px solid #edf2f8;background:#fff}
+    .hero-mock-nav b{font-size:17px;color:#1e2837}
+    .hero-mock-menu{display:flex;gap:22px;color:#5b6777;font-weight:600}
+    .hero-mock-menu span:last-child{font-weight:800;color:#fff;background:#302821;border-radius:999px;padding:8px 14px;margin-top:-4px}
+    .hero-mock-hero{position:relative;height:304px;padding:34px 34px;background:linear-gradient(135deg,#6e5439,#a78361 52%,#614833);color:#fff}
+    .hero-mock-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.12))}
+    .hero-mock-hero strong,.hero-mock-hero span,.hero-mock-hero .hero-mock-btn{position:relative;z-index:1;display:block}
+    .hero-mock-hero strong{font-size:42px;line-height:1.18;letter-spacing:-.05em;margin-top:98px;max-width:280px}
+    .hero-mock-hero span{margin-top:14px;font-size:17px;opacity:.94;max-width:270px}
+    .hero-mock-btn{margin-top:20px;display:inline-flex!important;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;background:rgba(255,255,255,.92);color:#242a33;font-size:15px;font-weight:800}
+    .hero-mock-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px;background:#fff}
+    .hero-mock-action{padding:16px 8px 14px;border:1px solid #edf2f8;border-radius:14px;text-align:center;color:#596577}
+    .hero-mock-action svg{width:22px;height:22px;stroke:#2d3645;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+    .hero-mock-action span{display:block;font-size:12px;font-weight:700}
+    .hero-laptop-base{height:14px;margin:0 -20px;border-radius:0 0 48px 48px;background:linear-gradient(180deg,#c8d3df,#98a5b6)}
+    .hero-phone{position:absolute;right:22px;bottom:42px;width:182px;background:#202836;border-radius:36px;padding:10px 10px 12px;box-shadow:0 18px 36px rgba(12,36,73,.2)}
+    .hero-phone-notch{width:72px;height:7px;border-radius:999px;background:#202836;margin:0 auto 8px}
+    .hero-phone-screen{background:#fff;border-radius:28px;overflow:hidden}
+    .hero-phone-top{padding:16px 14px;font-size:12px;color:#556173;border-bottom:1px solid #edf2f8;font-weight:600}
+    .hero-phone-hero{height:304px;padding:20px 16px;background:linear-gradient(135deg,#6e5439,#a78361 52%,#614833);color:#fff;position:relative}
+    .hero-phone-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.13))}
+    .hero-phone-hero b,.hero-phone-hero span,.hero-phone-hero .hero-phone-btn{position:relative;z-index:1;display:block}
+    .hero-phone-hero b{font-size:18px;line-height:1.22;letter-spacing:-.05em;margin-top:154px;max-width:82px}
+    .hero-phone-hero span{font-size:10px;margin-top:8px;opacity:.94;max-width:92px}
+    .hero-phone-btn{margin-top:14px;display:inline-flex!important;align-items:center;justify-content:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.92);color:#202734;font-size:10px;font-weight:800}
+    .hero-phone-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:12px 8px 14px}
+    .hero-phone-action{text-align:center;color:#586374}
+    .hero-phone-action svg{width:16px;height:16px;stroke:#2d3645;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:4px}
+    .hero-phone-action span{display:block;font-size:9px;font-weight:700}
+    .hero-badge{position:absolute;display:grid;place-items:center;width:64px;height:64px;border-radius:20px;background:#fff;color:var(--blue);box-shadow:0 10px 24px rgba(34,79,146,.12);border:1px solid #eef3fb}
+    .hero-badge svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .hero-badge.badge-top{right:440px;top:34px}
+        .hero-spark{position:absolute;right:0;bottom:230px;width:40px;height:40px;color:var(--blue)}
+    .hero-spark::before,.hero-spark::after,.hero-spark span{content:'';position:absolute;display:block;background:currentColor;border-radius:999px}
+    .hero-spark::before{width:4px;height:26px;left:18px;top:7px;transform:rotate(90deg)}
+    .hero-spark::after{width:4px;height:18px;left:18px;top:11px;transform:rotate(45deg)}
+    .hero-spark span{width:4px;height:18px;left:18px;top:11px;transform:rotate(-45deg)}
+    .section-intro{width:min(100%,1100px);margin:0 auto;padding:48px 34px 28px;text-align:center}.section-divider{width:54px;height:4px;border-radius:999px;background:var(--blue);margin:0 auto 28px}
+    .section-kicker{margin:0 0 14px;font-size:22px;font-weight:500;color:var(--blue);letter-spacing:-.03em}
+    .section-title{margin:0;font-size:clamp(36px,4.9vw,60px);line-height:1.18;font-weight:950;letter-spacing:-.06em}
+    .section-title .accent{color:var(--blue)}
+
+    .benefits{
+      width:min(100%,1100px);
+      margin:0 auto;
+      padding:0 34px 34px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .benefit{
+      min-height:286px;
+      padding:35px 22px 24px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      text-align:center;
+      box-shadow:0 8px 24px rgba(30,75,145,.025);
+    }
+    .icon-circle{
+      width:88px;height:88px;margin:0 auto 23px;border-radius:50%;
+      display:grid;place-items:center;background:#f1f7ff;color:var(--blue)
+    }
+    .icon-circle svg{width:50px;height:50px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .benefit h3{margin:0 0 16px;font-size:20px;font-weight:900;letter-spacing:-.045em;line-height:1.35}
+    .benefit h3 .accent,.flow-item strong .accent{color:var(--blue)}
+    .benefit p{margin:0;color:#657080;font-size:16px;line-height:1.58;font-weight:500;word-break:keep-all}
+
+    .responsive-showcase{width:min(100%,1100px);margin:0 auto 12px;padding:0 34px 34px}
+    .showcase-box{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:18px;padding:34px 34px 24px;border-radius:24px;background:linear-gradient(180deg,#f4f9ff 0%,#edf6ff 100%)}
+    .showcase-copy p{margin:0 0 14px;color:#536173;font-size:18px;line-height:1.65;font-weight:500}
+    .showcase-copy h3{margin:0 0 18px;font-size:clamp(30px,3.35vw,50px);line-height:1.14;font-weight:950;letter-spacing:-.05em;white-space:nowrap}.mobile-title-break{display:none}
+    .showcase-copy h3 .accent{color:var(--blue)}
+    .showcase-copy .detail{margin:0;color:#5b6778;font-size:16px;line-height:1.7}
+    .showcase-visual{position:relative;min-height:248px}
+    .laptop-mockup{position:absolute;right:58px;bottom:0;width:348px;background:#1f2734;border-radius:18px 18px 10px 10px;padding:12px 12px 0;box-shadow:0 18px 36px rgba(12,36,73,.2)}
+    .laptop-screen{background:#fff;border-radius:10px 10px 0 0;overflow:hidden}
+    .mock-nav{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;font-size:11px;color:#525e70;border-bottom:1px solid #eef2f7}
+    .mock-nav b{font-size:17px;color:#2a3444}
+    .mock-hero{position:relative;height:195px;padding:22px;background:linear-gradient(135deg,#6d5439,#aa8157 55%,#5d4630);color:#fff}
+    .mock-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.12))}
+    .mock-hero strong,.mock-hero span{position:relative;display:block;z-index:1}
+    .mock-hero strong{font-size:30px;line-height:1.18;letter-spacing:-.04em;margin-top:72px;max-width:220px}
+    .mock-hero span{margin-top:10px;font-size:15px;opacity:.93;max-width:210px}
+    .laptop-base{height:12px;margin:0 -16px;border-radius:0 0 40px 40px;background:linear-gradient(180deg,#c7d2df,#909cab)}
+    .phone-mockup{position:absolute;right:-6px;bottom:18px;width:106px;background:#1f2734;border-radius:22px;padding:8px 7px 9px;box-shadow:0 12px 28px rgba(12,36,73,.18)}
+    .phone-notch{width:42px;height:6px;border-radius:999px;background:#1f2734;margin:0 auto 6px}
+    .phone-screen{background:#fff;border-radius:16px;overflow:hidden}
+    .phone-top{padding:10px 10px;font-size:9px;color:#556173;border-bottom:1px solid #eef2f7}
+    .phone-hero{height:170px;padding:12px;background:linear-gradient(135deg,#6d5439,#aa8157 55%,#5d4630);color:#fff;position:relative}
+    .phone-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.12))}
+    .phone-hero b,.phone-hero span{position:relative;display:block;z-index:1}
+    .phone-hero b{font-size:12px;line-height:1.22;letter-spacing:-.04em;margin-top:88px;max-width:54px}
+    .phone-hero span{font-size:7px;margin-top:6px;opacity:.95;max-width:52px}
+
+    .flow-wrap{
+      background:linear-gradient(180deg,#f8fbff 0%,#edf5ff 100%);
+      margin-top:10px;
+      padding:50px 0 58px;
+      border-top:1px solid #eef4fb;
+    }
+    .flow-inner{width:min(100%,1100px);margin:0 auto;padding:0 34px;text-align:center}
+    .flow-title{font-size:34px;font-weight:900;line-height:1.25;margin:0 0 34px;letter-spacing:-.05em}
+    .flow-title .accent{color:var(--blue)}
+    .flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+    .flow-item{position:relative;background:#fff;border-radius:16px;padding:28px 18px 24px;min-height:278px;box-shadow:0 9px 24px rgba(35,85,155,.035);border:1px solid #e7eef7}
+    .flow-item::after{display:none!important}
+    .flow-icon{width:76px;height:76px;border-radius:50%;margin:0 auto 14px;background:#f2f7ff;display:grid;place-items:center;color:var(--blue)}
+    .flow-icon svg{width:43px;height:43px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .flow-item strong{display:block;font-size:19px;line-height:1.35;margin-bottom:12px;font-weight:900;letter-spacing:-.03em}
+    .flow-item p{margin:0;color:#66707d;font-size:16px;line-height:1.58;font-weight:500;word-break:keep-all}
+
+    .landing-footer{
+      width:min(100%,1100px);margin:0 auto;padding:28px 34px 34px;display:flex;align-items:flex-start;
+      justify-content:space-between;gap:24px;color:#6b7482;font-size:12px;line-height:1.7;border-top:1px solid #edf1f6
+    }
+    .landing-footer strong{display:block;color:#222b37;font-size:13px;margin-bottom:2px}
+    .landing-footer a{color:#354052;text-decoration:underline;text-underline-offset:3px}
+    a:focus-visible,button:focus-visible{outline:3px solid rgba(18,101,243,.35);outline-offset:4px;border-radius:8px}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
+
+    @media(max-width:820px){
+      .topbar{padding:20px 20px 14px;align-items:center}
+      .brand{font-size:22px}.brand-sub{font-size:12px}
+      .nav{gap:14px;font-size:13px}
+      .hero{margin-top:8px;padding:34px 24px 28px;border-radius:28px}
+      .hero-inner{grid-template-columns:1fr;gap:18px}
+      .hero-left{padding:10px 0 0;text-align:center}
+      .eyebrow{font-size:18px;margin-bottom:18px}
+      h1{font-size:clamp(42px,11vw,68px);line-height:1.1}
+      .hero-copy{font-size:18px;margin-top:18px}
+      .hero-line1{white-space:normal}
+      .main-cta{min-width:0;width:min(100%,420px);min-height:72px;font-size:21px;margin-top:26px}
+      .hero-note{width:min(100%,420px);font-size:15px}
+      .hero-points{grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+      .hero-point{flex-direction:column;text-align:center;gap:10px}
+      .hero-point-icon{width:56px;height:56px;flex-basis:56px}.hero-point-icon svg{width:28px;height:28px}
+      .hero-point strong{font-size:14px}.hero-point span{font-size:13px}
+      .hero-right{min-height:520px}
+      .hero-plant{left:20px;bottom:64px;transform:scale(.88);transform-origin:bottom left}
+      .hero-laptop{right:70px;bottom:76px;width:470px}
+      .hero-mock-nav{padding:12px 16px;font-size:12px}.hero-mock-nav b{font-size:15px}.hero-mock-menu{gap:16px}.hero-mock-menu span:last-child{padding:7px 12px}
+      .hero-mock-hero{height:258px;padding:26px}.hero-mock-hero strong{font-size:34px;margin-top:84px;max-width:230px}.hero-mock-hero span{font-size:15px}.hero-mock-btn{font-size:13px;padding:10px 18px}
+      .hero-phone{width:158px;right:18px;bottom:30px}.hero-phone-hero{height:260px}.hero-phone-hero b{font-size:16px;max-width:72px;margin-top:126px}
+      .hero-badge{width:58px;height:58px}.hero-badge svg{width:24px;height:24px}.hero-badge.badge-top{right:360px;top:20px}
+      .benefits{grid-template-columns:1fr 1fr;padding:0 20px 28px;gap:12px}
+      .benefit{min-height:230px;padding:28px 16px 22px}
+      .flow-inner{padding:0 20px}.flow-grid{grid-template-columns:1fr 1fr;gap:14px}
+      .flow-item:not(:last-child)::after{display:none}.flow-title{font-size:29px}
+    }
+
+    @media(max-width:430px){
+      .showcase-box{padding:22px 14px 18px}
+      .showcase-copy h3{font-size:29px}
+      .showcase-visual{min-height:198px}
+      .mock-hero strong{font-size:19px;max-width:126px;margin-top:44px}
+      .mock-hero span{font-size:10px;max-width:118px}
+      .phone-mockup{width:82px;right:0;bottom:14px}
+      .phone-hero{height:128px}
+      .phone-hero b{font-size:11px;max-width:40px;margin-top:66px}
+    }
+
+    @media(max-width:520px){
+      .topbar{padding:18px 16px 10px}.brand{font-size:19px}.brand-sub{display:none}
+      .nav{gap:10px;font-size:11.5px}.nav .active{padding-bottom:7px}
+      .hero{margin-top:6px;padding:26px 14px 24px;border-radius:24px}
+      .hero-inner{grid-template-columns:1fr;gap:8px}
+      .hero-left{padding:8px 0 0;text-align:center}
+      .eyebrow{font-size:16px;margin-bottom:14px}
+      h1{font-size:43px;line-height:1.12;text-align:center;margin-left:auto;margin-right:auto;word-break:keep-all}
+      .hero-copy{font-size:16px;line-height:1.6;margin-top:16px}
+      .hero-line1{white-space:normal}
+      .main-cta{min-height:64px;font-size:19px;padding:0 24px;margin-top:24px;width:100%}
+      .hero-note{width:100%;font-size:14px;line-height:1.55}
+      .hero-points{grid-template-columns:1fr;gap:12px;margin-top:18px}
+      .hero-point{flex-direction:row;text-align:left;gap:12px}.hero-point-icon{width:52px;height:52px;flex-basis:52px}.hero-point-icon svg{width:26px;height:26px}
+      .hero-point strong{font-size:14px}.hero-point span{font-size:13px}
+      .hero-right{min-height:308px}
+      .hero-visual{inset:0}
+      .hero-plant{display:none}
+      .hero-laptop{right:44px;bottom:48px;width:286px;padding:8px 8px 0;border-radius:14px 14px 8px 8px}
+      .hero-laptop-screen{border-radius:10px 10px 0 0}.hero-mock-nav{padding:7px 10px;font-size:8px}.hero-mock-nav b{font-size:11px}.hero-mock-menu{gap:8px}.hero-mock-menu span:last-child{padding:5px 8px;font-size:8px}
+      .hero-mock-hero{height:150px;padding:14px}.hero-mock-hero strong{font-size:20px;line-height:1.15;margin-top:46px;max-width:126px}.hero-mock-hero span{font-size:9px;max-width:118px;margin-top:8px}.hero-mock-btn{font-size:8px;padding:7px 10px;margin-top:10px}
+      .hero-mock-actions{gap:6px;padding:10px}.hero-mock-action{padding:8px 4px 7px;border-radius:10px}.hero-mock-action svg{width:14px;height:14px;margin-bottom:5px}.hero-mock-action span{font-size:8px}
+      .hero-laptop-base{height:10px;margin:0 -10px}
+      .hero-phone{width:98px;right:4px;bottom:18px;padding:6px 6px 8px;border-radius:20px}.hero-phone-notch{width:36px;height:5px;margin-bottom:4px}.hero-phone-screen{border-radius:16px}.hero-phone-top{padding:8px 8px;font-size:8px}.hero-phone-hero{height:148px;padding:10px}.hero-phone-hero b{font-size:11px;line-height:1.18;max-width:46px;margin-top:76px}.hero-phone-hero span{display:none}.hero-phone-btn{font-size:7px;padding:5px 8px;margin-top:8px}.hero-phone-actions{padding:8px 6px 10px;gap:3px}.hero-phone-action svg{width:12px;height:12px;margin-bottom:3px}.hero-phone-action span{font-size:6px}
+      .hero-badge{width:44px;height:44px;border-radius:14px}.hero-badge svg{width:20px;height:20px}.hero-badge.badge-top{right:216px;top:4px}
+      .hero-spark{right:2px;bottom:104px;transform:scale(.75)}
+      .section-intro{padding:36px 16px 20px}.section-divider{width:50px;height:3px;margin-bottom:22px}.section-kicker{font-size:17px;margin-bottom:10px}.section-title{font-size:34px}
+      .benefits{grid-template-columns:1fr;padding:0 16px 26px}.benefit{min-height:auto}
+      .responsive-showcase{padding:0 16px 24px}.showcase-box{padding:24px 18px;gap:16px}.showcase-copy p{font-size:16px;margin-bottom:10px}.showcase-copy h3{font-size:33px;white-space:normal;line-height:1.16}.mobile-title-break{display:block}.showcase-copy .detail{font-size:15px}.showcase-visual{min-height:214px}.laptop-mockup{width:100%;right:auto}.mock-nav b{font-size:14px}.mock-hero{height:148px}.mock-hero strong{font-size:21px;line-height:1.16;margin-top:42px;max-width:138px}.mock-hero span{font-size:11px;max-width:130px}.phone-mockup{width:88px;right:2px;bottom:12px}.phone-hero{height:136px}.phone-hero b{font-size:12px;line-height:1.18;margin-top:68px;max-width:44px}.phone-hero span{display:none}
+      .flow-wrap{padding:38px 0 46px}.flow-inner{padding:0 16px}.flow-grid{grid-template-columns:1fr}.flow-item{min-height:auto}
+      .flow-title{font-size:27px}.intro-skip{right:18px;bottom:18px}.landing-footer{padding:24px 16px 28px;display:block}.landing-footer>div+div{margin-top:10px}
+    }
+    /* 신청 버튼: 한글 글자 간격을 자연스럽게 고정 */
+  .main-cta .cta-label,.bottom-cta .cta-label{letter-spacing:0;word-spacing:normal;white-space:nowrap}
+
+    /* 반응형 안내 문구: PC와 모바일 모두 가로 가운데 정렬 */
+    .responsive-showcase .showcase-box{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      gap:0;
+      padding:46px 28px;
+    }
+    .responsive-showcase .showcase-copy{
+      width:100%;
+      max-width:880px;
+      margin-inline:auto;
+      text-align:center;
+    }
+    .responsive-showcase .showcase-copy h3{
+      text-align:center;
+      white-space:normal;
+      font-size:clamp(29px,4vw,50px);
+    }
+    .responsive-showcase .showcase-copy p,
+    .responsive-showcase .showcase-copy .detail{
+      text-align:center;
+      margin-inline:auto;
+    }
+    @media(max-width:520px){
+      .responsive-showcase .showcase-box{padding:32px 18px;}
+      .responsive-showcase .showcase-copy h3{font-size:clamp(27px,7.2vw,33px);}
+      .responsive-showcase .showcase-copy .detail{font-size:15px;line-height:1.75;}
+    }
+
+    /* 12가지 장점: 시안 2번의 카드 통합 레이아웃 */
+    .section-intro{width:min(100%,1400px);padding:56px 32px 36px}
+    .section-divider{margin-bottom:28px}
+    .section-kicker{font-size:21px;font-weight:700;margin-bottom:17px}
+    .section-title{font-size:clamp(36px,4.7vw,58px)}
+    .benefits{width:min(100%,1400px);padding:0 32px 75px;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;background:transparent}
+    .benefit{min-height:280px;padding:30px 20px 28px;border:1px solid #d7e7ff;border-radius:23px;background:linear-gradient(180deg,#fff 0%,#fcfdff 100%);box-shadow:0 10px 22px rgba(31,95,193,.075);display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+    .icon-circle{width:82px;height:82px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,#edf5ff,#e2efff);flex:none}
+    .icon-circle svg{width:45px;height:45px;stroke-width:2.25}
+    .benefit h3{font-size:21px;line-height:1.36;margin:0 0 13px;font-weight:900;word-break:keep-all}
+    .benefit p{font-size:16px;line-height:1.65;color:#53627a;font-weight:500;word-break:keep-all}
+    @media(max-width:1060px){.benefits{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.benefit{min-height:262px}}
+    @media(max-width:820px){.benefits{padding:0 20px 55px;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.benefit{min-height:242px;padding:28px 15px 25px}.benefit h3{font-size:18px}.benefit p{font-size:14px}}
+    @media(max-width:520px){.section-intro{padding:42px 16px 27px}.section-kicker{font-size:15px}.section-title{font-size:clamp(27px,7.5vw,35px)}.benefits{padding:0 14px 48px;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.benefit{min-height:228px;padding:24px 10px 20px;border-radius:18px}.icon-circle{width:61px;height:61px;margin-bottom:18px}.icon-circle svg{width:35px;height:35px}.benefit h3{font-size:15px;margin-bottom:12px}.benefit p{font-size:12px;line-height:1.6}.benefit p br{display:none}}
+
+    /* Updated restaurant website showcase mockup */
+    .hero-right{min-height:570px;display:flex;align-items:center;justify-content:center;overflow:visible}
+    .restaurant-mockup{display:block;width:118%;max-width:none;height:auto;mix-blend-mode:multiply;object-fit:contain;transform:translate(-1%, 1%);filter:drop-shadow(0 8px 14px rgba(43,69,101,.05))}
+    @media (max-width:1100px) and (min-width:821px){
+      .hero-right{min-height:475px}
+      .restaurant-mockup{width:125%;transform:translate(0,0)}
+    }
+    @media (max-width:820px){
+      .hero-right{min-height:0;max-width:610px;width:100%;margin:0 auto}
+      .restaurant-mockup{width:100%;transform:none}
+    }
+    @media (max-width:520px){
+      .hero-right{min-height:0}
+      .restaurant-mockup{width:110%;transform:translateX(-2%)}
+    }
+
+    /* v2.6.3: the baked-in badge at the lower-left of the showcase photo
+       duplicates the real benefit row; hide only that image corner,
+       keeping the bottom of the phone mockup intact. */
+    .restaurant-mockup{
+      clip-path:polygon(0 0,100% 0,100% 100%,69% 100%,69% 86%,0 86%);
+    }
+    /* Center the three icon + description groups on narrow phones.
+       Desktop and tablet layouts are intentionally unchanged. */
+    @media (max-width:520px){
+      .hero-points{display:flex;flex-direction:column;align-items:center;gap:14px}
+      .hero-point{width:264px;max-width:100%;margin-inline:auto;justify-content:flex-start;text-align:left}
+      .hero-point > div:last-child{flex:1;min-width:0}
+    }
+
+    /* v2.6.4 — mobile benefits: balanced icon/text scale and tighter transition
+       to the restaurant mockup. Desktop/tablet are not modified. */
+    @media (max-width:520px){
+      .hero-points{
+        width:100%;
+        margin:17px auto 0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:11px;
+      }
+      .hero-point{
+        box-sizing:border-box;
+        width:238px;
+        max-width:100%;
+        margin-inline:auto;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:11px;
+        text-align:left;
+      }
+      .hero-point-icon{
+        width:46px;
+        height:46px;
+        flex:0 0 46px;
+      }
+      .hero-point-icon svg{width:23px;height:23px}
+      .hero-point > div:last-child{flex:0 1 175px;min-width:0}
+      .hero-point strong{font-size:14px;line-height:1.32;margin-bottom:3px}
+      .hero-point span{font-size:12px;line-height:1.35}
+      .hero-inner{row-gap:0}
+      .hero-right{margin-top:3px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="intro-inner">
+      <div class="intro-logo">SYON WORKS</div>
+      <div class="intro-copy">홈페이지에 품격을 더하다</div>
+    </div>
+  </div>
+
+  <!-- FREE TRIAL LANDING -->
+  <div class="page">
+    <header class="topbar">
+      <a href="./home/" class="brand-wrap" aria-label="SYON WORKS 홈">
+        <div class="brand">SYON WORKS</div>
+        <div class="brand-sub">홈페이지로 시작하는 작은 변화</div>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./free-apply/" class="active">무료 제작 신청</a>
+        <a href="./home/">공식 홈페이지</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-left">
+            <div class="eyebrow">제작비 때문에 그동안 고민만 하셨나요?</div>
+            <h1><span class="hero-line1">우리 가게 홈페이지,</span><br><span class="accent">이제 무료로</span><br>준비하세요!</h1>
+            <p class="hero-copy">사진, 메뉴, 연락처, 위치 안내까지<br>우리 가게에 필요한 내용을 보기 좋게 담아드립니다.</p>
+            <a class="main-cta" href="./free-apply/"><span class="cta-label">무료제작 신청하기</span><span class="arrow" aria-hidden="true">›</span></a>
+            <p class="hero-note">성함과 연락처만 남겨주시면 간편하게 신청하실 수 있어요.</p>
+            <div class="hero-points" aria-label="주요 장점">
+              <div class="hero-point">
+                <div class="hero-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><ellipse cx="28" cy="17" rx="15" ry="7"/><path d="M13 17v11c0 4 7 7 15 7 3 0 6-.4 8-1.2M13 28v11c0 4 7 7 15 7 3 0 5-.3 7-1"/><circle cx="45" cy="42" r="12"/><path d="M39 38h12M40 46h10M41 36l3 12M49 36l-3 12"/></svg>
+                </div>
+                <div><strong>제작비 부담 없음</strong><span>무료로 제작해드려요.</span></div>
+              </div>
+              <div class="hero-point">
+                <div class="hero-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><rect x="8" y="15" width="30" height="20" rx="2"/><path d="M15 43h16M23 35v8"/><rect x="41" y="9" width="15" height="30" rx="3"/><path d="M47 33h3"/></svg>
+                </div>
+                <div><strong>모바일·PC 최적화</strong><span>어떤 화면에서도 편하게.</span></div>
+              </div>
+              <div class="hero-point">
+                <div class="hero-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><path d="M19 14l6 10-6 10-6-10 6-10zM45 14l6 10-6 10-6-10 6-10zM32 30l6 10-6 10-6-10 6-10z"/></svg>
+                </div>
+                <div><strong>우리 가게 맞춤 제작</strong><span>업종에 맞춰 깔끔하게.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-right" aria-hidden="true">
+            <img class="restaurant-mockup" src="./assets/restaurant-mockup.jpg" alt="" loading="eager" decoding="async" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-intro" aria-label="무료 제작 소개 제목">
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-kicker">우리 가게 홈페이지, 어떻게 만들어질까요?</p>
+        <h2 class="section-title">이런 장점들을 <span class="accent">담아드려요.</span></h2>
+      </section>
+
+      <section class="benefits" id="benefits" aria-label="홈페이지 제작의 12가지 장점">
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="12" y="15" width="40" height="37" rx="5"/><path d="M21 9v12M43 9v12M12 27h40m-29 12 6 6 12-13"/></svg></div>
+          <h3>편리한 예약</h3>
+          <p>고객이 기존 예약 페이지로 연결되어<br>간편하게 예약할 수 있어요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M21 12c-5 0-9 4-9 9 0 17 14 31 31 31 5 0 9-4 9-9v-5l-12-5-5 6a33 33 0 0 1-10-10l6-5-5-12h-5z"/></svg></div>
+          <h3>쉬운 문의</h3>
+          <p>전화, 문자, 카카오톡 등으로<br>편하게 문의할 수 있어요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M31 11a21 21 0 1 0 20 21c-2-3-5-3-7-2-3 1-7-1-6-5 2-5-2-14-7-14Z"/><circle cx="23" cy="22" r="3"/><circle cx="16" cy="33" r="3"/><circle cx="27" cy="44" r="3"/><circle cx="39" cy="18" r="3"/></svg></div>
+          <h3>맞춤형 디자인</h3>
+          <p>우리 가게의 분위기와 특징에 맞춰<br>보기 좋게 제작해드려요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="6" y="14" width="36" height="26" rx="3"/><path d="M17 48h14m-7-8v8"/><rect x="45" y="22" width="13" height="26" rx="3"/><path d="M50 43h3"/></svg></div>
+          <h3>모바일·PC 최적화</h3>
+          <p>스마트폰, 태블릿, PC 등<br>어떤 화면에서도 보기 편해요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="21"/><path d="M32 18v15l11 6"/></svg></div>
+          <h3>24시간 가게 안내</h3>
+          <p>언제 어디서든 우리 가게 정보를<br>확인할 수 있어요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 55s18-19 18-32a18 18 0 0 0-36 0c0 13 18 32 18 32Z"/><circle cx="32" cy="23" r="6"/></svg></div>
+          <h3>위치 안내</h3>
+          <p>지도와 길찾기 연결로 고객이<br>쉽게 찾아올 수 있어요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="36" rx="4"/><circle cx="24" cy="26" r="4"/><path d="m14 44 13-12 9 8 8-10 7 7"/></svg></div>
+          <h3>사진·갤러리</h3>
+          <p>매장, 상품, 작업 사례 등을<br>사진으로 멋지게 보여줘요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M20 16h31M20 29h31M20 42h31"/><circle cx="11" cy="16" r="2"/><circle cx="11" cy="29" r="2"/><circle cx="11" cy="42" r="2"/></svg></div>
+          <h3>메뉴·서비스 안내</h3>
+          <p>제공하는 서비스와 가격 정보를<br>한눈에 보기 쉽게 안내해요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M13 28h9l25-12v32L22 36h-9zM22 36l5 15h8l-6-13M52 24c4 3 4 13 0 16"/></svg></div>
+          <h3>이벤트·공지</h3>
+          <p>할인 행사와 새로운 소식 등<br>중요한 정보를 전달할 수 있어요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="13" width="44" height="40" rx="5"/><path d="M20 8v12M44 8v12M10 27h44"/><circle cx="39" cy="40" r="9"/><path d="M39 35v6l4 3"/></svg></div>
+          <h3>영업시간·휴무일 안내</h3>
+          <p>운영시간과 휴무일 정보를<br>보기 쉽게 안내해요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="16"/><path d="m40 40 14 14"/></svg></div>
+          <h3>검색을 위한 기본 설정</h3>
+          <p>검색엔진이 홈페이지를 찾을 수 있도록<br>기본 검색 설정을 도와드려요.</p>
+        </article>
+        <article class="benefit">
+          <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="11" y="11" width="17" height="17" rx="3"/><rect x="36" y="11" width="17" height="17" rx="3"/><rect x="11" y="36" width="17" height="17" rx="3"/><rect x="36" y="36" width="17" height="17" rx="3"/></svg></div>
+          <h3>다양한 페이지 구성</h3>
+          <p>소개, 서비스, 갤러리 등<br>필요한 페이지를 알차게 구성해요.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="landing-footer" aria-label="회사 정보">
+      <div><strong>SYON WORKS</strong>대표 손성준 · <a href="tel:01049685078">T. 010-4968-5078</a><br>강원특별자치도 원주시 남원로 648</div>
+      <div><a href="./privacy/">개인정보 및 작성 정보 처리 안내</a><br>© 2026 SYON WORKS.</div>
+    </footer>
+  </div>
+
+  <script>
+    const intro = document.getElementById('intro');
+    window.addEventListener('load', () => {
+      setTimeout(() => hideIntro(), 2000);
+    });
+    function hideIntro(){ intro.classList.add('hide'); intro.setAttribute('aria-hidden','true'); }
+    function skipIntro(){ hideIntro(); }
+  </script>
+</body>
+</html>
