@@ -644,3 +644,22 @@ a.logo .wordmark-suffix {font-weight: 500;}
 .partnership-apply-panel small{color:#a9bad0;line-height:1.7}
 @media(max-width:800px){.production-types-grid,.partnership-apply-grid{grid-template-columns:1fr}.production-type-card{min-height:0}.partnership-apply-grid{gap:26px}}
 @media(max-width:540px){.production-types .section-heading{display:block}.production-types .section-heading>p{margin-top:15px}.production-type-card{padding:26px 22px}.production-type-card h3{margin:15px 0 12px}.production-type-actions{gap:14px}.production-type-actions .button{width:100%}.inquiry-type-grid{grid-template-columns:1fr}.inquiry-type-choice{min-height:0}.partnership-apply-panel{padding:22px}}
+
+
+/* Partnership / standard service cards + partnership explanation */
+.services-production-types{background:#07182f;color:#f3f7ff}
+.services-production-types .section-heading>p{color:#b4c7e0}
+.services-production-types .production-type-card{background:linear-gradient(150deg,#102844,#0b1e36);border-color:#2c4b73;color:#f2f7ff}
+.services-production-types .production-type-card>p{color:#c4d3e5}
+.services-production-types .production-type-note{color:#b3c4dc}
+.services-production-types .production-type-detail{color:#b8d3ff}
+.partnership-explainer{background:linear-gradient(115deg,#091b34,#0d2c51);color:#f4f8ff}
+.partnership-explainer-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,100px);align-items:start}
+.partnership-explainer h2{font-size:clamp(30px,3.7vw,54px);line-height:1.28}
+.partnership-explainer h2 em{font-style:normal;color:#8fbaff}
+.partnership-explainer-copy{border-left:1px solid rgba(159,193,237,.3);padding-left:clamp(22px,3vw,46px)}
+.partnership-explainer-copy p{font-size:16px;line-height:1.95;color:#c5d5e7;margin:0 0 22px}
+.partnership-explainer-copy .partnership-explainer-lead{font-size:21px;line-height:1.6;font-weight:700;color:#f2f7ff}
+.partnership-explainer-copy strong{color:#fff}
+.partnership-explainer-link{display:inline-flex;gap:18px;align-items:center;padding:14px 0;font-weight:750;color:#9ec5ff;border-bottom:1px solid #79acfa}
+@media(max-width:760px){.partnership-explainer-grid{grid-template-columns:1fr;gap:28px}.partnership-explainer-copy{padding-left:0;border-left:0;border-top:1px solid rgba(159,193,237,.3);padding-top:24px}.partnership-explainer-copy p{font-size:14px}.partnership-explainer-copy .partnership-explainer-lead{font-size:18px}}
