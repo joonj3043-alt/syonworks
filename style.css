@@ -391,3 +391,99 @@ a.logo{display:inline-flex;align-items:center;gap:.34em;font-family:Arial,'Apple
 .header .logo{color:#f7faff}
 .footer .logo{color:#f7faff}
 @media(max-width:700px){a.logo{font-size:20px;gap:.28em}}
+
+
+/* FREE PROJECT — 2026 B-dark unified redesign */
+body.free-project-redesign{background:#061120;color:#edf4ff}
+.free-project-redesign .free-page-hero{
+ background:radial-gradient(ellipse at 91% 0%,rgba(57,108,255,.32),transparent 42%),linear-gradient(140deg,#061120,#0c2140 68%,#061120);
+ color:#f5f9ff;position:relative;overflow:hidden;border-bottom:1px solid rgba(156,186,239,.16)
+}
+.free-project-redesign .free-page-hero:after{content:"";pointer-events:none;position:absolute;width:460px;height:460px;border-radius:50%;right:-175px;top:-240px;border:2px solid rgba(106,151,255,.2);box-shadow:0 0 120px 40px rgba(45,90,245,.14)}
+.free-project-redesign .free-page-hero .page-hero-grid{position:relative;z-index:1;grid-template-columns:1.25fr .85fr;align-items:center;gap:clamp(35px,5vw,90px)}
+.free-project-redesign .free-page-hero h1{font-size:clamp(50px,5.6vw,84px);line-height:1.12;letter-spacing:-.055em}
+.free-project-redesign .free-page-hero h1 em{color:#9fc1ff;font-style:normal}
+.free-project-redesign .free-page-hero .eyebrow,.free-project-redesign .eyebrow{color:#99baff}
+.free-project-redesign .page-hero-copy p{color:#c2d3e8;font-size:16px;line-height:1.95;margin:0 0 28px}
+.free-project-redesign .free-page-hero .button{width:auto;min-width:240px;justify-content:space-between}
+.free-hero-highlights{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.free-hero-highlights span{border:1px solid rgba(156,186,239,.24);background:rgba(255,255,255,.045);color:#b8cee9;border-radius:999px;padding:8px 13px;font-size:11px;letter-spacing:.02em}
+.free-hero-highlights strong{color:#fff}
+.free-project-redesign main>.section{padding-block:clamp(70px,7.5vw,108px)}
+.free-project-redesign .reason-grid,.free-project-redesign .audience,.free-project-redesign .faq-grid{width:min(1240px,calc(100% - 96px))}
+.free-project-redesign .reason-grid{grid-template-columns:.82fr 1.18fr;align-items:start;gap:clamp(32px,6vw,95px);background:none;color:#eef4ff}
+.free-project-redesign .reason-grid .lead{color:#f7faff;font-size:clamp(22px,2.1vw,30px);font-weight:700;line-height:1.5}
+.free-project-redesign .reason-grid>div:last-child>p:not(.lead){color:#aec1da;font-size:15px;line-height:1.9}
+.free-project-redesign .audience{margin-top:0;padding-top:90px;grid-template-columns:.7fr 1.3fr;border-top:1px solid rgba(157,190,238,.15);gap:45px}
+.free-project-redesign .audience ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.free-project-redesign .audience li{display:flex;flex-direction:column;gap:17px;min-height:155px;padding:24px;border-radius:22px;background:linear-gradient(155deg,#0d2341,#0a1a31);border:1px solid rgba(156,186,239,.16);color:#e8f2ff;font-size:15px;line-height:1.65}
+.free-project-redesign .audience li span{margin:0;color:#80acff;font-size:12px;font-weight:800;letter-spacing:.08em}
+.free-project-redesign .free-build{background:radial-gradient(circle at 85% 12%,rgba(49,106,246,.16),transparent 40%),#0a1c34;border-block:1px solid rgba(156,186,239,.14);color:#f5f9ff}
+.free-project-redesign .free-build .editorial-split{align-items:start}
+.free-project-redesign .free-build .lead{color:#e7f0ff;font-weight:650}
+.free-project-redesign .free-build .editorial-copy p:not(.lead){color:#adc1d9}
+.free-project-redesign .free-examples{background:#061120;color:#f5f9ff;padding-bottom:80px}
+.free-project-redesign .free-examples .section-heading p{color:#acbfd5}
+.free-project-redesign .free-example-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;border:0}
+.free-project-redesign .free-example-links a{padding:26px;min-height:240px;border-radius:23px;border:1px solid rgba(156,186,239,.18);background:linear-gradient(155deg,#0d2341,#0a1a31);transition:transform .2s ease,border-color .2s ease}
+.free-project-redesign .free-example-links a:hover{transform:translateY(-3px);border-color:rgba(146,186,255,.5)}
+.free-project-redesign .free-example-links span{color:#87b1ff}.free-project-redesign .free-example-links b{color:#f7faff;font-size:21px;line-height:1.5;margin:26px 0 20px}.free-project-redesign .free-example-links i{color:#acc7ef}
+.free-project-redesign .free-section{background:linear-gradient(180deg,#08172b,#071324);color:#f5f9ff;border-block:1px solid rgba(156,186,239,.12)}
+.free-project-redesign .free-layout{display:grid;grid-template-columns:.82fr 1.18fr;background:transparent;border:0;gap:18px;align-items:stretch}
+.free-project-redesign .price-panel{padding:clamp(28px,4vw,50px);border:1px solid rgba(156,186,239,.18);background:radial-gradient(circle at 80% 5%,rgba(67,108,255,.22),transparent 45%),linear-gradient(150deg,#102950,#0a1d35);border-radius:28px;box-shadow:0 16px 50px rgba(0,0,0,.15);display:flex;flex-direction:column}
+.free-project-redesign .price-panel>span{color:#c4d5ec;font-size:14px}.free-project-redesign .price{color:#f9fbff;font-size:clamp(88px,9vw,132px);letter-spacing:-.075em;line-height:1.12;margin:18px 0}.free-project-redesign .price>span{color:#94baff;letter-spacing:-.01em;font-size:26px}
+.free-project-redesign .price-panel>p{color:#c5d6ed;font-size:15px;line-height:1.9;margin:0 0 26px}.free-project-redesign .price-panel .button{margin-top:auto}.free-project-redesign .price-panel small{margin-top:20px;color:#9cb4d0;font-size:12px;line-height:1.7}
+.free-project-redesign .scope-panel{padding:clamp(28px,3.2vw,43px);border:1px solid rgba(156,186,239,.18);background:linear-gradient(155deg,#0d2341,#0a1a31);border-radius:28px}
+.free-project-redesign .scope-panel h3{font-size:24px;color:#fff;margin:0 0 22px}.free-project-redesign .check-list{display:grid;grid-template-columns:1fr 1fr;gap:17px 18px;color:#dce9ff;font-size:13px}.free-project-redesign .check-list li:before{color:#74a3ff}
+.free-project-redesign .separate-cost{margin-top:34px;padding-top:27px;border-top:1px solid rgba(156,186,239,.2)}.free-project-redesign .separate-cost h3{font-size:19px;margin-bottom:12px}.free-project-redesign .separate-cost p{color:#bccfe5;font-size:13px;line-height:1.9}.free-project-redesign .separate-cost span{color:#9db4d3;font-size:12px}
+.free-project-redesign .program-process{background:#071324;color:#f5f9ff}
+.free-project-redesign .program-process .section-heading>p{color:#aec3dc}
+.free-project-redesign .program-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;border:0}
+.free-project-redesign .program-steps article{min-height:225px;margin:0;padding:26px 18px;background:linear-gradient(155deg,#102442,#0a192d);border:1px solid rgba(156,186,239,.15)!important;border-radius:22px}
+.free-project-redesign .program-steps article>span{color:#90b8ff;font-weight:850;font-size:25px}.free-project-redesign .program-steps h3{color:#fff;font-size:19px;margin:28px 0 10px}.free-project-redesign .program-steps p{color:#afc1d9;font-size:13px;line-height:1.75}
+.free-project-redesign .faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(35px,6vw,90px);background:#061120;color:#f4f8ff}
+.free-project-redesign .faq-grid .body-copy{color:#aac0d9;line-height:1.8}.free-project-redesign .faq-list{border-top:1px solid rgba(156,186,239,.2)}
+.free-project-redesign .faq-list details{border-bottom:1px solid rgba(156,186,239,.16);padding:23px 0}
+.free-project-redesign .faq-list summary{color:#f4f8ff;font-size:15px}.free-project-redesign .faq-list details p{color:#b8cce3;font-size:13px;line-height:1.9}
+.free-project-redesign .contact-section{background:radial-gradient(circle at 96% 0%,rgba(55,103,239,.19),transparent 39%),#09192f;color:#f5f9ff;border-top:1px solid rgba(156,186,239,.16)}
+.free-project-redesign .contact-grid{grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,78px)}
+.free-project-redesign .contact-section h2{font-size:clamp(36px,3.8vw,57px);line-height:1.22;letter-spacing:-.04em;margin-bottom:22px}
+.free-project-redesign .contact-section h2 em{color:#9abaff;font-style:normal}.free-project-redesign .contact-grid>div:first-child>p:not(.eyebrow){color:#bbcee4;font-size:15px;line-height:1.85}
+.free-project-redesign .contact-detail{border-color:rgba(156,186,239,.2)}.free-project-redesign .contact-detail span{color:#95b7ea}.free-project-redesign .contact-detail p{color:#a7bfdc}
+.free-project-redesign .form-panel{background:#0e213a;color:#f5f9ff;border:1px solid rgba(156,186,239,.2);border-radius:26px;padding:clamp(24px,3vw,38px);box-shadow:0 22px 55px rgba(0,0,0,.18)}
+.free-project-redesign .form-panel h3{color:#fff;font-size:25px;margin:0 0 18px}
+.free-project-redesign .form-notice{background:#152e4b;color:#c5d7ed;border:1px solid rgba(156,186,239,.15);border-left:3px solid #5c91ff;border-radius:10px;padding:13px 16px;font-size:12px;line-height:1.85}
+.free-project-redesign .form-panel label{color:#e8f2ff;font-weight:650;font-size:13px}
+.free-project-redesign .form-row input,.free-project-redesign .form-row select,.free-project-redesign .form-panel textarea{background:#08182d;color:#f6faff;border:1px solid #365477;border-radius:12px;min-height:52px;padding:13px 15px;outline:none}
+.free-project-redesign .form-row input::placeholder,.free-project-redesign .form-panel textarea::placeholder{color:#a7bad3;opacity:1}
+.free-project-redesign .form-row input:focus,.free-project-redesign .form-row select:focus,.free-project-redesign .form-panel textarea:focus{border-color:#8db4ff;box-shadow:0 0 0 3px rgba(68,124,255,.15)}
+.free-project-redesign .form-panel textarea{min-height:140px;resize:vertical}
+.free-project-redesign .form-panel select option{background:#08182d;color:#fff}
+.free-project-redesign .form-panel .consent{color:#bdcfe5}.free-project-redesign .form-panel .consent a{color:#afc9fb;text-decoration:underline;text-underline-offset:3px}.free-project-redesign .form-panel .form-foot{color:#adbfda}
+.free-project-redesign #inquiry-result{margin-top:22px;border-radius:16px;border:1px solid rgba(156,186,239,.2);background:#0b1c33;padding:18px}
+.free-project-redesign #inquiry-result textarea{width:100%;margin-top:10px}.free-project-redesign #inquiry-result .result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.free-project-redesign #copy-status{color:#bdd1e8;font-size:12px}
+.free-project-redesign .footer{background:#061120;color:#f5f9ff}
+@media(max-width:1020px){
+ .free-project-redesign .free-page-hero .page-hero-grid{grid-template-columns:1fr;gap:26px}
+ .free-project-redesign .audience{grid-template-columns:1fr;gap:25px}
+ .free-project-redesign .program-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .free-project-redesign .contact-grid{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:700px){
+ .free-project-redesign .reason-grid,.free-project-redesign .audience,.free-project-redesign .faq-grid{width:calc(100% - 36px)}
+ .free-project-redesign main>.section{padding-block:66px}
+ .free-project-redesign .free-page-hero .page-hero-grid{padding-block:65px 56px}
+ .free-project-redesign .free-page-hero h1{font-size:clamp(39px,10.5vw,57px);letter-spacing:-.05em}
+ .free-project-redesign .free-page-hero .button{width:100%}
+ .free-project-redesign .reason-grid,.free-project-redesign .faq-grid{grid-template-columns:1fr;gap:23px}
+ .free-project-redesign .audience{padding-top:65px}.free-project-redesign .audience ul{grid-template-columns:1fr}
+ .free-project-redesign .audience li{min-height:0;padding:20px}
+ .free-project-redesign .free-example-links{grid-template-columns:1fr}.free-project-redesign .free-example-links a{min-height:175px}
+ .free-project-redesign .free-layout{grid-template-columns:1fr}
+ .free-project-redesign .price-panel,.free-project-redesign .scope-panel{padding:27px}
+ .free-project-redesign .check-list{grid-template-columns:1fr;gap:12px}
+ .free-project-redesign .program-steps{grid-template-columns:1fr 1fr;gap:10px}.free-project-redesign .program-steps article{min-height:185px;padding:20px 15px}.free-project-redesign .program-steps h3{margin:18px 0 8px}
+ .free-project-redesign .form-panel{padding:22px}.free-project-redesign .contact-section h2{font-size:36px}
+}
+@media(max-width:390px){.free-project-redesign .program-steps{grid-template-columns:1fr}.free-project-redesign .program-steps article{min-height:0}}
