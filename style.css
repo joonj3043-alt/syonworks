@@ -1090,3 +1090,28 @@ body[data-page="index"] .syon-devices-visual img{
  body[data-page="index"] .hero .syon-devices-visual{max-width:100%;margin:0}
  body[data-page="index"] .syon-devices-visual img{width:108%;max-width:none;margin-left:-4%}
 }
+
+
+/* Home reassurance section — replaces concept portfolio tiles, leaves hero untouched */
+body[data-page="index"] .syon-reassurance{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(155deg,#081729 0%,#0c2341 56%,#0a1b32 100%);color:#f5f8ff;padding-block:clamp(80px,7.5vw,112px)}
+body[data-page="index"] .syon-reassurance::before{content:"";position:absolute;z-index:-1;inset:-150px -15% auto auto;width:640px;height:550px;pointer-events:none;background:radial-gradient(ellipse,rgba(54,126,232,.17),transparent 68%)}
+.syon-reassurance-heading{text-align:center;margin:0 auto 44px;max-width:1160px}
+.syon-reassurance-heading .eyebrow{color:#91bfff;margin-bottom:19px;font-size:11px;letter-spacing:.16em}
+.syon-reassurance-heading h2{margin:0;color:#fff;font-size:clamp(30px,3.15vw,46px);font-weight:850;line-height:1.3;letter-spacing:-.05em;white-space:nowrap}
+.syon-reassurance-heading h2 em{font-style:normal;color:#91bfff}
+.syon-reassurance-intro{margin:22px 0 0;color:#c9d8ec;font-size:clamp(15px,1.3vw,18px);line-height:1.85}
+.syon-reassurance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.syon-reassurance-card{min-width:0;padding:28px 23px 30px;background:linear-gradient(155deg,rgba(22,51,85,.95),rgba(16,37,64,.96));border:1px solid #355676;border-radius:20px;transition:transform .2s,border-color .2s,background .2s}
+@media(hover:hover){.syon-reassurance-card:hover{transform:translateY(-4px);border-color:#75a9e8}}
+.syon-reassurance-icon{display:flex;align-items:center;justify-content:center;width:62px;height:62px;color:#9cc7ff;background:#213f66;border:1px solid #3b6797;border-radius:18px;margin-bottom:25px}
+.syon-reassurance-icon svg{width:32px;height:32px}
+.syon-reassurance-step{display:block;margin-bottom:10px;color:#8eb7e8;letter-spacing:.13em;font-size:10px;font-weight:800}
+.syon-reassurance-card h3{margin:0 0 10px;color:#fff;font-size:clamp(19px,1.55vw,23px);font-weight:800;letter-spacing:-.035em}
+.syon-reassurance-card p{margin:0;color:#bdcee4;font-size:13px;line-height:1.85}
+.syon-reassurance-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:35px;padding:26px 30px;border:1px solid #355577;border-radius:19px;background:rgba(11,31,55,.7)}
+.syon-reassurance-cta p{margin:0;color:#e7f0ff;font-size:16px;font-weight:700;line-height:1.7}
+.syon-reassurance-cta .button{border-radius:99px;min-width:260px;white-space:nowrap}
+.syon-only-mobile{display:none}
+@media(max-width:1000px){.syon-reassurance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.syon-reassurance-heading h2{white-space:normal}}
+@media(max-width:650px){body[data-page="index"] .syon-reassurance{padding-block:66px 70px}.syon-reassurance-heading{margin-bottom:31px}.syon-reassurance-heading h2{font-size:clamp(29px,7.4vw,38px);line-height:1.32}.syon-reassurance-heading h2 span,.syon-reassurance-heading h2 em{display:block}.syon-reassurance-intro{margin-top:17px;font-size:14px;line-height:1.8}.syon-reassurance-grid{gap:11px}.syon-reassurance-card{padding:20px 15px 22px;border-radius:16px}.syon-reassurance-icon{width:52px;height:52px;border-radius:14px;margin-bottom:17px}.syon-reassurance-icon svg{width:27px;height:27px}.syon-reassurance-step{font-size:9px;letter-spacing:.05em;margin-bottom:8px}.syon-reassurance-card h3{font-size:17px}.syon-reassurance-card p{font-size:12px;line-height:1.7}.syon-reassurance-card p br{display:none}.syon-reassurance-cta{flex-direction:column;align-items:stretch;text-align:center;margin-top:20px;padding:22px 17px;gap:16px}.syon-reassurance-cta p{font-size:14px}.syon-reassurance-cta .button{min-width:0;width:100%;font-size:13px}.syon-only-mobile{display:initial}}
+@media(max-width:350px){.syon-reassurance-grid{grid-template-columns:1fr}.syon-reassurance-heading h2{font-size:27px}}
