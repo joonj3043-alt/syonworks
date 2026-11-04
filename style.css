@@ -1054,3 +1054,39 @@ body[data-page="index"] .syon-devices-visual img{width:115%;max-width:none;heigh
  .syon-hero-benefits span{padding-inline:9px}.syon-hero-benefits b{font-size:16px}
 }
 @media(max-width:390px){.syon-hero-benefits span{border-right:0;padding-left:0;padding-right:12px}}
+
+/* 2026-11-04 final hero correction: match approved concept / no chopped text in artwork */
+body[data-page="index"] .hero.studio-hero{
+  background:radial-gradient(ellipse at 85% 37%,rgba(54,107,191,.22),transparent 52%),linear-gradient(110deg,#06172b 0%,#0b2040 65%,#102b50 100%);
+}
+body[data-page="index"] .hero.studio-hero::after{
+  left:32%;bottom:-17%;width:105%;height:58%;border-top:1px solid rgba(80,148,245,.5);
+  border-radius:58% 0 0 0;transform:rotate(-9deg);box-shadow:none;
+  background:linear-gradient(162deg,rgba(31,87,173,.15),transparent 48%);
+}
+body[data-page="index"] .hero.studio-hero .hero-grid{
+  grid-template-columns:minmax(0,0.90fr) minmax(0,1.10fr);
+  gap:clamp(12px,1.7vw,28px);min-height:clamp(630px,45vw,760px);padding-block:72px 65px;
+}
+body[data-page="index"] .hero .hero-copy h1{font-size:clamp(56px,5.45vw,88px);line-height:1.15}
+body[data-page="index"] .hero .hero-intro{margin-top:38px;max-width:610px;line-height:1.9}
+body[data-page="index"] .hero .syon-devices-visual{
+  min-height:0;height:auto;display:flex;align-items:center;justify-content:center;overflow:visible;
+  background:transparent;border:0;padding:0;box-shadow:none;isolation:auto;
+}
+body[data-page="index"] .syon-devices-visual img{
+  display:block;width:121%;max-width:none;height:auto;margin-left:0;
+  filter:none;-webkit-mask-image:none;mask-image:none;
+}
+@media(max-width:1020px){
+ body[data-page="index"] .hero.studio-hero .hero-grid{grid-template-columns:1fr;gap:6px;min-height:0;padding-block:65px 34px}
+ body[data-page="index"] .hero .syon-devices-visual{width:100%;max-width:790px;margin:auto}
+ body[data-page="index"] .syon-devices-visual img{width:100%;max-width:100%;margin:0}
+}
+@media(max-width:760px){
+ body[data-page="index"] .hero.studio-hero .hero-grid{padding-block:47px 27px;gap:18px}
+ body[data-page="index"] .hero .hero-copy h1{font-size:clamp(43px,10.5vw,67px)}
+ body[data-page="index"] .hero .hero-intro{margin:31px 0 24px}
+ body[data-page="index"] .hero .syon-devices-visual{max-width:100%;margin:0}
+ body[data-page="index"] .syon-devices-visual img{width:108%;max-width:none;margin-left:-4%}
+}
