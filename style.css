@@ -1206,3 +1206,71 @@ body[data-page="contact"] .inquiry-plan-choice strong{font-size:15px}
 body[data-page="contact"] .inquiry-plan-choice small{font-size:11px;color:#d0e1f1;line-height:1.55}
 body[data-page="contact"] .inquiry-plan-note{font-size:12px;color:#c3d9ec;margin:12px 0 0}
 @media(max-width:760px){.syon-plan-grid{grid-template-columns:1fr}.syon-plan-card{padding:12px}body[data-page="contact"] .inquiry-plan-grid{grid-template-columns:1fr}}
+
+/* Fix: CONTACT general-tier radio controls must not inherit full-size text input styling. */
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice {
+  display:flex;
+  align-items:flex-start;
+  flex-direction:row;
+  gap:10px;
+  min-width:0;
+  min-height:120px;
+  padding:16px 13px;
+  cursor:pointer;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice input[type="radio"] {
+  appearance:none;
+  -webkit-appearance:none;
+  display:block;
+  position:static;
+  width:20px;
+  min-width:20px;
+  max-width:20px;
+  height:20px;
+  min-height:20px;
+  flex:0 0 20px;
+  padding:0;
+  margin:2px 0 0;
+  border:2px solid #a8c5df;
+  border-radius:50%;
+  background:transparent;
+  box-shadow:none;
+  outline-offset:3px;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice input[type="radio"]:checked {
+  border:6px solid #99e7f0;
+  background:#0d304b;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice input[type="radio"]:focus-visible {
+  outline:3px solid #c4f5ff;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice > span {
+  display:flex;
+  flex:1 1 auto;
+  flex-direction:column;
+  min-width:0;
+  gap:6px;
+  overflow-wrap:anywhere;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice strong {
+  display:block;
+  font-size:16px;
+  line-height:1.5;
+  color:#fff;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice small {
+  display:block;
+  font-size:12px;
+  line-height:1.6;
+  color:#d0e1f1;
+}
+@media(max-width:900px){
+  body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-grid {grid-template-columns:1fr;}
+  body[data-page="contact"] .contact-b-left .form-panel .inquiry-plan-choice {min-height:80px;}
+}
