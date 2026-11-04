@@ -916,3 +916,53 @@ body[data-page="projects"] .projects-final-cta .text-link{color:#d5e5ff}
 .kakao-floating:hover{transform:translateY(-3px);box-shadow:0 12px 29px rgba(6,17,32,.28)}.kakao-floating svg{flex-shrink:0}
 .kakao-contact-button{display:inline-block;margin-top:12px;border-radius:10px;background:#fee500;color:#371d1e!important;font-weight:800;font-size:13px;padding:10px 15px;text-decoration:none!important}
 @media(max-width:700px){.mobile-contact-bar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:7px 8px calc(7px + env(safe-area-inset-bottom));justify-items:stretch}.mobile-contact-bar a{min-width:0;display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;text-align:center;padding:6px 2px;border-right:1px solid rgba(255,255,255,.26)}.mobile-contact-bar a:last-child{border-right:0}.mobile-contact-bar a span{font-size:12px;line-height:1.4;white-space:nowrap}.mobile-contact-bar a b{font-size:9px;letter-spacing:.09em;opacity:.8}.mobile-contact-bar a.kakao-mobile-link{color:#fee500}.mobile-contact-bar:not(.hidden-cta)~.kakao-floating{display:none}.kakao-floating{right:15px;bottom:calc(16px + env(safe-area-inset-bottom));padding:12px;border-radius:50%}.kakao-floating span{display:none}}
+
+
+
+/* CONTACT production choice v2: accessible, clean radio-row selector on all screens */
+body[data-page="contact"] .inquiry-type-fieldset > p:first-of-type{margin-bottom:15px}
+body[data-page="contact"] .inquiry-type-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:11px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{
+  display:flex;align-items:center;gap:14px;position:relative;min-height:95px;
+  padding:18px 68px 18px 19px;border-radius:15px;border:1.5px solid #58718e;
+  background:#142b46;cursor:pointer;box-shadow:none;transform:none;
+  transition:background .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::before{
+  content:"";flex:none;width:23px;height:23px;border:2px solid #9eb4cf;
+  border-radius:50%;background:transparent;box-sizing:border-box;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::after{
+  content:"선택";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  color:#d4e2f3;border:1px solid #607e9d;border-radius:999px;
+  padding:5px 11px;font-size:12px;line-height:1.3;font-weight:700;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:hover{
+  background:#1d3959;border-color:#9fbeeb;transform:none;box-shadow:none;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+  background:#173b5e;border:2px solid #8de5ee;box-shadow:inset 4px 0 0 #8de5ee;
+  padding-left:18.5px;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked)::before{
+  border:7px solid #82e9ef;background:#123252;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked)::after{
+  content:"✓ 선택됨";background:#8de5ee;color:#0a293b;border-color:#8de5ee;
+}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text{padding-right:0;gap:5px}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:17px}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12.5px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus-within{outline:3px solid #a1c2ff;outline-offset:3px}
+@media(max-width:540px){
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{
+   padding:15px 66px 15px 14px;min-height:88px;gap:11px;border-radius:13px
+ }
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){padding-left:13.5px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::before{width:20px;height:20px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked)::before{border-width:6px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::after{right:10px;padding:5px 8px;font-size:11px}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:11.5px}
+}
+@media(prefers-reduced-motion:reduce){body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{transition:none}}
