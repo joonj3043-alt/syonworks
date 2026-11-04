@@ -966,3 +966,44 @@ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus
  body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:11.5px}
 }
 @media(prefers-reduced-motion:reduce){body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{transition:none}}
+
+/* CONTACT 제작 방식 — 시안 2: 사이트 톤에 맞춘 미니멀 선택 카드 (PC + 모바일) */
+body[data-page="contact"] .inquiry-type-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+  display:flex;align-items:center;gap:17px;min-height:106px;
+  padding:21px 24px;border-radius:16px;
+  border:1.5px solid #436184;background:#142c48;
+  box-shadow:none;transform:none;transition:background-color .18s,border-color .18s,box-shadow .18s;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:hover{background:#193754;border-color:#81aacd}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+  border:2px solid #83dfea;background:#193d5c;
+  box-shadow:0 0 0 1px rgba(131,223,234,.10);
+  padding:20.5px 23.5px;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::before{
+  content:"";flex:none;width:25px;height:25px;border-radius:50%;
+  border:2px solid #a1b8cf;background:transparent;box-sizing:border-box;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked)::before{
+  content:"";border:0;background-color:#83e0ec;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 12 4.3 4.3L19 7' fill='none' stroke='%230d2b42' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;background-size:17px 17px;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::after,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked)::after{content:none;display:none}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text{display:flex;flex-direction:column;gap:7px;min-width:0;padding:0}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:19px;line-height:1.35;font-weight:750;letter-spacing:-.025em}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:13px;line-height:1.55;color:#c6d8ea}
+body[data-page="contact"] .inquiry-type-fieldset .inquiry-type-help{border-color:#345775;background:#0f253e}
+body[data-page="contact"] .inquiry-type-fieldset .inquiry-type-help a{color:#94e3ee}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus-within{outline:3px solid #b2e9f0;outline-offset:3px}
+@media(max-width:540px){
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){min-height:92px;padding:17px 14px;gap:13px;border-radius:14px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){padding:16.5px 13.5px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice::before{width:23px;height:23px}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12px}
+}
