@@ -910,3 +910,9 @@ body[data-page="projects"] .projects-final-cta .text-link{color:#d5e5ff}
  body[data-page="projects"] .projects-card-copy h3{font-size:24px}
  body[data-page="projects"] .projects-gallery-heading >p br{display:none}
 }
+
+/* KakaoTalk customer chat — desktop floating button / mobile 3-way CTA */
+.kakao-floating{position:fixed;right:26px;bottom:26px;z-index:30;display:flex;align-items:center;gap:9px;background:#fee500;color:#371d1e;border-radius:40px;padding:12px 17px 12px 12px;font-size:14px;font-weight:800;line-height:1.2;box-shadow:0 9px 25px rgba(6,17,32,.24);transition:transform .2s,box-shadow .2s}
+.kakao-floating:hover{transform:translateY(-3px);box-shadow:0 12px 29px rgba(6,17,32,.28)}.kakao-floating svg{flex-shrink:0}
+.kakao-contact-button{display:inline-block;margin-top:12px;border-radius:10px;background:#fee500;color:#371d1e!important;font-weight:800;font-size:13px;padding:10px 15px;text-decoration:none!important}
+@media(max-width:700px){.mobile-contact-bar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:7px 8px calc(7px + env(safe-area-inset-bottom));justify-items:stretch}.mobile-contact-bar a{min-width:0;display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;text-align:center;padding:6px 2px;border-right:1px solid rgba(255,255,255,.26)}.mobile-contact-bar a:last-child{border-right:0}.mobile-contact-bar a span{font-size:12px;line-height:1.4;white-space:nowrap}.mobile-contact-bar a b{font-size:9px;letter-spacing:.09em;opacity:.8}.mobile-contact-bar a.kakao-mobile-link{color:#fee500}.mobile-contact-bar:not(.hidden-cta)~.kakao-floating{display:none}.kakao-floating{right:15px;bottom:calc(16px + env(safe-area-inset-bottom));padding:12px;border-radius:50%}.kakao-floating span{display:none}}

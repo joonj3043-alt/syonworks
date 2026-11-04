@@ -495,7 +495,11 @@
       .restaurant-mockup{width:110%;transform:translateX(-2%)}
     }
   </style>
-</head>
+<style>
+.kakao-floating{position:fixed;right:26px;bottom:27px;z-index:9999;display:flex;align-items:center;gap:9px;padding:12px 17px 12px 12px;background:#fee500;color:#371d1e;border-radius:40px;text-decoration:none;font:700 14px/1.2 Arial,sans-serif;box-shadow:0 8px 25px rgba(0,0,0,.22);transition:transform .2s}
+.kakao-floating:hover{transform:translateY(-3px)}.kakao-floating svg{flex-shrink:0}
+@media(max-width:700px){.kakao-floating{right:16px;bottom:calc(18px + env(safe-area-inset-bottom));padding:12px;border-radius:50%}.kakao-floating span{display:none}}
+</style></head>
 <body>
 
   <!-- INTRO -->
@@ -638,5 +642,5 @@
     function hideIntro(){ intro.classList.add('hide'); intro.setAttribute('aria-hidden','true'); }
     function skipIntro(){ hideIntro(); }
   </script>
-</body>
+<a class="kakao-floating" href="https://pf.kakao.com/_nTDFX" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 상담하기" title="카카오톡 상담하기"><svg aria-hidden="true" viewBox="0 0 40 40" width="30" height="30"><path fill="#371D1E" d="M20 6C10.3 6 2.5 12.1 2.5 19.6c0 4.6 2.9 8.7 7.6 11.3l-1.7 6.3 7.3-4.3c1.4.3 2.8.4 4.3.4 9.7 0 17.5-6.1 17.5-13.7S29.7 6 20 6Z"/></svg><span>카카오 상담</span></a></body>
 </html>
