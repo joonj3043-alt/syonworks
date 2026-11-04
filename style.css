@@ -1007,3 +1007,50 @@ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus
  body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px}
  body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12px}
 }
+
+
+/* SYON WORKS hero refresh — blue wave + responsive device mockup (2026-11) */
+body[data-page="index"] .hero.studio-hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:radial-gradient(ellipse at 72% 45%,rgba(40,94,177,.38),transparent 44%),linear-gradient(115deg,#061629 0%,#0a1e3a 55%,#102b51 100%);
+}
+body[data-page="index"] .hero.studio-hero::before{
+  content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 56% 76%,rgba(63,146,255,.27),transparent 27%);
+}
+body[data-page="index"] .hero.studio-hero::after{
+  content:"";position:absolute;z-index:-1;left:31%;bottom:1%;width:110%;height:62%;
+  border-top:2px solid rgba(101,178,255,.64);border-radius:80% 0 0 0;transform:rotate(-13deg);
+  background:linear-gradient(160deg,rgba(27,97,186,.20),transparent 46%);pointer-events:none;
+  box-shadow:0 -12px 32px -25px #75b7ff;
+}
+body[data-page="index"] .hero.studio-hero .hero-grid{grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:clamp(16px,2vw,34px);min-height:620px;padding-block:62px 70px}
+body[data-page="index"] .hero .hero-copy{position:relative;z-index:2}
+body[data-page="index"] .hero .hero-copy h1{font-size:clamp(58px,5.25vw,88px);font-weight:900;line-height:1.14;letter-spacing:-.068em}
+body[data-page="index"] .hero .hero-copy h1 em{font-style:normal;color:#8fbeff;position:relative;white-space:nowrap}
+body[data-page="index"] .hero .hero-copy h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:9px;border-radius:50%;border-top:4px solid #539dff;transform:rotate(-1.3deg)}
+body[data-page="index"] .hero .hero-intro{max-width:570px;font-size:clamp(15px,1.15vw,19px);margin:34px 0 26px;line-height:1.9;color:#dae6f9}
+body[data-page="index"] .hero .hero-button{min-width:250px;justify-content:space-between;border-radius:999px;padding-inline:32px}
+body[data-page="index"] .hero .eligibility{font-size:11px;margin-top:12px;opacity:.82}
+.syon-hero-benefits{display:flex;align-items:center;flex-wrap:wrap;gap:12px 0;margin-top:27px;color:#dceaff;font-size:13px}
+.syon-hero-benefits span{display:inline-flex;align-items:center;gap:7px;padding:0 15px;border-right:1px solid rgba(168,200,250,.38)}
+.syon-hero-benefits span:first-child{padding-left:0}.syon-hero-benefits span:last-child{border-right:0}
+.syon-hero-benefits b{color:#8fc4ff;font-size:19px;font-weight:600}
+body[data-page="index"] .hero .syon-devices-visual{border:0;border-radius:0;background:none;box-shadow:none;backdrop-filter:none;overflow:visible;display:flex;align-items:center;justify-content:center;height:auto;min-height:440px;position:relative;z-index:1}
+body[data-page="index"] .syon-devices-visual img{width:115%;max-width:none;height:auto;display:block;filter:drop-shadow(0 19px 22px rgba(0,0,0,.22));-webkit-mask-image:radial-gradient(ellipse 76% 77% at 54% 49%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 76% 77% at 54% 49%,#000 70%,transparent 100%)}
+@media(max-width:1020px){
+ body[data-page="index"] .hero.studio-hero .hero-grid{grid-template-columns:1fr;padding-block:66px 40px;gap:15px}
+ body[data-page="index"] .hero .syon-devices-visual{min-height:0;max-width:800px;width:100%;margin:0 auto}
+ body[data-page="index"] .syon-devices-visual img{width:100%}
+}
+@media(max-width:760px){
+ body[data-page="index"] .hero.studio-hero .hero-grid{padding-block:48px 26px;gap:22px}
+ body[data-page="index"] .hero .hero-copy h1{font-size:clamp(43px,10.3vw,69px)}
+ body[data-page="index"] .hero .hero-intro{margin-top:27px;margin-bottom:23px;font-size:15px}
+ body[data-page="index"] .hero .hero-button{width:100%;max-width:420px}
+ body[data-page="index"] .hero .syon-devices-visual{height:auto;min-height:0;border-radius:0}
+ body[data-page="index"] .syon-devices-visual img{width:112%;margin-left:-6%}
+ .syon-hero-benefits{font-size:11px;gap:10px 0;margin-top:24px}
+ .syon-hero-benefits span{padding-inline:9px}.syon-hero-benefits b{font-size:16px}
+}
+@media(max-width:390px){.syon-hero-benefits span{border-right:0;padding-left:0;padding-right:12px}}
