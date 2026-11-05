@@ -1235,3 +1235,12 @@ body[data-page="index"] .syon-offer h1 span{color:#9dcfff}
   .services-b-features .feature-card-search-support .feature-icon {grid-column:1;grid-row:1;}
   .services-b-features .feature-card-search-support .feature-card-copy {grid-column:2;grid-row:1;}
 }
+
+/* ABOUT: brand philosophy */
+.about-philosophy-hero h1{word-break:keep-all}
+.about-philosophy-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(26px,5vw,80px);align-items:start}
+.about-philosophy-copy h2{font-size:clamp(27px,3vw,42px);line-height:1.32;letter-spacing:-.045em;word-break:keep-all}
+.about-philosophy-text{display:grid;gap:19px}
+.about-philosophy-text p{margin:0;line-height:1.95;color:#44526b;font-size:clamp(15px,1.35vw,18px);word-break:keep-all}
+.about-philosophy-text strong{color:#102947;font-weight:750}
+@media(max-width:760px){.about-philosophy-copy{grid-template-columns:1fr;gap:22px}.about-philosophy-text{gap:16px}.about-philosophy-hero h1{font-size:clamp(30px,7vw,44px)}}
