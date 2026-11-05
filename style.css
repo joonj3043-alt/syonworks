@@ -1193,3 +1193,45 @@ body[data-page="index"] .syon-offer h1{color:#fff;font-size:clamp(30px,3.15vw,48
 body[data-page="index"] .syon-offer h1 span{color:#9dcfff}
 @media(max-width:760px){body[data-page="index"] .syon-offer h1{font-size:clamp(29px,6vw,39px)}}
 @media(max-width:440px){body[data-page="index"] .syon-offer h1{font-size:28px}}
+
+/* 두 페이지 공통: 검색 등록 지원 2개를 첫 번째 줄에 가로 2칸씩 배치 */
+.services-b-features .features-b-grid > .feature-card-search-support,
+.home-feature-grid > .feature-card-search-support {
+  grid-column:span 2;
+  min-height:156px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:22px 26px;
+}
+.services-b-features .feature-card-search-support .feature-icon,
+.home-feature-grid .feature-card-search-support .feature-icon {
+  flex:0 0 58px;
+  width:58px;
+  height:58px;
+  margin:0;
+  display:grid;
+  place-items:center;
+}
+.services-b-features .feature-card-search-support .feature-icon svg {width:30px;height:30px;}
+.services-b-features .feature-card-search-support h3,
+.home-feature-grid .feature-card-search-support h3 {display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px;}
+.feature-free-chip {font-size:11px;font-weight:750;line-height:1.4;padding:4px 8px;border-radius:999px;color:#a8d3ff;background:rgba(51,132,252,.17);white-space:nowrap;letter-spacing:0;}
+.home-feature-grid .feature-free-chip {background:#e7f1ff;color:#1762c3;}
+.home-feature-grid > .feature-card-search-support {text-align:left;}
+.home-feature-grid > .feature-card-search-support .feature-icon {border-radius:17px;background:#eaf2ff;}
+@media(max-width:700px){
+  .services-b-features .features-b-grid > .feature-card-search-support,
+  .home-feature-grid > .feature-card-search-support {grid-column:span 1;display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:190px;padding:18px 14px;}
+  .services-b-features .feature-card-search-support .feature-icon,
+  .home-feature-grid .feature-card-search-support .feature-icon {width:48px;height:48px;flex:0 0 48px;margin:0;}
+  .home-feature-grid > .feature-card-search-support {text-align:center;align-items:center;}
+  .services-b-features .feature-card-search-support h3,
+  .home-feature-grid .feature-card-search-support h3 {display:block;}
+  .feature-card-search-support .feature-free-chip {display:inline-block;margin-top:5px;}
+}
+@media(max-width:420px){
+  .services-b-features .features-b-grid > .feature-card-search-support {display:grid;grid-template-columns:52px minmax(0,1fr);min-height:auto;gap:8px 13px;align-items:center;}
+  .services-b-features .feature-card-search-support .feature-icon {grid-column:1;grid-row:1;}
+  .services-b-features .feature-card-search-support .feature-card-copy {grid-column:2;grid-row:1;}
+}
