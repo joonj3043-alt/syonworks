@@ -1244,3 +1244,47 @@ body[data-page="index"] .syon-offer h1 span{color:#9dcfff}
 .about-philosophy-text p{margin:0;line-height:1.95;color:#44526b;font-size:clamp(15px,1.35vw,18px);word-break:keep-all}
 .about-philosophy-text strong{color:#102947;font-weight:750}
 @media(max-width:760px){.about-philosophy-copy{grid-template-columns:1fr;gap:22px}.about-philosophy-text{gap:16px}.about-philosophy-hero h1{font-size:clamp(30px,7vw,44px)}}
+
+/* HOME + SERVICES: 네이버 등록 지원 카드 콘텐츠 중앙 정렬 */
+.services-b-features .features-b-grid > .feature-card-search-support,
+.home-feature-grid > .feature-card-search-support {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  gap:12px;
+}
+.services-b-features .feature-card-search-support .feature-icon,
+.home-feature-grid .feature-card-search-support .feature-icon {
+  flex:0 0 58px;
+  width:58px;
+  height:58px;
+  margin:0 auto;
+}
+.services-b-features .feature-card-search-support .feature-card-copy,
+.home-feature-grid .feature-card-search-support .feature-card-copy {width:100%;text-align:center;}
+.services-b-features .feature-card-search-support h3,
+.home-feature-grid .feature-card-search-support h3 {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+  margin:0 0 8px;
+  text-align:center;
+}
+.services-b-features .feature-card-search-support p,
+.home-feature-grid .feature-card-search-support p {text-align:center;}
+@media (max-width:700px){
+  .services-b-features .features-b-grid > .feature-card-search-support,
+  .home-feature-grid > .feature-card-search-support {align-items:center;justify-content:center;min-height:185px;gap:10px;}
+  .services-b-features .feature-card-search-support .feature-icon,
+  .home-feature-grid .feature-card-search-support .feature-icon {width:48px;height:48px;flex-basis:48px;}
+}
+@media (max-width:420px){
+  .services-b-features .features-b-grid > .feature-card-search-support,
+  .home-feature-grid > .feature-card-search-support {display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .services-b-features .feature-card-search-support h3,
+  .home-feature-grid .feature-card-search-support h3 {display:flex;justify-content:center;}
+}
