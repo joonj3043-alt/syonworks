@@ -1918,3 +1918,107 @@ body[data-page="contact"] .contact-side-cards article strong{line-height:1.35;}
   body[data-page="contact"] .contact-hours-laptop{max-width:126px;margin-right:4px;opacity:.95;}
   body[data-page="contact"] .contact-side-cards article{padding:18px 16px;}
 }
+
+
+/* v27: service feature cards mobile cleanup (badge overlap fix + centered card content) */
+body[data-page="services"] .services-b-features .features-b-grid > .feature-card,
+body[data-page="home"] .home-feature-grid > .feature-card {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+  gap:0;
+}
+body[data-page="services"] .services-b-features .feature-card .feature-icon,
+body[data-page="home"] .home-feature-grid .feature-card .feature-icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 14px;
+  flex-shrink:0;
+}
+body[data-page="services"] .services-b-features .feature-card h3,
+body[data-page="services"] .services-b-features .feature-card p,
+body[data-page="home"] .home-feature-grid .feature-card h3,
+body[data-page="home"] .home-feature-grid .feature-card p {
+  text-align:center;
+}
+body[data-page="services"] .services-b-features .feature-card p,
+body[data-page="home"] .home-feature-grid .feature-card p {
+  width:100%;
+}
+body[data-page="services"] .services-b-features .feature-card-search-support,
+body[data-page="home"] .home-feature-grid > .feature-card-search-support {
+  position:relative;
+}
+body[data-page="services"] .services-b-features .feature-card-search-support > .feature-free-chip-floating,
+body[data-page="home"] .home-feature-grid > .feature-card-search-support > .feature-free-chip-floating {
+  position:absolute;
+  top:14px;
+  right:14px;
+  left:auto;
+  bottom:auto;
+  z-index:2;
+}
+body[data-page="services"] .services-b-features .feature-card-search-support .feature-card-copy,
+body[data-page="home"] .home-feature-grid > .feature-card-search-support .feature-card-copy {
+  width:100%;
+  text-align:center;
+}
+@media (max-width:700px) {
+  body[data-page="services"] .services-b-features .features-b-grid > .feature-card,
+  body[data-page="home"] .home-feature-grid > .feature-card {
+    align-items:center;
+    text-align:center;
+  }
+  body[data-page="services"] .services-b-features .features-b-grid > .feature-card-search-support,
+  body[data-page="home"] .home-feature-grid > .feature-card-search-support {
+    padding-top:46px;
+  }
+  body[data-page="services"] .services-b-features .feature-card-search-support > .feature-free-chip-floating,
+  body[data-page="home"] .home-feature-grid > .feature-card-search-support > .feature-free-chip-floating {
+    top:12px;
+    right:12px;
+    font-size:10px;
+    padding:4px 7px;
+  }
+}
+@media (max-width:420px) {
+  body[data-page="services"] .services-b-features .features-b-grid {
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+  }
+  body[data-page="services"] .services-b-features .features-b-grid > .feature-card {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:188px;
+    padding:16px 12px 15px;
+  }
+  body[data-page="services"] .services-b-features .features-b-grid > .feature-card-search-support {
+    min-height:196px;
+    padding-top:48px;
+  }
+  body[data-page="services"] .services-b-features .feature-card .feature-icon {
+    width:44px;
+    height:44px;
+    margin-bottom:12px;
+  }
+  body[data-page="services"] .services-b-features .feature-card h3 {
+    margin:0 0 8px;
+    font-size:14px;
+    line-height:1.45;
+  }
+  body[data-page="services"] .services-b-features .feature-card p {
+    margin:0;
+    font-size:11.5px;
+    line-height:1.65;
+  }
+}
+@media (max-width:360px) {
+  body[data-page="services"] .services-b-features .features-b-grid {
+    grid-template-columns:1fr;
+  }
+}
