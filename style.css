@@ -1358,3 +1358,19 @@ body[data-page="about"] .founder-page{padding-top:62px}
  body[data-page="about"] .founder-page{padding-top:42px}
  body[data-page="about"] .founder-visual>div.founder-wordmark{font-size:clamp(33px,9vw,52px)}
 }
+
+/* Compact closing inquiry: Services page only */
+body[data-page="services"] .final-cta-simple{padding-block:54px;background:radial-gradient(ellipse at 92% 35%,rgba(42,100,240,.22),transparent 44%),#071629}
+body[data-page="services"] .final-cta-simple .final-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:26px}
+body[data-page="services"] .final-cta-simple .eyebrow{margin-bottom:14px;color:#86b4ff;font-size:13px;letter-spacing:.12em}
+body[data-page="services"] .final-cta-simple h2{margin:0;font-size:clamp(27px,3.3vw,44px);line-height:1.36;letter-spacing:-.045em}
+body[data-page="services"] .final-cta-simple h2 em{color:#7eb1ff;font-style:normal}
+body[data-page="services"] .final-cta-simple .cta-stack{min-width:0;flex-shrink:0;margin:0}
+body[data-page="services"] .final-cta-simple .button.primary{min-width:205px}
+@media(max-width:800px){
+ body[data-page="services"] .final-cta-simple{padding-block:42px}
+ body[data-page="services"] .final-cta-simple .final-cta-inner{display:flex;flex-direction:column;align-items:stretch;gap:23px}
+ body[data-page="services"] .final-cta-simple h2{font-size:clamp(27px,6.2vw,36px);line-height:1.4}
+ body[data-page="services"] .final-cta-simple .cta-stack{width:100%;margin-top:0}
+ body[data-page="services"] .final-cta-simple .button.primary{width:100%;min-width:0;text-align:center;justify-content:center}
+}
