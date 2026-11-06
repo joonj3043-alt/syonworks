@@ -1638,3 +1638,57 @@ body[data-page="contact"] .contact-hours-laptop{position:absolute;z-index:1;widt
  body[data-page="contact"] .contact-hours-content{width:92%}
  body[data-page="contact"] .contact-hours-laptop{opacity:.35;right:-20%}
 }
+
+
+/* Inquiry selection cards: streamlined single-row options without text badges */
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+  display:grid;grid-template-columns:48px minmax(0,1fr) 25px;
+  align-items:center;column-gap:13px;row-gap:0;
+  min-height:96px;padding:17px 16px;border-radius:16px;
+  border:1px solid rgba(117,151,195,.44);
+  background:#132b46;box-shadow:none;transform:none;
+  cursor:pointer;
+  transition:background-color .16s,border-color .16s,box-shadow .16s;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:hover{
+  background:#173452;border-color:rgba(141,189,250,.68);transform:none;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+  background:#173653;border:1.5px solid #76baff;
+  box-shadow:0 0 0 1px rgba(118,186,255,.13);
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon{
+  width:48px;height:48px;border-radius:13px;
+  background:#1d3e68;border:1px solid rgba(145,181,230,.20);
+  color:#aacbff;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon svg{width:25px;height:25px;}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text{min-width:0;gap:4px;}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:17px;line-height:1.4;}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12px;line-height:1.55;}
+body[data-page="contact"] .inquiry-choice-indicator{
+  grid-column:3;display:block;position:relative;
+  width:23px;height:23px;border-radius:50%;
+  border:1.8px solid #738eaf;background:transparent;
+}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator{
+  border-color:#80caff;background:#80caff;
+}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator::after{
+  content:"";position:absolute;left:6px;top:3px;width:6px;height:10px;
+  transform:rotate(42deg);border:solid #082747;border-width:0 2.5px 2.5px 0;
+}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus-within{
+  outline:2px solid #9dcfff;outline-offset:3px;
+}
+@media(max-width:700px){
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){
+   grid-template-columns:46px minmax(0,1fr) 23px;
+   gap:11px;padding:15px 13px;min-height:90px;
+ }
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon{width:46px;height:46px;}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px;}
+ body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12px;}
+}
