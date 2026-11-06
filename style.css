@@ -1374,3 +1374,23 @@ body[data-page="services"] .final-cta-simple .button.primary{min-width:205px}
  body[data-page="services"] .final-cta-simple .cta-stack{width:100%;margin-top:0}
  body[data-page="services"] .final-cta-simple .button.primary{width:100%;min-width:0;text-align:center;justify-content:center}
 }
+
+
+/* v24: free-support chip reposition + fixed inquiry anchors */
+.services-b-features .feature-card-search-support,
+.home-feature-grid > .feature-card-search-support {position:relative;}
+.services-b-features .feature-card-search-support .feature-card-copy,
+.home-feature-grid > .feature-card-search-support .feature-card-copy {position:relative;width:100%;}
+.services-b-features .feature-card-search-support h3,
+.home-feature-grid > .feature-card-search-support h3 {display:block;align-items:initial;gap:0;flex-wrap:nowrap;margin-bottom:8px;}
+.feature-free-chip-floating {position:absolute;top:0;right:0;z-index:2;}
+.services-b-features .feature-card-search-support .feature-card-copy,
+.home-feature-grid > .feature-card-search-support .feature-card-copy {padding-top:6px;}
+@media (max-width:700px){
+  .feature-free-chip-floating {top:-2px;right:-2px;font-size:10px;padding:4px 7px;}
+}
+@media (max-width:420px){
+  .home-feature-grid > .feature-card-search-support .feature-card-copy,
+  .services-b-features .feature-card-search-support .feature-card-copy {padding-top:0;}
+  .feature-free-chip-floating {position:static;display:inline-block;margin:0 0 8px;}
+}
