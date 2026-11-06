@@ -1748,3 +1748,83 @@ body[data-page="contact"] .contact-hours-laptop{width:43%;height:auto;right:-3%;
  body[data-page="contact"] .contact-hours-laptop{right:-12%;width:51%;opacity:.36}
  body[data-page="contact"] .contact-hours-content h3{font-size:21px}
 }
+
+
+/* v31 - CONTACT final alignment: inputs use full grid cell; artwork never overlaps copy */
+body[data-page="contact"] .contact-b-left .form-panel{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:18px;
+  row-gap:0;
+  align-content:start;
+}
+body[data-page="contact"] .contact-b-left .form-panel > .form-row{
+  display:block;min-width:0;width:100%;max-width:none;
+  grid-template-columns:none;gap:0;margin:0 0 20px;
+}
+body[data-page="contact"] .contact-b-left .form-panel > .form-row label{
+  display:block;min-width:0;width:100%;max-width:none;margin:0;
+}
+body[data-page="contact"] .contact-b-left .form-panel > .form-row :is(input,select,textarea){
+  display:block;width:100%;max-width:100%;min-width:0;
+  box-sizing:border-box;margin-top:10px;
+}
+body[data-page="contact"] .contact-b-left .form-panel > .form-row:nth-of-type(n+3){grid-column:1/-1}
+body[data-page="contact"] .contact-b-left .form-panel > .form-row textarea{min-height:140px}
+body[data-page="contact"] .contact-b-left .form-panel > fieldset{padding:0;margin:0 0 22px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-grid{margin:0;gap:12px}
+body[data-page="contact"] .contact-b-left .form-panel > .consent{margin:4px 0 14px}
+body[data-page="contact"] .contact-b-left .form-panel .submit-wide{width:100%;margin-top:0}
+body[data-page="contact"] .contact-b-left .form-panel > .form-notice{margin-top:14px}
+
+/* Two separate areas in working-hours banner, not overlapping layers */
+body[data-page="contact"] .contact-b-visual{min-width:0;overflow:visible}
+body[data-page="contact"] .contact-hours-banner{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(105px,39%);
+  align-items:center;gap:0;min-height:222px;padding:0;
+  overflow:hidden;isolation:isolate;
+  background:linear-gradient(120deg,#061b38 0%,#072b60 64%,#0750ad 100%);
+}
+body[data-page="contact"] .contact-hours-content{
+  position:relative;z-index:2;width:auto;max-width:none;min-width:0;
+  padding:25px 0 25px 22px;display:flex;flex-direction:column;justify-content:center;
+}
+body[data-page="contact"] .contact-hours-kicker{font-size:10px;letter-spacing:.1em;margin:0 0 10px}
+body[data-page="contact"] .contact-hours-content h3{
+  font-size:clamp(18px,1.7vw,24px);line-height:1.35;
+  letter-spacing:-.04em;word-break:keep-all;white-space:normal;
+  margin:0 0 16px;
+}
+body[data-page="contact"] .contact-hours-lines{gap:9px;max-width:100%;}
+body[data-page="contact"] .contact-hours-lines>div{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:8px;row-gap:2px;min-width:0}
+body[data-page="contact"] .contact-hours-label{font-size:12px;line-height:1.35}
+body[data-page="contact"] .contact-hours-value{font-size:13px;line-height:1.35}
+body[data-page="contact"] .contact-hours-laptop{
+  position:relative;grid-column:2;grid-row:1;z-index:1;
+  width:100%;max-width:200px;height:auto;min-width:0;
+  right:auto;bottom:auto;opacity:1;object-fit:contain;
+  transform:translateX(5%);mask-image:none;
+  filter:drop-shadow(0 8px 12px rgba(0,0,0,.18));
+}
+body[data-page="contact"] .contact-side-cards .phone-consult-card{padding:22px 18px}
+body[data-page="contact"] .contact-side-cards .phone-consult-card strong{line-height:1.35}
+@media(max-width:1050px){
+ body[data-page="contact"] .contact-hours-banner{grid-template-columns:minmax(0,1fr) minmax(120px,38%)}
+ body[data-page="contact"] .contact-hours-content{width:auto;padding:24px 0 24px 22px}
+ body[data-page="contact"] .contact-hours-laptop{width:100%;max-width:215px;right:auto}
+}
+@media(max-width:700px){
+ body[data-page="contact"] .contact-b-left .form-panel{grid-template-columns:1fr;gap:0;padding:20px 17px}
+ body[data-page="contact"] .contact-b-left .form-panel > .form-row{grid-column:1/-1;margin-bottom:17px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-grid{grid-template-columns:1fr}
+ body[data-page="contact"] .contact-hours-banner{grid-template-columns:minmax(0,1fr) minmax(90px,37%);min-height:212px}
+ body[data-page="contact"] .contact-hours-content{width:auto;padding:20px 0 20px 18px}
+ body[data-page="contact"] .contact-hours-content h3{font-size:20px;margin-bottom:14px}
+ body[data-page="contact"] .contact-hours-laptop{width:100%;max-width:185px;right:auto;opacity:1}
+}
+@media(max-width:390px){
+ body[data-page="contact"] .contact-hours-banner{grid-template-columns:minmax(0,1fr) 31%}
+ body[data-page="contact"] .contact-hours-content{width:auto}
+ body[data-page="contact"] .contact-hours-content h3{font-size:18px}
+ body[data-page="contact"] .contact-hours-laptop{width:100%;right:auto;opacity:.85;transform:translateX(8%)}
+}
