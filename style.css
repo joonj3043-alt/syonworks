@@ -1692,3 +1692,59 @@ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:focus
  body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px;}
  body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:12px;}
 }
+
+
+/* Contact layout repair v30: consistent form width, rhythm and safe banner artwork */
+body[data-page="contact"] .contact-b-grid{grid-template-columns:minmax(0,1.38fr) minmax(320px,.82fr);align-items:start;gap:clamp(24px,3.5vw,44px)}
+body[data-page="contact"] .contact-b-left,body[data-page="contact"] .contact-b-side{min-width:0}
+body[data-page="contact"] .contact-b-left>h2{margin:0 0 12px;line-height:1.28}
+body[data-page="contact"] .contact-b-left>p:not(.eyebrow){margin:0 0 19px;line-height:1.8}
+body[data-page="contact"] .contact-quick-guide{margin:0 0 21px;gap:10px}
+body[data-page="contact"] .contact-quick-guide .contact-guide-step{min-width:0;padding:9px 12px;gap:9px;min-height:56px}
+body[data-page="contact"] .contact-quick-guide .contact-guide-title{font-size:14px;white-space:normal;word-break:keep-all}
+body[data-page="contact"] .contact-b-left .form-panel{width:100%;max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:clamp(20px,2.5vw,30px)}
+body[data-page="contact"] .form-panel>fieldset,body[data-page="contact"] .form-panel>.form-row:nth-of-type(n+3),body[data-page="contact"] .form-panel>.consent,body[data-page="contact"] .form-panel>.submit-wide,body[data-page="contact"] .form-panel>.form-notice,body[data-page="contact"] .form-panel>.inquiry-result{grid-column:1/-1;min-width:0}
+body[data-page="contact"] .form-panel>.form-row{min-width:0;margin:0 0 18px}
+body[data-page="contact"] .form-panel>.form-row label{display:block;width:100%}
+body[data-page="contact"] .form-panel>.form-row :is(input,select,textarea){width:100%;max-width:none;min-width:0;box-sizing:border-box}
+body[data-page="contact"] .form-panel>.form-row textarea{min-height:130px}
+body[data-page="contact"] .inquiry-type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:22px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){min-width:0;min-height:88px;grid-template-columns:43px minmax(0,1fr) 20px;column-gap:10px;padding:12px 11px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon{width:43px;height:43px}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text strong{font-size:16px;letter-spacing:-.035em}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text small{font-size:11.5px;line-height:1.5}
+body[data-page="contact"] .inquiry-choice-indicator{width:20px;height:20px}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator::after{left:5px;top:2px}
+body[data-page="contact"] .contact-b-side{position:static}
+body[data-page="contact"] .contact-hours-banner{min-height:238px;background:linear-gradient(115deg,#061b38 0%,#062b61 61%,#00469c 100%)}
+body[data-page="contact"] .contact-hours-content{width:62%;padding:24px 4px 24px 22px;flex-shrink:0}
+body[data-page="contact"] .contact-hours-content h3{font-size:clamp(20px,1.45vw,26px);line-height:1.32;margin-bottom:17px;white-space:normal;word-break:keep-all}
+body[data-page="contact"] .contact-hours-kicker{font-size:11px;margin-bottom:10px}
+body[data-page="contact"] .contact-hours-lines{gap:10px}
+body[data-page="contact"] .contact-hours-lines>div{column-gap:8px}
+body[data-page="contact"] .contact-hours-label{font-size:12px}
+body[data-page="contact"] .contact-hours-value{font-size:13px}
+body[data-page="contact"] .contact-hours-laptop{width:43%;height:auto;right:-3%;bottom:0;opacity:.92;filter:drop-shadow(0 8px 12px rgba(0,0,0,.14));mask-image:linear-gradient(to right,transparent 0%,#000 16%)}
+@media(max-width:1050px){
+ body[data-page="contact"] .contact-b-grid{grid-template-columns:1fr;gap:26px}
+ body[data-page="contact"] .contact-b-side{max-width:100%}
+ body[data-page="contact"] .contact-hours-content{width:65%}
+ body[data-page="contact"] .contact-hours-laptop{width:36%;right:0}
+}
+@media(max-width:700px){
+ body[data-page="contact"] .contact-b-left .form-panel{grid-template-columns:1fr;gap:0;padding:19px 16px}
+ body[data-page="contact"] .form-panel>.form-row{grid-column:1/-1;margin-bottom:15px}
+ body[data-page="contact"] .inquiry-type-grid{grid-template-columns:1fr;gap:10px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){grid-template-columns:43px minmax(0,1fr) 20px;min-height:76px;padding:12px}
+ body[data-page="contact"] .contact-quick-guide{grid-template-columns:1fr;gap:8px}
+ body[data-page="contact"] .contact-quick-guide .contact-guide-step{min-height:48px}
+ body[data-page="contact"] .contact-hours-banner{min-height:214px}
+ body[data-page="contact"] .contact-hours-content{width:65%;padding:21px 4px 21px 18px}
+ body[data-page="contact"] .contact-hours-content h3{font-size:21px}
+ body[data-page="contact"] .contact-hours-laptop{width:42%;right:-5%;opacity:.75}
+}
+@media(max-width:430px){
+ body[data-page="contact"] .contact-hours-content{width:74%}
+ body[data-page="contact"] .contact-hours-laptop{right:-12%;width:51%;opacity:.36}
+ body[data-page="contact"] .contact-hours-content h3{font-size:21px}
+}
