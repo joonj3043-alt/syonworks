@@ -1428,3 +1428,18 @@ body[data-page="contact"] .kakao-contact-card .kakao-contact-button{margin-top:1
   body[data-page="contact"] .contact-b-left .form-panel{padding:22px 18px;border-radius:20px}
   body[data-page="contact"] .contact-b-visual{min-height:120px}
 }
+
+/* v26: free registration badges pinned to card top-right */
+.services-b-features .features-b-grid > .feature-card-search-support,
+.home-feature-grid > .feature-card-search-support {position:relative;}
+.services-b-features .features-b-grid > .feature-card-search-support > .feature-free-chip-floating,
+.home-feature-grid > .feature-card-search-support > .feature-free-chip-floating {
+  position:absolute;top:16px;right:16px;left:auto;bottom:auto;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:auto;max-width:calc(100% - 32px);margin:0;
+  padding:5px 9px;z-index:2;white-space:nowrap;
+}
+@media(max-width:700px){
+  .services-b-features .features-b-grid > .feature-card-search-support > .feature-free-chip-floating,
+  .home-feature-grid > .feature-card-search-support > .feature-free-chip-floating {top:12px;right:12px;font-size:10px;padding:4px 7px;}
+}
