@@ -2141,3 +2141,8 @@ body[data-page="about"] .founder-copy>p:not(.eyebrow){color:#263b56;font-size:14
  body[data-page="about"] .founder-copy h3{font-size:17px}
  body[data-page="about"] .founder-copy>p:not(.eyebrow){font-size:13px}
 }
+
+/* ABOUT - philosophy headline removed; keep compact introduction spacing */
+body[data-page="about"] .about-philosophy-inner>.eyebrow{margin-bottom:24px}
+body[data-page="about"] .founder-copy>p strong{font-weight:800;color:#0b306b}
+@media(max-width:760px){body[data-page="about"] .about-philosophy-inner>.eyebrow{margin-bottom:18px}}
