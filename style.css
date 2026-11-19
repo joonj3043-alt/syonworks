@@ -2146,3 +2146,20 @@ body[data-page="about"] .founder-copy>p:not(.eyebrow){color:#263b56;font-size:14
 body[data-page="about"] .about-philosophy-inner>.eyebrow{margin-bottom:24px}
 body[data-page="about"] .founder-copy>p strong{font-weight:800;color:#0b306b}
 @media(max-width:760px){body[data-page="about"] .about-philosophy-inner>.eyebrow{margin-bottom:18px}}
+/* Small-business support center */
+.header #navigation a[href$="/support/"]{white-space:nowrap}
+.support-hero{background:linear-gradient(125deg,#081e39 0%,#103965 65%,#1c5db8 100%);color:#fff}
+.support-hero-inner{padding:110px 0 118px;text-align:center}
+.support-hero h1{font-size:clamp(30px,4.1vw,54px);letter-spacing:-.055em;line-height:1.32;margin:0 auto 20px;max-width:1050px;word-break:keep-all}
+.support-hero p{font-size:clamp(16px,1.6vw,20px);line-height:1.8;color:#dce8fa;margin:0 auto;max-width:760px}
+.support-services{background:#f5f8fc}
+.support-section-heading{margin-bottom:30px}.support-section-heading h2{font-size:clamp(26px,3vw,38px);letter-spacing:-.04em;margin:6px 0}
+.support-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.support-card{display:flex;flex-direction:column;align-items:flex-start;min-height:325px;background:#fff;border:1px solid #dfe8f2;border-radius:20px;padding:32px;box-shadow:0 12px 32px #16345b0a}
+.support-card-icon{height:52px;width:52px;display:grid;place-items:center;border-radius:14px;background:#eaf1ff;color:#205bd8;font-size:29px;line-height:1}
+.support-card h3{font-size:23px;letter-spacing:-.045em;margin:20px 0 9px}
+.support-card p{font-size:16px;color:#5c6b7d;line-height:1.7;margin:0 0 22px}
+.support-status{margin-top:auto;background:#edf2f8;color:#52677f;border-radius:999px;padding:7px 13px;font-size:14px;font-weight:700}
+.support-note{color:#68778a;font-size:14px;margin:23px 0 0}
+@media(max-width:1000px){.support-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.header #navigation{gap:14px}.header #navigation a{font-size:13px}}
+@media(max-width:700px){.support-hero-inner{padding:78px 0 86px}.support-card-grid{grid-template-columns:1fr}.support-card{min-height:270px;padding:27px}.support-card h3{font-size:22px}.support-section-heading{margin-bottom:20px}}
