@@ -2171,6 +2171,8 @@ body[data-page="about"] .founder-copy>p strong{font-weight:800;color:#0b306b}
 .inquiry-options label{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #d5dfea;border-radius:12px;cursor:pointer;font-size:1rem}
 .inquiry-options input{accent-color:#1668c9;width:18px;height:18px;flex-shrink:0}
 .inquiry-options label:has(input:checked){border-color:#1668c9;background:#eef6ff}
+.budget-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){.budget-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.budget-options label{padding:11px 9px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}}
 .inquiry-fee{padding:18px;border-radius:14px;background:#eef6ff;border:1px solid #b8d9fa}
 .inquiry-fee strong{display:block;font-size:1.35rem;color:#115cb5}
 .inquiry-fee p{margin:7px 0;font-size:1rem}
