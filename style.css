@@ -2163,3 +2163,16 @@ body[data-page="about"] .founder-copy>p strong{font-weight:800;color:#0b306b}
 .support-note{color:#68778a;font-size:14px;margin:23px 0 0}
 @media(max-width:1000px){.support-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.header #navigation{gap:14px}.header #navigation a{font-size:13px}}
 @media(max-width:700px){.support-hero-inner{padding:78px 0 86px}.support-card-grid{grid-template-columns:1fr}.support-card{min-height:270px;padding:27px}.support-card h3{font-size:22px}.support-section-heading{margin-bottom:20px}}
+/* Consultation choices and conditional production-cost notice */
+.inquiry-extra-fields{display:grid;gap:18px;margin:20px 0 24px}
+.inquiry-extra-fields fieldset{border:0;padding:0;margin:0;min-width:0}
+.inquiry-extra-fields legend{font-weight:750;margin-bottom:12px;font-size:1rem}
+.inquiry-options{display:grid;gap:9px}
+.inquiry-options label{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #d5dfea;border-radius:12px;cursor:pointer;font-size:1rem}
+.inquiry-options input{accent-color:#1668c9;width:18px;height:18px;flex-shrink:0}
+.inquiry-options label:has(input:checked){border-color:#1668c9;background:#eef6ff}
+.inquiry-fee{padding:18px;border-radius:14px;background:#eef6ff;border:1px solid #b8d9fa}
+.inquiry-fee strong{display:block;font-size:1.35rem;color:#115cb5}
+.inquiry-fee p{margin:7px 0;font-size:1rem}
+.inquiry-fee small{display:block;font-size:.875rem;color:#40566b;line-height:1.5}
+.inquiry-extra-fields [hidden]{display:none!important}
