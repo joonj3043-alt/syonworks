@@ -3103,3 +3103,169 @@ body[data-page="contact"] .form-panel [hidden]{
     width:100%;
   }
 }
+
+/* 2026-11-23: align PARTNERSHIP and STANDARD call-to-action baseline */
+@media (min-width:801px){
+  body[data-page="services"] .services-production-types .production-type-card{
+    min-height:465px;
+  }
+  body[data-page="services"] .services-production-types .production-type-card > p:not(.production-type-note){
+    min-height:3.6em;
+  }
+  body[data-page="services"] .services-production-types .production-type-price{
+    margin-top:19px;
+  }
+  body[data-page="services"] .services-production-types .production-type-note{
+    min-height:3.5em;
+  }
+  body[data-page="services"] .services-production-types .production-type-actions{
+    box-sizing:border-box;
+    min-height:112px;
+    margin-top:auto;
+    padding-top:18px;
+    justify-content:flex-start;
+    gap:11px;
+  }
+  body[data-page="services"] .services-production-types .production-type-actions .button{
+    flex:0 0 54px;
+    min-height:54px;
+    margin:0;
+  }
+}
+@media (max-width:800px){
+  body[data-page="services"] .services-production-types .production-type-card{
+    min-height:0;
+  }
+  body[data-page="services"] .services-production-types .production-type-actions{
+    min-height:0;
+    margin-top:14px;
+    padding-top:18px;
+  }
+}
+
+
+/* SYON WORKS unified page polish 2026-11-23 -- CONTACT + SERVICES
+   This final scoped layer intentionally supersedes older light-selected-card rules. */
+body[data-page="contact"],body[data-page="services"]{background:#071629}
+body[data-page="contact"] .contact-b-section,
+body[data-page="services"] .page-hero-b.syon-simple-hero{
+ background:linear-gradient(160deg,#07172b 0%,#081e38 60%,#07182e 100%);
+ color:#f5f9ff;
+}
+body[data-page="contact"] .contact-b-section{padding-block:clamp(42px,5vw,74px) 96px;min-height:calc(100vh - 82px)}
+body[data-page="contact"] #apply{scroll-margin-top:100px}
+body[data-page="contact"] .contact-b-grid{grid-template-columns:minmax(0,1.56fr) minmax(275px,.92fr);gap:clamp(24px,3vw,44px);align-items:start}
+body[data-page="contact"] .contact-b-left{min-width:0}
+body[data-page="contact"] .contact-b-left > .eyebrow{color:#83baff;font-size:12px;letter-spacing:.13em;margin:0 0 14px}
+body[data-page="contact"] .contact-b-left > h1{font-size:clamp(34px,3.4vw,54px);line-height:1.24;letter-spacing:-.055em;white-space:normal;word-break:keep-all;overflow:visible;margin:0 0 13px;max-width:100%;color:#fff}
+body[data-page="contact"] .contact-b-left > p:not(.eyebrow){margin:0 0 25px;color:#c2d3e7;font-size:15px;line-height:1.8}
+body[data-page="contact"] .contact-quick-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 24px}
+body[data-page="contact"] .contact-quick-guide .contact-guide-step{min-width:0;min-height:60px;padding:11px 12px;border-radius:15px;background:#102a4a;border:1px solid #315276;display:flex;align-items:center;gap:10px;box-shadow:none}
+body[data-page="contact"] .contact-guide-num{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#286cec;color:#fff;font-size:12px;font-weight:800}
+body[data-page="contact"] .contact-guide-title{font-size:12px;line-height:1.5;color:#e1ebf9;font-weight:700;word-break:keep-all}
+body[data-page="contact"] .contact-b-left .form-panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;min-width:0;width:100%;padding:clamp(20px,3vw,32px);background:#0d2440;border:1px solid #315376;border-radius:24px;color:#f5f9ff;box-shadow:0 16px 38px rgba(0,0,0,.13)}
+body[data-page="contact"] .contact-b-left .form-panel fieldset{grid-column:1/-1;min-width:0;margin:0 0 22px;padding:0;border:0}
+body[data-page="contact"] .contact-b-left .form-panel legend{font-size:16px;color:#fff;font-weight:800;margin-bottom:8px}
+body[data-page="contact"] .inquiry-type-fieldset > p{font-size:13px;line-height:1.65;color:#b4c9e1;margin:0 0 15px}
+body[data-page="contact"] .inquiry-type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){display:flex;align-items:center;justify-content:flex-start;gap:11px;min-height:88px;padding:15px;border-radius:16px;cursor:pointer;transition:background .16s,border-color .16s,box-shadow .16s;color:#edf5ff!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{background:#143052!important;border:1px solid #365b84!important;box-shadow:none!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:hover{background:#1b3d67!important;border-color:#75a5ec!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){background:#194677!important;border:2px solid #7db4ff!important;box-shadow:inset 0 0 0 1px rgba(157,200,255,.19),0 0 0 3px rgba(39,110,231,.13)!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice .inquiry-type-text :is(strong,small),
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked) .inquiry-type-text :is(strong,small){color:#f6faff!important;font-size:clamp(13px,1.1vw,16px);line-height:1.45;word-break:keep-all}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice .inquiry-type-icon{display:inline-grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:#1e4779!important;color:#bcd7ff!important;border:1px solid #3e6799!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked) .inquiry-type-icon{background:#2867bd!important;border-color:#619ef7!important;color:#fff!important}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice .inquiry-choice-indicator{flex:0 0 16px;display:block;width:16px;height:16px;margin-left:auto;border:2px solid #86a3c8!important;background:transparent!important;border-radius:50%;box-sizing:border-box}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator{background:#8dc3ff!important;border:4px solid #225aa4!important;box-shadow:0 0 0 2px #a1cfff}
+body[data-page="contact"] .inquiry-options{display:grid;grid-template-columns:1fr!important;gap:10px}
+body[data-page="contact"] .inquiry-options label,
+body[data-page="contact"] .inquiry-options label:has(input:checked){display:flex;align-items:center;gap:12px;padding:13px 16px;min-height:60px;border-radius:14px;box-shadow:none!important;cursor:pointer;font-size:15px;font-weight:650;line-height:1.5;transition:background .16s,border-color .16s}
+body[data-page="contact"] .inquiry-options label{background:#143052!important;border:1px solid #365b84!important;color:#eaf4ff!important}
+body[data-page="contact"] .inquiry-options label:hover{background:#1a3a62!important;border-color:#81afe8!important}
+body[data-page="contact"] .inquiry-options label:has(input:checked){background:#194677!important;border:2px solid #78b2ff!important;color:#fff!important}
+body[data-page="contact"] .inquiry-options label :is(span,strong,small),
+body[data-page="contact"] .inquiry-options label:has(input:checked) :is(span,strong,small){color:inherit!important}
+body[data-page="contact"] .inquiry-options input{width:19px;height:19px;accent-color:#78b8ff}
+body[data-page="contact"] :is(.inquiry-type-choice,.inquiry-options label):focus-within{outline:3px solid #a4caff!important;outline-offset:3px}
+body[data-page="contact"] .contact-b-left .form-panel>.form-row{margin:0 0 18px;min-width:0}
+body[data-page="contact"] .contact-b-left .form-panel>.form-row:nth-of-type(n+3){grid-column:1/-1}
+body[data-page="contact"] .form-row label{color:#e5f0fd;font-size:14px;font-weight:700}
+body[data-page="contact"] .form-panel .form-row :is(input,select,textarea){width:100%;max-width:100%;min-width:0;min-height:52px;margin-top:9px;padding:13px 15px;border:1px solid #3b5d84;border-radius:13px;background:#09203b!important;color:#eff7ff!important;font-size:14px;box-shadow:none}
+body[data-page="contact"] .form-panel .form-row :is(input,textarea)::placeholder{color:#a4b9d2;opacity:1}
+body[data-page="contact"] .form-panel .form-row :is(input,select,textarea):focus{border-color:#81b4ff;outline:2px solid rgba(93,151,250,.37);outline-offset:1px}
+body[data-page="contact"] .form-panel .form-row select option{background:#0e2948;color:#f5faff}
+body[data-page="contact"] .form-panel .form-row textarea{min-height:134px;resize:vertical}
+body[data-page="contact"] .consent{grid-column:1/-1;color:#c5d5e9;font-size:13px;line-height:1.7}
+body[data-page="contact"] .consent a{color:#9fc5ff}
+body[data-page="contact"] .form-panel>.submit-wide{grid-column:1/-1;border-radius:13px;min-height:56px;background:linear-gradient(115deg,#397aff,#1f5ed9);box-shadow:0 12px 24px rgba(20,67,163,.24)}
+body[data-page="contact"] .form-panel>.form-notice{grid-column:1/-1;color:#a6bfdc;font-size:12px;line-height:1.75}
+body[data-page="contact"] .form-panel>.inquiry-result{grid-column:1/-1;min-width:0}
+body[data-page="contact"] .contact-b-side{min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:0}
+body[data-page="contact"] .contact-hours-banner{border:1px solid #31577f;border-radius:21px;min-height:214px}
+body[data-page="contact"] .contact-side-cards{display:grid;gap:15px}
+body[data-page="contact"] .contact-side-cards > article{border:1px solid #315275;border-radius:20px;background:#102945;padding:24px;box-shadow:none}
+body[data-page="contact"] .phone-consult-card{min-height:0}
+body[data-page="contact"] .phone-consult-card > strong{font-size:21px;color:#fff}
+body[data-page="contact"] .phone-consult-card p,body[data-page="contact"] .contact-side-help p{color:#c4d5ea;font-size:14px;line-height:1.75}
+body[data-page="contact"] .phone-consult-link{max-width:100%;border-radius:12px}
+body[data-page="contact"] .contact-side-help > strong{font-size:17px;color:#fff}
+/* SERVICES: hero, package cards, detailed service cards and CTA share same visual language. */
+body[data-page="services"] .page-hero-b.syon-simple-hero{padding-block:42px 24px}
+body[data-page="services"] .syon-simple-hero-panel{padding:clamp(24px,3vw,38px);border:1px solid #2b4b72;border-radius:26px;background:linear-gradient(130deg,#0b2547,#0b1d37);box-shadow:none}
+body[data-page="services"] .syon-simple-hero-panel h1{font-size:clamp(29px,3.7vw,49px);line-height:1.3;letter-spacing:-.05em}
+body[data-page="services"] .syon-simple-hero-desc{color:#c9d9eb;font-size:clamp(14px,1.35vw,17px);line-height:1.75}
+body[data-page="services"] .syon-service-mini-card{background:#153456;border:1px solid #355c86;border-radius:16px;min-height:94px;transition:background .2s,border-color .2s,transform .2s}
+body[data-page="services"] .syon-service-mini-card:hover{background:#204879;border-color:#85b5f6;transform:translateY(-2px)}
+body[data-page="services"] .services-production-types{padding-block:40px 70px;background:linear-gradient(180deg,#081a30,#071628);color:#f6faff}
+body[data-page="services"] .production-types-heading{align-items:end;gap:18px}
+body[data-page="services"] .services-production-types .production-type-card{border:1px solid #345579;border-radius:24px;background:linear-gradient(160deg,#102b4b,#0d2039);min-height:0;padding:clamp(26px,3vw,42px) clamp(20px,2.7vw,36px);box-shadow:none}
+body[data-page="services"] .services-production-types .production-type-card h3{font-size:clamp(27px,2.65vw,37px);line-height:1.32;color:#fff}
+body[data-page="services"] .services-production-types .production-type-card > p:not(.production-type-note){color:#d0dfef;min-height:3.7em;max-width:400px;font-size:15px;line-height:1.75}
+body[data-page="services"] .services-production-types .production-type-price{margin-top:14px;font-size:clamp(25px,2.5vw,34px);color:#fff}
+body[data-page="services"] .services-production-types .production-type-price em{color:#8bbdff}
+body[data-page="services"] .services-production-types .production-type-note{color:#aac2de;font-size:13px;line-height:1.7;max-width:390px;min-height:3.5em}
+body[data-page="services"] .services-production-types .production-type-actions{min-height:112px;margin-top:auto;padding-top:20px;gap:11px;justify-content:flex-start}
+body[data-page="services"] .services-production-types .production-type-actions .button{flex:0 0 54px;width:min(100%,300px);min-height:54px;border-radius:13px;background:linear-gradient(110deg,#367bff,#2460e2);box-shadow:none}
+body[data-page="services"] .services-production-types .production-type-detail{font-size:13px;color:#afd0ff}
+body[data-page="services"] .services-b-core,body[data-page="services"] .services-b-features{background:#071628}
+body[data-page="services"] .service-b-item,body[data-page="services"] .feature-card{border:1px solid #294669;background:linear-gradient(135deg,#0e2542,#0a1c33);border-radius:21px;box-shadow:none}
+body[data-page="services"] .service-b-item{scroll-margin-top:110px}
+body[data-page="services"] .service-b-main p,body[data-page="services"] .feature-card p{color:#bed0e5;line-height:1.8}
+body[data-page="services"] .service-b-main h3,body[data-page="services"] .feature-card h3{color:#fff}
+body[data-page="services"] .services-b-core{padding-top:58px}
+@media(max-width:1020px){
+ body[data-page="contact"] .contact-b-grid{grid-template-columns:minmax(0,1fr) minmax(245px,.72fr);gap:20px}
+ body[data-page="contact"] .contact-b-left .form-panel{padding:22px}
+ body[data-page="contact"] .contact-quick-guide .contact-guide-step{padding:10px 8px;gap:7px}
+ body[data-page="contact"] .contact-guide-title{font-size:11px}
+}
+@media(max-width:800px){
+ body[data-page="contact"] .contact-b-grid{grid-template-columns:minmax(0,1fr)}
+ body[data-page="contact"] .contact-b-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ body[data-page="contact"] .contact-b-visual{min-width:0}
+ body[data-page="contact"] .contact-side-cards{gap:14px}
+ body[data-page="services"] .services-production-types .production-type-card > p:not(.production-type-note){min-height:0}
+ body[data-page="services"] .services-production-types .production-type-note{min-height:0}
+ body[data-page="services"] .services-production-types .production-type-actions{min-height:0;margin-top:18px}
+}
+@media(max-width:650px){
+ body[data-page="contact"] .contact-b-section{padding-top:27px;padding-bottom:60px}
+ body[data-page="contact"] .contact-b-left > h1{font-size:clamp(30px,9vw,39px)}
+ body[data-page="contact"] .contact-quick-guide{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ body[data-page="contact"] .contact-quick-guide .contact-guide-step{min-height:55px;flex-direction:column;justify-content:center;align-items:center;gap:4px;text-align:center;padding:7px 3px;border-radius:11px}
+ body[data-page="contact"] .contact-guide-num{width:25px;height:25px;font-size:10px}
+ body[data-page="contact"] .contact-guide-title{font-size:10px;line-height:1.3}
+ body[data-page="contact"] .contact-b-left .form-panel{display:block;border-radius:20px;padding:19px 16px}
+ body[data-page="contact"] .inquiry-type-grid{grid-template-columns:1fr!important;gap:10px}
+ body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice{min-height:75px;padding:12px}
+ body[data-page="contact"] .contact-b-side{grid-template-columns:1fr}
+ body[data-page="contact"] .contact-b-left .form-panel>.form-row{margin-bottom:17px}
+ body[data-page="services"] .page-hero-b.syon-simple-hero{padding-top:24px}
+ body[data-page="services"] .syon-simple-hero-panel{padding:23px 17px;border-radius:21px}
+ body[data-page="services"] .syon-service-mini-card{min-height:82px}
+ body[data-page="services"] .services-production-types{padding-top:28px}
+ body[data-page="services"] .services-production-types .production-type-card{padding:28px 19px}
+ body[data-page="services"] .services-production-types .production-type-card > p:not(.production-type-note){font-size:14px}
+}
