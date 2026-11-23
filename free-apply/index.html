@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#eef7ff">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#eef7ff" name="theme-color"/>
 <title>무료제작 신청 | SYON WORKS</title>
-<meta name="description" content="우리 가게 홈페이지, 무료로 만들어 보세요. 성함과 연락처만 입력해 주세요.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta content="우리 가게 홈페이지, 무료로 만들어 보세요. 성함과 연락처만 입력해 주세요." name="description"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
 <style>
 :root{font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;color:#091c43;letter-spacing:-.035em}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#edf7ff,#f8fbff 60%,#e8f4ff);padding:clamp(20px,5vw,70px) 18px 45px}
@@ -29,17 +30,17 @@ button.primary:hover{background:#0055dc}button.primary:focus-visible{outline:3px
 <body>
 <main class="card">
 <h1>무료제작 신청</h1>
-<p class="lead">우리 가게 홈페이지, 무료로 만들어 보세요.<br>성함과 연락처만 입력해 주세요.</p>
+<p class="lead">우리 가게 홈페이지, 무료로 만들어 보세요.<br/>성함과 연락처만 입력해 주세요.</p>
 <form id="apply-form">
-<label class="field">성함<input name="name" required autocomplete="name" maxlength="80" placeholder="예: 홍길동"></label>
-<label class="field">연락처<input name="phone" required type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="예: 010-1234-5678" pattern="[0-9+() .-]{8,20}"></label>
-<label class="consent"><input name="consent" type="checkbox" required><span>작성 정보의 처리 안내를 확인했습니다. <a href="../privacy/" target="_blank" rel="noopener noreferrer">보기</a></span></label>
+<label class="field">성함<input autocomplete="name" maxlength="80" name="name" placeholder="예: 홍길동" required=""/></label>
+<label class="field">연락처<input autocomplete="tel" inputmode="tel" maxlength="20" name="phone" pattern="[0-9+() .-]{8,20}" placeholder="예: 010-1234-5678" required="" type="tel"/></label>
+<label class="consent"><input name="consent" required="" type="checkbox"/><span>작성 정보의 처리 안내를 확인했습니다. <a href="../privacy/" rel="noopener noreferrer" target="_blank">보기</a></span></label>
 <button class="primary" type="submit">무료제작 신청 남기기</button>
 <p class="foot">문자 앱에서 전송 버튼을 눌러 주세요.</p>
-<div class="result" id="result" hidden aria-live="polite">
+<div aria-live="polite" class="result" hidden="" id="result">
 <p>문자 앱에서 전송을 완료해야 신청이 접수됩니다. 문자 앱이 열리지 않으면 아래 내용을 복사해 보내 주세요.</p>
-<textarea id="message" readonly aria-label="신청 문자 내용"></textarea>
-<div class="actions"><a id="send-sms" href="#">문자 앱 열기 ↗</a><button id="copy" type="button">내용 복사</button></div>
+<textarea aria-label="신청 문자 내용" id="message" readonly=""></textarea>
+<div class="actions"><a href="#" id="send-sms">문자 앱 열기 ↗</a><button id="copy" type="button">내용 복사</button></div>
 <p id="copy-status" role="status"></p>
 </div>
 </form>
@@ -65,5 +66,5 @@ form.elements.consent.addEventListener('change',()=>result.hidden=true);
 document.querySelector('#copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(textarea.value);document.querySelector('#copy-status').textContent='내용을 복사했습니다.';}catch{textarea.focus();textarea.select();document.querySelector('#copy-status').textContent='내용을 선택했습니다. 복사해서 보내 주세요.';}});
 })();
 </script>
-<a class="kakao-floating" href="https://pf.kakao.com/_nTDFX/chat" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 상담하기" title="카카오톡 상담하기"><svg aria-hidden="true" viewBox="0 0 40 40" width="30" height="30"><path fill="#371D1E" d="M20 6C10.3 6 2.5 12.1 2.5 19.6c0 4.6 2.9 8.7 7.6 11.3l-1.7 6.3 7.3-4.3c1.4.3 2.8.4 4.3.4 9.7 0 17.5-6.1 17.5-13.7S29.7 6 20 6Z"/></svg><span>카카오 상담</span></a></body>
+</body>
 </html>

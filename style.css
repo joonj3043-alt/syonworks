@@ -2196,3 +2196,333 @@ body[data-page="services"] .services-b-features .feature-card{text-align:center;
 body[data-page="services"] .services-b-features .feature-card :is(h3,p){text-align:center}
 body[data-page="services"] .services-b-features .feature-card .feature-icon{margin-inline:auto}
 @media(max-width:650px){body[data-page="contact"] .inquiry-options{grid-template-columns:1fr}}
+
+
+/* 2026-11-23: HOME feature cards — consistent mobile-only icon/title/description alignment.
+   Overrides the older <=420px icon-left grid rule without changing desktop layout. */
+@media (max-width:700px) {
+  body[data-page="index"] .home-feature-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:11px;
+    align-items:stretch;
+  }
+  body[data-page="index"] .home-feature-grid > .feature-card,
+  body[data-page="index"] .home-feature-grid > .feature-card-search-support {
+    box-sizing:border-box;
+    grid-column:span 1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-width:0;
+    min-height:202px;
+    height:100%;
+    gap:0;
+    padding:23px 12px 18px;
+    text-align:center;
+  }
+  body[data-page="index"] .home-feature-grid .feature-icon,
+  body[data-page="index"] .home-feature-grid .feature-card-search-support .feature-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-row:auto;
+    grid-column:auto;
+    flex:0 0 52px;
+    width:52px;
+    height:52px;
+    margin:0 auto 13px;
+    border-radius:50%;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card-copy {
+    width:100%;
+    min-width:0;
+    grid-row:auto;
+    grid-column:auto;
+    text-align:center;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card h3,
+  body[data-page="index"] .home-feature-grid .feature-card-search-support h3 {
+    display:block;
+    grid-column:auto;
+    margin:0 0 9px;
+    color:#101f35;
+    font-size:15px;
+    font-weight:800;
+    line-height:1.42;
+    text-align:center;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card p {
+    grid-column:auto;
+    margin:0;
+    font-size:12px;
+    line-height:1.6;
+    color:#5b6980;
+    text-align:center;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  body[data-page="index"] .home-feature-grid .feature-free-chip-floating {
+    position:absolute;
+    top:9px;
+    right:9px;
+    margin:0;
+  }
+  body[data-page="index"] .home-feature-grid > .feature-card-search-support {
+    padding-top:27px;
+  }
+}
+@media (max-width:350px) {
+  body[data-page="index"] .home-feature-grid {gap:8px;}
+  body[data-page="index"] .home-feature-grid > .feature-card {padding-inline:8px;}
+  body[data-page="index"] .home-feature-grid .feature-card h3 {font-size:14px;}
+  body[data-page="index"] .home-feature-grid .feature-card p {font-size:11.5px;}
+}
+
+/* Free registration assistance: separated from the general features near the final inquiry CTA. */
+.free-registration-support{padding-top:56px;padding-bottom:56px;background:var(--surface,#fff)}
+.free-registration-heading{text-align:center;max-width:720px;margin:0 auto 28px}
+.free-registration-heading h2{margin:8px 0 12px}
+.free-registration-heading>p:last-child{margin:0;color:var(--muted,#687382)}
+.free-registration-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:850px;margin:0 auto}
+.free-registration-grid>.feature-card{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px}
+.free-registration-grid>.feature-card .feature-card-copy{text-align:center}
+.free-registration-grid>.feature-card .feature-icon{margin-inline:auto}
+.free-registration-support .feature-footnote{text-align:center;max-width:850px;margin:20px auto 0}
+@media(max-width:600px){.free-registration-support{padding-top:40px;padding-bottom:40px}.free-registration-grid{gap:12px}.free-registration-grid>.feature-card{padding:18px 12px}.free-registration-heading{margin-bottom:20px}}
+
+/* 2026-11-23 contact UI: consistent accessible selection cards */
+body[data-page="contact"] .inquiry-options{grid-template-columns:1fr!important;gap:10px;}
+body[data-page="contact"] .inquiry-options label{display:flex;align-items:center;min-height:54px;padding:14px 16px;background:#fff!important;border:2px solid #cbd9eb!important;border-radius:14px;color:#172f4c!important;font-size:15px;font-weight:650;line-height:1.5;box-shadow:none!important;cursor:pointer;transition:background .15s,border-color .15s;}
+body[data-page="contact"] .inquiry-options label:has(input:checked){background:#eaf3ff!important;border-color:#1768c8!important;color:#12375f!important;}
+body[data-page="contact"] .inquiry-options input{width:20px;height:20px;accent-color:#1768c8;opacity:1;visibility:visible;}
+body[data-page="contact"] .inquiry-options label:focus-within{outline:3px solid #81b8ff;outline-offset:3px;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){background:#fff!important;border:2px solid #cbd9eb!important;color:#172f4c!important;border-radius:16px;min-height:86px;box-shadow:none!important;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){background:#eaf3ff!important;border-color:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text :is(strong,small),
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-type-text :is(strong,small){color:#172f4c!important;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon{background:#e9f2ff!important;border-color:#c9ddf8!important;color:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator{border-color:#1768c8!important;background:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice:focus-within{outline:3px solid #81b8ff!important;outline-offset:3px;}
+body[data-page="contact"] .form-panel .submit-wide{min-height:54px;font-weight:750;}
+body[data-page="contact"] .form-notice{line-height:1.65;}
+body[data-page="contact"] .mobile-contact-bar{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media(max-width:650px){body[data-page="contact"] .inquiry-type-grid{grid-template-columns:1fr!important;}}
+
+/* Search registration assistance belongs to the shared features grid (desktop + mobile). */
+.home-feature-grid > .free-registration-feature,
+.services-b-features .features-b-grid > .free-registration-feature {
+  grid-column:auto; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; text-align:center;
+}
+.home-feature-grid > .free-registration-feature .feature-icon,
+.services-b-features .free-registration-feature .feature-icon {margin-left:auto;margin-right:auto;}
+.home-feature-grid > .free-registration-feature h3,
+.services-b-features .free-registration-feature h3,
+.home-feature-grid > .free-registration-feature p,
+.services-b-features .free-registration-feature p {text-align:center;}
+.feature-registration-label {display:inline-block; align-self:center; margin-top:12px; padding:5px 9px; border-radius:999px; font-size:11px; line-height:1.3; font-weight:700; color:#175cd3; background:#eaf2ff;}
+@media(max-width:600px){.home-feature-grid > .free-registration-feature, .services-b-features .features-b-grid > .free-registration-feature{min-width:0;} .feature-registration-label{font-size:10px;padding:4px 7px;margin-top:9px;}}
+
+
+/* Top 2-card row for free registration support */
+.feature-top-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.feature-grid-rest{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.home-feature-grid.feature-grid-rest{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+@media(max-width:1000px){.home-feature-grid.feature-grid-rest{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.feature-top-row{gap:11px}.home-feature-grid.feature-grid-rest{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}}
+@media(max-width:960px){.feature-grid-rest{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.feature-grid-rest{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}}
+
+
+/* Feature card typography/alignment cleanup */
+.feature-top-row .feature-card,
+.feature-grid-rest .feature-card,
+.services-b-features .features-b-grid .feature-card {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+}
+.feature-top-row .feature-icon,
+.feature-grid-rest .feature-icon,
+.services-b-features .features-b-grid .feature-icon {
+  margin-left:auto;
+  margin-right:auto;
+}
+.feature-top-row .feature-card h3,
+.feature-grid-rest .feature-card h3,
+.services-b-features .features-b-grid .feature-card h3 {
+  text-align:center;
+  font-size:18px;
+  line-height:1.45;
+  margin:0 0 10px;
+  letter-spacing:-0.02em;
+  word-break:keep-all;
+}
+.feature-top-row .feature-card p,
+.feature-grid-rest .feature-card p,
+.services-b-features .features-b-grid .feature-card p {
+  text-align:center;
+  font-size:14px;
+  line-height:1.75;
+  margin:0;
+  word-break:keep-all;
+}
+.feature-top-row .feature-registration-label,
+.feature-grid-rest .feature-registration-label,
+.services-b-features .features-b-grid .feature-registration-label {
+  margin-top:14px;
+}
+@media (max-width:700px) {
+  .feature-top-row .feature-card h3,
+  .feature-grid-rest .feature-card h3,
+  .services-b-features .features-b-grid .feature-card h3 {
+    font-size:16px;
+    line-height:1.4;
+  }
+  .feature-top-row .feature-card p,
+  .feature-grid-rest .feature-card p,
+  .services-b-features .features-b-grid .feature-card p {
+    font-size:12.5px;
+    line-height:1.7;
+  }
+}
+
+
+/* Center home services section heading */
+.home-services .section-heading{
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  text-align:center;
+}
+.home-services .section-heading > div,
+.home-services .section-heading > p{
+  text-align:center;
+}
+.home-services .section-heading > p{
+  max-width:720px;
+  margin:0 auto;
+}
+
+
+/* Homepage service cards: consistent rhythm and readable titles on all screens */
+body[data-page="index"] .home-services .service-preview-grid-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px;
+  align-items:stretch;
+}
+body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{
+  box-sizing:border-box;
+  min-width:0;
+  min-height:282px;
+  padding:30px 27px 25px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{
+  font-size:clamp(21px,1.85vw,26px);
+  line-height:1.4;
+  letter-spacing:-.045em;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+  margin:23px 0 12px;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{
+  margin:0;
+  max-width:36ch;
+  font-size:14px;
+  line-height:1.85;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card b{
+  margin-top:auto;
+  padding-top:24px;
+}
+@media(max-width:1050px) and (min-width:901px){
+  body[data-page="index"] .home-services .service-preview-grid-three{gap:12px}
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{padding:25px 19px;min-height:286px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:21px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{font-size:13px}
+}
+@media(max-width:900px){
+  body[data-page="index"] .home-services .service-preview-grid-three{grid-template-columns:1fr!important;gap:13px}
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{min-height:0;padding:25px 24px 22px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:22px;line-height:1.4;margin:18px 0 8px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{max-width:none;font-size:14px;line-height:1.75}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card b{padding-top:18px}
+}
+@media(max-width:420px){
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{padding:23px 20px 20px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:20px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{font-size:13px}
+}
+
+
+/* Services and process: concise, unified top hero layout */
+body[data-page="services"] .page-hero.page-hero-b,
+body[data-page="process"] .page-hero.page-hero-b {
+  padding-block: 72px 76px;
+  min-height: 0;
+}
+body[data-page="services"] .page-hero-b .page-hero-grid,
+body[data-page="process"] .page-hero-b .page-hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 22px;
+  max-width: 1100px;
+  margin-left: 0;
+}
+body[data-page="services"] .page-hero-b h1,
+body[data-page="process"] .page-hero-b h1 {
+  font-size: clamp(40px, 4.2vw, 62px);
+  line-height: 1.21;
+  letter-spacing: -.045em;
+  margin: 0;
+  word-break: keep-all;
+}
+body[data-page="services"] .page-hero-b .page-hero-copy,
+body[data-page="process"] .page-hero-b .page-hero-copy {
+  padding: 0;
+  width: 100%;
+  max-width: 750px;
+}
+body[data-page="services"] .page-hero-b .page-hero-copy p,
+body[data-page="process"] .page-hero-b .page-hero-copy p {
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  body[data-page="services"] .page-hero.page-hero-b,
+  body[data-page="process"] .page-hero.page-hero-b {
+    padding-block: 58px 62px;
+  }
+  body[data-page="services"] .page-hero-b .page-hero-grid,
+  body[data-page="process"] .page-hero-b .page-hero-grid {
+    gap: 18px;
+  }
+  body[data-page="services"] .page-hero-b h1,
+  body[data-page="process"] .page-hero-b h1 {
+    font-size: clamp(32px, 8.2vw, 46px);
+    line-height: 1.23;
+    letter-spacing: -.04em;
+  }
+  body[data-page="services"] .page-hero-b .page-hero-copy p,
+  body[data-page="process"] .page-hero-b .page-hero-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
