@@ -2813,3 +2813,141 @@ body[data-page="process"] .process-b-list p{font-size:15px;line-height:1.8}
 /* Services content refresh: stable jump targets and long label wrapping */
 body[data-page="services"] .service-b-item[id]{scroll-margin-top:108px;}
 body[data-page="services"] .syon-service-mini-card strong{word-break:keep-all;overflow-wrap:break-word;text-wrap:balance;}
+
+
+/* Process FAQ — consistent navy surfaces and responsive accordion typography */
+body[data-page="process"] .syon-process-faq{
+  background:transparent;
+  color:#edf5ff;
+  padding-block:42px 88px;
+}
+body[data-page="process"] .syon-faq-wrap{max-width:1150px}
+body[data-page="process"] .syon-faq-heading{
+  margin:0 0 27px;
+  text-align:center;
+}
+body[data-page="process"] .syon-faq-heading .eyebrow{
+  margin:0 0 10px;
+  color:#8dbaff;
+  letter-spacing:.16em;
+  font-size:11px;
+}
+body[data-page="process"] .syon-faq-heading h2{
+  color:#fff;
+  font-size:clamp(28px,3vw,38px);
+  letter-spacing:-.045em;
+  line-height:1.35;
+}
+body[data-page="process"] .syon-faq-heading>p:last-child{
+  color:#b5c7df;
+  margin:12px 0 0;
+  line-height:1.75;
+  font-size:15px;
+}
+body[data-page="process"] .syon-faq-list{
+  display:grid;
+  gap:12px;
+}
+body[data-page="process"] .syon-faq-item{
+  border:1px solid rgba(142,180,239,.2);
+  border-radius:18px;
+  background:linear-gradient(145deg,#0d2648 0%,#091b34 100%);
+  overflow:hidden;
+  color:#f4f8ff;
+}
+body[data-page="process"] .syon-faq-item[open]{
+  border-color:rgba(121,174,255,.48);
+  background:linear-gradient(145deg,#112e54 0%,#0a1d39 100%);
+}
+body[data-page="process"] .syon-faq-item summary{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  min-height:74px;
+  padding:19px 24px;
+  cursor:pointer;
+}
+body[data-page="process"] .syon-faq-item summary::-webkit-details-marker{display:none}
+body[data-page="process"] .syon-faq-item summary:focus-visible{
+  outline:3px solid #8bbcff;
+  outline-offset:-4px;
+  border-radius:15px;
+}
+body[data-page="process"] .syon-faq-number{
+  flex:0 0 32px;
+  color:#91c1ff;
+  font-size:13px;
+  font-weight:750;
+  font-variant-numeric:tabular-nums;
+}
+body[data-page="process"] .syon-faq-question{
+  flex:1;
+  min-width:0;
+  color:#f5f9ff;
+  font-weight:700;
+  font-size:17px;
+  line-height:1.5;
+  word-break:keep-all;
+}
+body[data-page="process"] .syon-faq-toggle{
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:rgba(117,166,241,.13);
+  position:relative;
+}
+body[data-page="process"] .syon-faq-toggle::before,
+body[data-page="process"] .syon-faq-toggle::after{
+  content:"";
+  position:absolute;
+  background:#a7d0ff;
+  border-radius:1px;
+  left:9px;
+  top:14px;
+  width:12px;
+  height:2px;
+}
+body[data-page="process"] .syon-faq-toggle::after{transform:rotate(90deg);transition:transform .18s ease}
+body[data-page="process"] .syon-faq-item[open] .syon-faq-toggle::after{transform:rotate(0)}
+body[data-page="process"] .syon-faq-answer{
+  margin:0 24px 20px 72px;
+  padding-top:15px;
+  border-top:1px solid rgba(155,184,225,.18);
+}
+body[data-page="process"] .syon-faq-answer p{
+  color:#c3d3e8;
+  font-size:15px;
+  line-height:1.85;
+  margin:0;
+  word-break:keep-all;
+}
+body[data-page="process"] .syon-process-faq+.final-cta{
+  background:#061120;
+  padding-top:56px;
+  border-top:1px solid rgba(142,180,239,.12);
+}
+@media(max-width:700px){
+  body[data-page="process"] .syon-process-faq{padding-block:30px 60px}
+  body[data-page="process"] .syon-faq-heading{margin-bottom:22px}
+  body[data-page="process"] .syon-faq-heading h2{font-size:29px}
+  body[data-page="process"] .syon-faq-heading>p:last-child{font-size:13px}
+  body[data-page="process"] .syon-faq-list{gap:10px}
+  body[data-page="process"] .syon-faq-item{border-radius:15px}
+  body[data-page="process"] .syon-faq-item summary{
+    padding:16px 15px;
+    gap:9px;
+    min-height:64px;
+  }
+  body[data-page="process"] .syon-faq-number{flex-basis:24px;font-size:12px}
+  body[data-page="process"] .syon-faq-question{font-size:14px;line-height:1.55}
+  body[data-page="process"] .syon-faq-toggle{flex-basis:27px;width:27px;height:27px}
+  body[data-page="process"] .syon-faq-toggle::before,
+  body[data-page="process"] .syon-faq-toggle::after{left:8px;top:12.5px;width:11px}
+  body[data-page="process"] .syon-faq-answer{margin:0 15px 17px 48px;padding-top:12px}
+  body[data-page="process"] .syon-faq-answer p{font-size:13px;line-height:1.8}
+  body[data-page="process"] .syon-process-faq+.final-cta{padding-top:42px}
+}
+
+body[data-page="process"] .syon-faq-answer p+p{margin-top:10px}
