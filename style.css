@@ -2293,3 +2293,22 @@ body[data-page="services"] .services-b-features .feature-card .feature-icon{marg
 .free-registration-grid>.feature-card .feature-icon{margin-inline:auto}
 .free-registration-support .feature-footnote{text-align:center;max-width:850px;margin:20px auto 0}
 @media(max-width:600px){.free-registration-support{padding-top:40px;padding-bottom:40px}.free-registration-grid{gap:12px}.free-registration-grid>.feature-card{padding:18px 12px}.free-registration-heading{margin-bottom:20px}}
+
+/* 2026-11-23 contact UI: consistent accessible selection cards */
+body[data-page="contact"] .inquiry-options{grid-template-columns:1fr!important;gap:10px;}
+body[data-page="contact"] .inquiry-options label{display:flex;align-items:center;min-height:54px;padding:14px 16px;background:#fff!important;border:2px solid #cbd9eb!important;border-radius:14px;color:#172f4c!important;font-size:15px;font-weight:650;line-height:1.5;box-shadow:none!important;cursor:pointer;transition:background .15s,border-color .15s;}
+body[data-page="contact"] .inquiry-options label:has(input:checked){background:#eaf3ff!important;border-color:#1768c8!important;color:#12375f!important;}
+body[data-page="contact"] .inquiry-options input{width:20px;height:20px;accent-color:#1768c8;opacity:1;visibility:visible;}
+body[data-page="contact"] .inquiry-options label:focus-within{outline:3px solid #81b8ff;outline-offset:3px;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice,
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){background:#fff!important;border:2px solid #cbd9eb!important;color:#172f4c!important;border-radius:16px;min-height:86px;box-shadow:none!important;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-choice:has(input:checked){background:#eaf3ff!important;border-color:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice .inquiry-type-text :is(strong,small),
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-type-text :is(strong,small){color:#172f4c!important;}
+body[data-page="contact"] .contact-b-left .form-panel .inquiry-type-icon{background:#e9f2ff!important;border-color:#c9ddf8!important;color:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choice-indicator{border-color:#1768c8!important;background:#1768c8!important;}
+body[data-page="contact"] .inquiry-type-choice:focus-within{outline:3px solid #81b8ff!important;outline-offset:3px;}
+body[data-page="contact"] .form-panel .submit-wide{min-height:54px;font-weight:750;}
+body[data-page="contact"] .form-notice{line-height:1.65;}
+body[data-page="contact"] .mobile-contact-bar{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media(max-width:650px){body[data-page="contact"] .inquiry-type-grid{grid-template-columns:1fr!important;}}
