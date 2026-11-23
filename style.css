@@ -2466,3 +2466,63 @@ body[data-page="index"] .home-services .service-preview-grid-three .renew-servic
   body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:20px}
   body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{font-size:13px}
 }
+
+
+/* Services and process: concise, unified top hero layout */
+body[data-page="services"] .page-hero.page-hero-b,
+body[data-page="process"] .page-hero.page-hero-b {
+  padding-block: 72px 76px;
+  min-height: 0;
+}
+body[data-page="services"] .page-hero-b .page-hero-grid,
+body[data-page="process"] .page-hero-b .page-hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 22px;
+  max-width: 1100px;
+  margin-left: 0;
+}
+body[data-page="services"] .page-hero-b h1,
+body[data-page="process"] .page-hero-b h1 {
+  font-size: clamp(40px, 4.2vw, 62px);
+  line-height: 1.21;
+  letter-spacing: -.045em;
+  margin: 0;
+  word-break: keep-all;
+}
+body[data-page="services"] .page-hero-b .page-hero-copy,
+body[data-page="process"] .page-hero-b .page-hero-copy {
+  padding: 0;
+  width: 100%;
+  max-width: 750px;
+}
+body[data-page="services"] .page-hero-b .page-hero-copy p,
+body[data-page="process"] .page-hero-b .page-hero-copy p {
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  body[data-page="services"] .page-hero.page-hero-b,
+  body[data-page="process"] .page-hero.page-hero-b {
+    padding-block: 58px 62px;
+  }
+  body[data-page="services"] .page-hero-b .page-hero-grid,
+  body[data-page="process"] .page-hero-b .page-hero-grid {
+    gap: 18px;
+  }
+  body[data-page="services"] .page-hero-b h1,
+  body[data-page="process"] .page-hero-b h1 {
+    font-size: clamp(32px, 8.2vw, 46px);
+    line-height: 1.23;
+    letter-spacing: -.04em;
+  }
+  body[data-page="services"] .page-hero-b .page-hero-copy p,
+  body[data-page="process"] .page-hero-b .page-hero-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
