@@ -2809,3 +2809,7 @@ body[data-page="process"] .process-b-list h3{font-size:30px}
 body[data-page="process"] .process-b-list p{font-size:15px;line-height:1.8}
 @media(max-width:900px){body[data-page="process"] .process-b-list article{grid-template-columns:70px 180px 1fr;gap:18px}body[data-page="process"] .process-b-list h3{font-size:26px}}
 @media(max-width:700px){body[data-page="process"] .page-hero-b.syon-simple-hero{padding:18px 0 8px}body[data-page="process"] .process-b-steps{padding-top:8px}body[data-page="process"] .process-b-list article{grid-template-columns:1fr;align-items:start;gap:14px;padding:18px 18px 20px}body[data-page="process"] .process-b-list span{width:48px;height:48px}body[data-page="process"] .process-b-list h3{font-size:22px}body[data-page="process"] .process-b-list p{font-size:14px;line-height:1.75}}
+
+/* Services content refresh: stable jump targets and long label wrapping */
+body[data-page="services"] .service-b-item[id]{scroll-margin-top:108px;}
+body[data-page="services"] .syon-service-mini-card strong{word-break:keep-all;overflow-wrap:break-word;text-wrap:balance;}
