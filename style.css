@@ -2196,3 +2196,88 @@ body[data-page="services"] .services-b-features .feature-card{text-align:center;
 body[data-page="services"] .services-b-features .feature-card :is(h3,p){text-align:center}
 body[data-page="services"] .services-b-features .feature-card .feature-icon{margin-inline:auto}
 @media(max-width:650px){body[data-page="contact"] .inquiry-options{grid-template-columns:1fr}}
+
+
+/* 2026-11-23: HOME feature cards — consistent mobile-only icon/title/description alignment.
+   Overrides the older <=420px icon-left grid rule without changing desktop layout. */
+@media (max-width:700px) {
+  body[data-page="index"] .home-feature-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:11px;
+    align-items:stretch;
+  }
+  body[data-page="index"] .home-feature-grid > .feature-card,
+  body[data-page="index"] .home-feature-grid > .feature-card-search-support {
+    box-sizing:border-box;
+    grid-column:span 1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-width:0;
+    min-height:202px;
+    height:100%;
+    gap:0;
+    padding:23px 12px 18px;
+    text-align:center;
+  }
+  body[data-page="index"] .home-feature-grid .feature-icon,
+  body[data-page="index"] .home-feature-grid .feature-card-search-support .feature-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-row:auto;
+    grid-column:auto;
+    flex:0 0 52px;
+    width:52px;
+    height:52px;
+    margin:0 auto 13px;
+    border-radius:50%;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card-copy {
+    width:100%;
+    min-width:0;
+    grid-row:auto;
+    grid-column:auto;
+    text-align:center;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card h3,
+  body[data-page="index"] .home-feature-grid .feature-card-search-support h3 {
+    display:block;
+    grid-column:auto;
+    margin:0 0 9px;
+    color:#101f35;
+    font-size:15px;
+    font-weight:800;
+    line-height:1.42;
+    text-align:center;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  body[data-page="index"] .home-feature-grid .feature-card p {
+    grid-column:auto;
+    margin:0;
+    font-size:12px;
+    line-height:1.6;
+    color:#5b6980;
+    text-align:center;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  body[data-page="index"] .home-feature-grid .feature-free-chip-floating {
+    position:absolute;
+    top:9px;
+    right:9px;
+    margin:0;
+  }
+  body[data-page="index"] .home-feature-grid > .feature-card-search-support {
+    padding-top:27px;
+  }
+}
+@media (max-width:350px) {
+  body[data-page="index"] .home-feature-grid {gap:8px;}
+  body[data-page="index"] .home-feature-grid > .feature-card {padding-inline:8px;}
+  body[data-page="index"] .home-feature-grid .feature-card h3 {font-size:14px;}
+  body[data-page="index"] .home-feature-grid .feature-card p {font-size:11.5px;}
+}
