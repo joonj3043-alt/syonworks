@@ -2951,3 +2951,155 @@ body[data-page="process"] .syon-process-faq+.final-cta{
 }
 
 body[data-page="process"] .syon-faq-answer p+p{margin-top:10px}
+
+
+/* 2026-11-23: balanced and centered service package cards */
+body[data-page="services"] .services-production-types .production-types-grid{
+  align-items:stretch;
+}
+body[data-page="services"] .services-production-types .production-type-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  justify-content:flex-start;
+  min-width:0;
+  padding:clamp(27px,3.4vw,42px) clamp(19px,3vw,38px);
+  min-height:445px;
+  border-radius:20px;
+}
+body[data-page="services"] .services-production-types .production-type-label{
+  display:block;
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:.11em;
+}
+body[data-page="services"] .services-production-types .production-type-card h3{
+  margin:18px 0 13px;
+  font-size:clamp(27px,3vw,36px);
+  line-height:1.34;
+  word-break:keep-all;
+}
+body[data-page="services"] .services-production-types .production-type-card > p{
+  max-width:390px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:15px;
+  line-height:1.78;
+  word-break:keep-all;
+}
+body[data-page="services"] .services-production-types .production-type-price{
+  display:block;
+  width:100%;
+  margin:24px 0 10px;
+  text-align:center;
+  font-size:clamp(24px,2.65vw,31px);
+}
+body[data-page="services"] .services-production-types .production-type-note{
+  min-height:52px;
+  max-width:390px;
+  margin:0 auto;
+  font-size:13px;
+  line-height:1.75;
+  color:#b8cbe4;
+}
+body[data-page="services"] .services-production-types .production-type-actions{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+  gap:13px;
+  margin-top:auto;
+  padding-top:26px;
+}
+body[data-page="services"] .services-production-types .production-type-actions .button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:min(100%,300px);
+  min-width:0;
+  min-height:50px;
+  white-space:normal;
+  text-align:center;
+  font-size:15px;
+}
+body[data-page="services"] .services-production-types .production-type-detail{
+  display:inline-block;
+  padding:5px 10px;
+  line-height:1.5;
+  text-align:center;
+}
+body[data-page="services"] .services-production-types .production-type-actions a:focus-visible{
+  outline:3px solid #9ac6ff;
+  outline-offset:4px;
+}
+@media(max-width:800px){
+  body[data-page="services"] .services-production-types .production-type-card{
+    min-height:0;
+    padding:29px 22px;
+  }
+  body[data-page="services"] .services-production-types .production-type-note{
+    min-height:0;
+  }
+  body[data-page="services"] .services-production-types .production-type-actions{
+    margin-top:12px;
+    padding-top:18px;
+  }
+}
+@media(max-width:480px){
+  body[data-page="services"] .services-production-types .production-type-card h3{
+    font-size:27px;
+  }
+  body[data-page="services"] .services-production-types .production-type-card > p{
+    font-size:14px;
+  }
+  body[data-page="services"] .services-production-types .production-type-actions .button{
+    width:100%;
+  }
+}
+
+/* Contact: readable action states across desktop/mobile and keyboard interaction. */
+body[data-page="contact"] .form-panel .inquiry-type-choice{
+  cursor:pointer;
+}
+body[data-page="contact"] .form-panel .inquiry-type-choice:focus-within{
+  outline:3px solid #8ebdff;
+  outline-offset:3px;
+}
+body[data-page="contact"] .form-panel .submit-wide{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:54px;
+  gap:10px;
+  white-space:normal;
+  text-align:center;
+}
+body[data-page="contact"] .form-panel .result-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:12px;
+}
+body[data-page="contact"] .form-panel .result-actions .button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  min-width:0;
+  white-space:normal;
+  text-align:center;
+}
+body[data-page="contact"] .form-panel [hidden]{
+  display:none!important;
+}
+@media(max-width:650px){
+  body[data-page="contact"] .form-panel .result-actions{
+    flex-direction:column;
+  }
+  body[data-page="contact"] .form-panel .result-actions .button{
+    width:100%;
+  }
+}
