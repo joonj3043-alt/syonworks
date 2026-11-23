@@ -2530,3 +2530,43 @@ body[data-page="process"] .page-hero-b .page-hero-copy p {
 /* Give the offer consultation button breathing room below the plan cards. */
 body[data-page="index"] .syon-offer-cta{margin-top:52px;}
 @media(max-width:760px){body[data-page="index"] .syon-offer-cta{margin-top:36px;}}
+
+/* 2026-11-23: centered plan cards with independent bottom enquiry actions */
+body[data-page="index"] .syon-offer-grid {align-items:stretch;}
+body[data-page="index"] .syon-offer-card {
+  display:flex; flex-direction:column; align-items:stretch; text-align:center;
+  justify-content:flex-start; min-width:0; padding:28px 30px 26px;
+}
+body[data-page="index"] .syon-offer-card-top {
+  flex-direction:column; align-items:center; justify-content:center; gap:16px;
+}
+body[data-page="index"] .syon-offer-card-top > div:last-child {text-align:center;}
+body[data-page="index"] .syon-offer-card-icon {margin:0 auto; flex-shrink:0;}
+body[data-page="index"] .syon-offer-card h3,
+body[data-page="index"] .syon-offer-card .syon-offer-price,
+body[data-page="index"] .syon-offer-card .syon-offer-card-desc {text-align:center;}
+body[data-page="index"] .syon-offer-card .syon-offer-card-desc {
+  margin:22px auto 20px; max-width:540px; word-break:keep-all;
+}
+body[data-page="index"] .syon-offer-card .syon-offer-features {width:100%; margin-bottom:24px;}
+body[data-page="index"] .syon-offer-card-button {
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  width:100%; min-height:58px; margin-top:auto;
+  padding:14px 20px; border-radius:14px;
+  border:1px solid #73b5ff; background:linear-gradient(180deg,#318bfb,#0755d1);
+  box-shadow:0 8px 20px rgba(0,24,82,.22);
+  color:#fff !important; text-decoration:none; font-weight:800; font-size:18px;
+  transition:transform .2s ease,filter .2s ease;
+}
+body[data-page="index"] .syon-offer-card-button:hover {transform:translateY(-2px);filter:brightness(1.08);}
+body[data-page="index"] .syon-offer-card-button:focus-visible {outline:3px solid #8fd1ff;outline-offset:3px;}
+body[data-page="index"] .syon-offer-condition-note {
+  margin:22px auto 0; color:#b5c8e3; font-size:11px; line-height:1.7; text-align:center;
+}
+@media(max-width:760px) {
+  body[data-page="index"] .syon-offer-card {padding:23px 18px 22px;}
+  body[data-page="index"] .syon-offer-card-top {gap:12px;}
+  body[data-page="index"] .syon-offer-card .syon-offer-card-desc {margin:16px auto 18px;}
+  body[data-page="index"] .syon-offer-card .syon-offer-features {margin-bottom:22px;}
+  body[data-page="index"] .syon-offer-card-button {min-height:52px;font-size:16px;padding:12px 14px;}
+}
