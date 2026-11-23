@@ -1,0 +1,8 @@
+PC·모바일 콘텐츠 통일 안내 (2026-11-23)
+- 실제 콘텐츠 소스: home/index.html 등 각 메뉴 폴더의 index.html
+- 루트 index.html: 최신 공통 메인 /home/로 이동(기존 구버전 콘텐츠 제거)
+- syonworks_mobile_centered.html: 별도 구버전 모바일 페이지 대신 /home/로 이동
+- 공통 CSS: style.css, 공통 스크립트: app.js
+- PC·모바일은 하나의 반응형 HTML을 공유. 별도 콘텐츠 복제 필요 없음.
+- 서버 업로드 시 이 압축파일 내부 syonworks-main 폴더의 내용을 웹사이트 공개 루트에 덮어쓰기.
+- 실제 기기별 화면과 폼 전송은 배포 후 확인 권장.
