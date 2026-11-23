@@ -3269,3 +3269,14 @@ body[data-page="services"] .services-b-core{padding-top:58px}
  body[data-page="services"] .services-production-types .production-type-card{padding:28px 19px}
  body[data-page="services"] .services-production-types .production-type-card > p:not(.production-type-note){font-size:14px}
 }
+
+
+/* 2026-11-23 services production cards centered heading and simplified copy */
+body[data-page="services"] .production-types-heading.production-types-heading-center{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+body[data-page="services"] .production-types-heading.production-types-heading-center > div{display:flex;flex-direction:column;align-items:center;text-align:center}
+body[data-page="services"] .production-types-heading.production-types-heading-center > p{max-width:760px;margin:0 auto}
+body[data-page="services"] .services-production-types .production-type-card{justify-content:flex-start}
+body[data-page="services"] .services-production-types .production-type-card > p{max-width:430px;margin-left:auto;margin-right:auto}
+body[data-page="services"] .services-production-types .production-type-price{margin-bottom:0}
+body[data-page="services"] .services-production-types .production-type-note{display:none}
+body[data-page="services"] .services-production-types .production-type-actions{padding-top:30px;margin-top:auto}
