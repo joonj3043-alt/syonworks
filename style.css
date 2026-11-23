@@ -2178,3 +2178,21 @@ body[data-page="about"] .founder-copy>p strong{font-weight:800;color:#0b306b}
 .inquiry-fee p{margin:7px 0;font-size:1rem}
 .inquiry-fee small{display:block;font-size:.875rem;color:#40566b;line-height:1.5}
 .inquiry-extra-fields [hidden]{display:none!important}
+
+/* Consistent, readable selection states and consultation sequence */
+body[data-page="contact"] .form-panel > .inquiry-extra-fields,
+body[data-page="contact"] .form-panel > .inquiry-type-fieldset{grid-column:1/-1}
+body[data-page="contact"] .form-panel > .inquiry-extra-fields{margin:0 0 22px}
+body[data-page="contact"] .inquiry-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-page="contact"] .inquiry-options label,
+body[data-page="contact"] .inquiry-options label:has(input:checked){color:#17324e!important}
+body[data-page="contact"] .inquiry-options label:has(input:checked){background:#eaf3ff!important;border-color:#1668c9!important}
+body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-type-text :is(strong,small){color:#fff!important}
+body[data-page="services"] .services-b-features .section-heading,
+body[data-page="services"] .production-types-heading{display:flex;flex-direction:column;text-align:center;align-items:center;gap:15px}
+body[data-page="services"] .services-b-features .section-heading p,
+body[data-page="services"] .production-types-heading p{margin-inline:auto;text-align:center}
+body[data-page="services"] .services-b-features .feature-card{text-align:center;align-items:center}
+body[data-page="services"] .services-b-features .feature-card :is(h3,p){text-align:center}
+body[data-page="services"] .services-b-features .feature-card .feature-icon{margin-inline:auto}
+@media(max-width:650px){body[data-page="contact"] .inquiry-options{grid-template-columns:1fr}}

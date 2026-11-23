@@ -43,20 +43,15 @@ if(validPhone)contactLink('전화 상담 ↗','tel:'+phone);if(kakao)contactLink
 // Inquiry form: no server persistence; opens user's own messaging/mail app only when configured
 const form=$('#inquiry'),prepared=$('#prepared-message'),canSend=validPhone||validEmail;
 if(form&&prepared){
- if(document.body.dataset.page==='contact'){
-  const messageRow=form.querySelector('textarea[name="message"]')?.closest('.form-row');
-  const typeFieldset=form.querySelector('.inquiry-type-fieldset');
-  if(messageRow&&typeFieldset)messageRow.after(typeFieldset);
- }
  const params=new URLSearchParams(location.search),freeTrialContext=params.get('type')==='free-trial'||document.body.dataset.page==='free-project';
  const notice=$('#form-notice'),foot=$('#form-foot'),formTitle=$('#form-title'),submitButton=$('#submit-button');
  const productionChoices=form.querySelectorAll('[name="production_type"]');
  if(productionChoices.length){const selected=params.get('type');const match=[...productionChoices].find(el=>el.value===selected);if(match)match.checked=true;}
  if(productionChoices.length){
-  const section=document.createElement('div');section.className='inquiry-extra-fields';section.innerHTML=`<fieldset><legend>어떤 홈페이지가 필요하신가요? <span class="required">필수</span></legend><div class="inquiry-options"><label><input type="radio" name="project_kind" value="신규 홈페이지 제작" required> 신규 홈페이지 제작</label><label><input type="radio" name="project_kind" value="기존 홈페이지 리뉴얼"> 기존 홈페이지 리뉴얼</label><label><input type="radio" name="project_kind" value="단순 홍보용 페이지(랜딩페이지)"> 단순 홍보용 페이지(랜딩페이지)</label></div></fieldset><div class="inquiry-fee" id="partnership-fee" hidden><strong>홈페이지 제작비 0원</strong><p>서버(호스팅) 비용 연 55,000원 (1회, VAT 포함)</p><small>제휴 프로그램 검토·선정 및 기본 제작 범위에 따라 적용됩니다.</small></div><div class="form-row" id="standard-budget" hidden><label>예상 제작 예산 <select name="budget"><option value="미정">상담 후 결정</option><option>50만 원 미만</option><option>50만~100만 원</option><option>100만~200만 원</option><option>200만 원 이상</option><option>잘 모르겠어요</option><option>홈페이지에 맞게 제안받고 싶어요</option></select></label></div>`;
+  const section=document.createElement('div');section.className='inquiry-extra-fields';section.innerHTML=`<fieldset><legend>어떤 홈페이지가 필요하신가요? <span class="required">필수</span></legend><div class="inquiry-options"><label><input type="radio" name="project_kind" value="신규 홈페이지 제작" required> 신규 홈페이지 제작</label><label><input type="radio" name="project_kind" value="기존 홈페이지 리뉴얼"> 기존 홈페이지 리뉴얼</label><label><input type="radio" name="project_kind" value="단순 홍보 페이지(랜딩페이지)"> 단순 홍보 페이지(랜딩페이지)</label></div></fieldset><div class="inquiry-fee" id="partnership-fee" hidden><strong>홈페이지 제작비 0원</strong><p>서버(호스팅) 비용 연 55,000원 (1회, VAT 포함)</p><small>제휴 프로그램 검토·선정 및 기본 제작 범위에 따라 적용됩니다.</small></div><div class="form-row" id="standard-budget" hidden><label>예상 제작 예산 <select name="budget"><option value="미정">상담 후 결정</option></select></label></div>`;
   const budgetChoices=['상담 후 결정'];
   section.querySelector('#standard-budget').innerHTML=`<fieldset><legend>예상 제작 예산</legend><div class="inquiry-options budget-options">${budgetChoices.map((choice,i)=>`<label><input type="radio" name="budget" value="${i===0?'미정':choice}" ${i===0?'checked':''}> ${choice}</label>`).join('')}</div></fieldset>`;
-  form.querySelector('.inquiry-type-fieldset').after(section);
+  form.querySelector('.inquiry-type-fieldset').before(section);
   const syncType=()=>{const chosen=form.querySelector('[name="production_type"]:checked')?.value;section.querySelector('#partnership-fee').hidden=chosen!=='partnership';section.querySelector('#standard-budget').hidden=chosen!=='standard';};
   productionChoices.forEach(choice=>choice.addEventListener('change',syncType));syncType();
  }
