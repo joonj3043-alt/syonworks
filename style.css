@@ -2796,3 +2796,16 @@ body[data-page="process"] .syon-process-mini-card strong {
   body[data-page="process"] .syon-process-mini-card span { font-size: 15px; }
   body[data-page="process"] .syon-process-mini-card strong { font-size: 13px; }
 }
+
+
+/* 2026-11-23 process page dark background + updated copy/layout */
+body[data-page="process"] main{background:linear-gradient(180deg,#071120 0%,#061120 100%)}
+body[data-page="process"] .page-hero-b.syon-simple-hero{background:linear-gradient(180deg,#071120 0%,#071120 100%);color:#eef4ff;padding:22px 0 10px}
+body[data-page="process"] .syon-simple-hero-panel{background:linear-gradient(135deg,#041a37 0%,#07224a 100%);box-shadow:0 10px 26px rgba(8,20,48,.16)}
+body[data-page="process"] .process-b-steps{background:transparent;padding-top:10px}
+body[data-page="process"] .process-b-list{display:grid;gap:16px}
+body[data-page="process"] .process-b-list article{grid-template-columns:78px 220px 1fr;align-items:center}
+body[data-page="process"] .process-b-list h3{font-size:30px}
+body[data-page="process"] .process-b-list p{font-size:15px;line-height:1.8}
+@media(max-width:900px){body[data-page="process"] .process-b-list article{grid-template-columns:70px 180px 1fr;gap:18px}body[data-page="process"] .process-b-list h3{font-size:26px}}
+@media(max-width:700px){body[data-page="process"] .page-hero-b.syon-simple-hero{padding:18px 0 8px}body[data-page="process"] .process-b-steps{padding-top:8px}body[data-page="process"] .process-b-list article{grid-template-columns:1fr;align-items:start;gap:14px;padding:18px 18px 20px}body[data-page="process"] .process-b-list span{width:48px;height:48px}body[data-page="process"] .process-b-list h3{font-size:22px}body[data-page="process"] .process-b-list p{font-size:14px;line-height:1.75}}
