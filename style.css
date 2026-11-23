@@ -2336,3 +2336,133 @@ body[data-page="contact"] .mobile-contact-bar{grid-template-columns:repeat(2,min
 @media(max-width:700px){.feature-top-row{gap:11px}.home-feature-grid.feature-grid-rest{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}}
 @media(max-width:960px){.feature-grid-rest{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.feature-grid-rest{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}}
+
+
+/* Feature card typography/alignment cleanup */
+.feature-top-row .feature-card,
+.feature-grid-rest .feature-card,
+.services-b-features .features-b-grid .feature-card {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+}
+.feature-top-row .feature-icon,
+.feature-grid-rest .feature-icon,
+.services-b-features .features-b-grid .feature-icon {
+  margin-left:auto;
+  margin-right:auto;
+}
+.feature-top-row .feature-card h3,
+.feature-grid-rest .feature-card h3,
+.services-b-features .features-b-grid .feature-card h3 {
+  text-align:center;
+  font-size:18px;
+  line-height:1.45;
+  margin:0 0 10px;
+  letter-spacing:-0.02em;
+  word-break:keep-all;
+}
+.feature-top-row .feature-card p,
+.feature-grid-rest .feature-card p,
+.services-b-features .features-b-grid .feature-card p {
+  text-align:center;
+  font-size:14px;
+  line-height:1.75;
+  margin:0;
+  word-break:keep-all;
+}
+.feature-top-row .feature-registration-label,
+.feature-grid-rest .feature-registration-label,
+.services-b-features .features-b-grid .feature-registration-label {
+  margin-top:14px;
+}
+@media (max-width:700px) {
+  .feature-top-row .feature-card h3,
+  .feature-grid-rest .feature-card h3,
+  .services-b-features .features-b-grid .feature-card h3 {
+    font-size:16px;
+    line-height:1.4;
+  }
+  .feature-top-row .feature-card p,
+  .feature-grid-rest .feature-card p,
+  .services-b-features .features-b-grid .feature-card p {
+    font-size:12.5px;
+    line-height:1.7;
+  }
+}
+
+
+/* Center home services section heading */
+.home-services .section-heading{
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  text-align:center;
+}
+.home-services .section-heading > div,
+.home-services .section-heading > p{
+  text-align:center;
+}
+.home-services .section-heading > p{
+  max-width:720px;
+  margin:0 auto;
+}
+
+
+/* Homepage service cards: consistent rhythm and readable titles on all screens */
+body[data-page="index"] .home-services .service-preview-grid-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px;
+  align-items:stretch;
+}
+body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{
+  box-sizing:border-box;
+  min-width:0;
+  min-height:282px;
+  padding:30px 27px 25px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{
+  font-size:clamp(21px,1.85vw,26px);
+  line-height:1.4;
+  letter-spacing:-.045em;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+  margin:23px 0 12px;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{
+  margin:0;
+  max-width:36ch;
+  font-size:14px;
+  line-height:1.85;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card b{
+  margin-top:auto;
+  padding-top:24px;
+}
+@media(max-width:1050px) and (min-width:901px){
+  body[data-page="index"] .home-services .service-preview-grid-three{gap:12px}
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{padding:25px 19px;min-height:286px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:21px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{font-size:13px}
+}
+@media(max-width:900px){
+  body[data-page="index"] .home-services .service-preview-grid-three{grid-template-columns:1fr!important;gap:13px}
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{min-height:0;padding:25px 24px 22px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:22px;line-height:1.4;margin:18px 0 8px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{max-width:none;font-size:14px;line-height:1.75}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card b{padding-top:18px}
+}
+@media(max-width:420px){
+  body[data-page="index"] .home-services .service-preview-grid-three > .renew-service-card{padding:23px 20px 20px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card h3{font-size:20px}
+  body[data-page="index"] .home-services .service-preview-grid-three .renew-service-card p{font-size:13px}
+}
