@@ -3406,3 +3406,6 @@ body[data-page="index"] .hero .hero-tags img{
   body[data-page="index"] .hero .hero-tags{font-size:14px;gap:12px}
   body[data-page="index"] .hero .hero-tags > span + span{padding-left:12px}
 }
+
+/* Desktop main copy vertical alignment only */
+@media (min-width:1021px){body[data-page="index"] .syon-offer-intro .syon-offer-copy{top:-65px;}}
