@@ -3343,3 +3343,66 @@ body[data-page="index"] .final-cta-simple .button.primary{width:min(100%,260px);
   .header .logo{font-size:20px}
   .header .header-cta{min-height:44px;padding:10px 14px;font-size:13px;border-radius:12px}
 }
+
+
+/* HOME HERO COPY TUNING 2026-11-24 */
+body[data-page="index"] .hero.studio-hero .hero-grid{
+  grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:clamp(26px,3.6vw,56px);
+  min-height:660px;
+  padding-block:76px 78px;
+}
+body[data-page="index"] .hero .hero-copy{
+  max-width:760px;
+}
+body[data-page="index"] .hero .hero-badge{
+  font-size:14px;
+  padding:12px 18px;
+  margin-bottom:30px;
+}
+body[data-page="index"] .hero .hero-badge::before{
+  width:10px;
+  height:10px;
+}
+body[data-page="index"] .hero .hero-copy h1{
+  font-size:clamp(66px,6vw,100px);
+  line-height:1.12;
+  letter-spacing:-.072em;
+  max-width:720px;
+}
+body[data-page="index"] .hero .hero-intro{
+  max-width:620px;
+  font-size:clamp(18px,1.45vw,22px);
+  line-height:1.92;
+  margin:38px 0 32px;
+}
+body[data-page="index"] .hero .hero-tags{
+  gap:18px;
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:0;
+}
+body[data-page="index"] .hero .hero-tags > span + span{
+  padding-left:18px;
+}
+body[data-page="index"] .hero .hero-tags svg,
+body[data-page="index"] .hero .hero-tags i,
+body[data-page="index"] .hero .hero-tags img{
+  transform:scale(1.08);
+}
+
+@media (max-width:1200px){
+  body[data-page="index"] .hero.studio-hero .hero-grid{min-height:620px;padding-block:68px 72px}
+  body[data-page="index"] .hero .hero-copy h1{font-size:clamp(58px,5.5vw,86px)}
+  body[data-page="index"] .hero .hero-intro{font-size:clamp(17px,1.3vw,20px);margin:32px 0 28px}
+  body[data-page="index"] .hero .hero-tags{font-size:15px;gap:14px}
+}
+
+@media (max-width:760px){
+  body[data-page="index"] .hero.studio-hero .hero-grid{grid-template-columns:1fr;min-height:0;padding-block:54px 30px;gap:20px}
+  body[data-page="index"] .hero .hero-badge{font-size:11px;padding:9px 12px;margin-bottom:20px}
+  body[data-page="index"] .hero .hero-copy h1{font-size:clamp(44px,10.6vw,68px);max-width:none}
+  body[data-page="index"] .hero .hero-intro{font-size:15px;line-height:1.8;margin:28px 0 22px;max-width:none}
+  body[data-page="index"] .hero .hero-tags{font-size:14px;gap:12px}
+  body[data-page="index"] .hero .hero-tags > span + span{padding-left:12px}
+}
