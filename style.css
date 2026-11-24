@@ -3433,3 +3433,26 @@ body[data-page="services"] .syon-services-hero .syon-service-mini-icon svg{width
 body[data-page="services"] .syon-services-hero .syon-service-mini-card strong{font-size:clamp(18px,2vw,24px);line-height:1.4}
 body[data-page="services"] .syon-services-hero .syon-service-mini-description{font-size:16px;color:#b1c6e0;line-height:1.65;max-width:280px;margin:0}
 @media(max-width:700px){body[data-page="services"] .syon-services-hero .syon-simple-hero-panel{padding:16px 0 22px}body[data-page="services"] .syon-services-hero .syon-simple-hero-panel h1{font-size:clamp(29px,7.5vw,38px)}body[data-page="services"] .syon-services-hero .syon-simple-hero-desc{font-size:15px;margin-top:14px}body[data-page="services"] .syon-services-hero .syon-service-mini-grid{grid-template-columns:1fr;gap:28px;margin-top:30px}body[data-page="services"] .syon-services-hero .syon-service-mini-card{gap:9px}body[data-page="services"] .syon-services-hero .syon-service-mini-icon svg{width:42px;height:42px}body[data-page="services"] .syon-services-hero .syon-service-mini-card strong{font-size:20px}body[data-page="services"] .syon-services-hero .syon-service-mini-description{font-size:14px}}
+
+/* Mobile service detail cards: centered content, readable checklist */
+@media (max-width:760px){
+ body[data-page="services"] .service-b-item{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:20px;padding:28px 22px;}
+ body[data-page="services"] .service-b-item .service-b-icon{margin:0 auto;}
+ body[data-page="services"] .service-b-item .service-b-main{width:100%;text-align:center;}
+ body[data-page="services"] .service-b-item .service-b-main p{margin-inline:auto;}
+ body[data-page="services"] .service-b-item ul{grid-column:1;justify-self:center;width:max-content;max-width:100%;text-align:left;margin:2px auto 0;gap:8px;}
+}
+
+/* Services: approved open mobile layout and uniform feature tags */
+@media(max-width:760px){
+ body[data-page="services"] .service-b-item{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:18px;padding:32px 4px 36px;border:0;border-bottom:1px solid #304c6b;border-radius:0;background:transparent;box-shadow:none;min-height:0;}
+ body[data-page="services"] .service-b-item .service-b-icon{margin:0 auto;background:transparent;border:0;box-shadow:none;color:#9dc5ff;}
+ body[data-page="services"] .service-b-item .service-b-icon svg{width:48px;height:48px;}
+ body[data-page="services"] .service-b-item .service-b-main{width:100%;text-align:center;min-width:0;}
+ body[data-page="services"] .service-b-item .service-b-main h3{font-size:clamp(23px,6vw,30px);line-height:1.4;word-break:keep-all;}
+ body[data-page="services"] .service-b-item .service-b-main p{font-size:16px;line-height:1.8;margin-inline:auto;}
+ body[data-page="services"] .service-b-item ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-column:1;width:100%;max-width:480px;gap:8px;margin:10px auto 0;padding:0;text-align:center;}
+ body[data-page="services"] .service-b-item li{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px 4px;background:#142d48;border:0;border-radius:6px;font-size:clamp(13px,3.6vw,16px);font-weight:600;line-height:1.4;word-break:keep-all;}
+ body[data-page="services"] .service-b-item li::before,body[data-page="services"] .service-b-item li::after{content:none;display:none;}
+ body[data-page="services"] .service-b-item li:last-child:nth-child(odd){grid-column:1;width:100%;justify-self:stretch;}
+}
