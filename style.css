@@ -2310,7 +2310,7 @@ body[data-page="contact"] .inquiry-type-choice:has(input:checked) .inquiry-choic
 body[data-page="contact"] .inquiry-type-choice:focus-within{outline:3px solid #81b8ff!important;outline-offset:3px;}
 body[data-page="contact"] .form-panel .submit-wide{min-height:54px;font-weight:750;}
 body[data-page="contact"] .form-notice{line-height:1.65;}
-body[data-page="contact"] .mobile-contact-bar{grid-template-columns:repeat(2,minmax(0,1fr));}
+body[data-page="contact"] .mobile-contact-bar{grid-template-columns:repeat(3,minmax(0,1fr));}
 @media(max-width:650px){body[data-page="contact"] .inquiry-type-grid{grid-template-columns:1fr!important;}}
 
 /* Search registration assistance belongs to the shared features grid (desktop + mobile). */
@@ -3617,3 +3617,5 @@ body[data-page="process"] .process-b-list article p{font-size:15px;line-height:1
  body[data-page="services"] .services-b-core{padding-top:12px;}
  body[data-page="services"] .services-b-list > .service-b-item:first-child{padding-top:12px;}
 }
+
+.mobile-contact-bar a.kakao-mobile-link span,.mobile-contact-bar a.kakao-mobile-link b{color:#fee500}
