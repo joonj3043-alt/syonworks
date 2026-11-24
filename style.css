@@ -3610,3 +3610,10 @@ body[data-page="process"] .process-b-list article{display:flex;flex-direction:co
 body[data-page="process"] .process-step-symbol .process-flow-icon{width:42px;height:42px}
 body[data-page="process"] .process-b-list article p{font-size:15px;line-height:1.8;max-width:480px}
 }
+
+/* Services: reduce mobile gap between production cards and first service */
+@media(max-width:760px){
+ body[data-page="services"] .services-production-types{padding-bottom:20px;}
+ body[data-page="services"] .services-b-core{padding-top:12px;}
+ body[data-page="services"] .services-b-list > .service-b-item:first-child{padding-top:12px;}
+}
