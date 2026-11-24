@@ -3280,3 +3280,13 @@ body[data-page="services"] .services-production-types .production-type-card > p{
 body[data-page="services"] .services-production-types .production-type-price{margin-bottom:0}
 body[data-page="services"] .services-production-types .production-type-note{display:none}
 body[data-page="services"] .services-production-types .production-type-actions{padding-top:30px;margin-top:auto}
+
+/* Home bottom consultation CTA: centered, responsive alignment */
+body[data-page="index"] .final-cta-simple{padding-block:76px;}
+body[data-page="index"] .final-cta-simple .final-cta-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:30px;}
+body[data-page="index"] .final-cta-simple .final-cta-inner>div:first-child{width:100%;min-width:0;}
+body[data-page="index"] .final-cta-simple .eyebrow{margin:0 0 16px;max-width:none;text-align:center;}
+body[data-page="index"] .final-cta-simple h2{margin:0;font-size:clamp(28px,3.2vw,44px);line-height:1.4;letter-spacing:-.045em;word-break:keep-all;text-wrap:balance;}
+body[data-page="index"] .final-cta-simple .cta-stack{margin:0;min-width:0;align-items:center;width:100%;}
+body[data-page="index"] .final-cta-simple .button.primary{width:min(100%,260px);min-height:60px;justify-content:center;gap:20px;font-size:17px;}
+@media(max-width:700px){body[data-page="index"] .final-cta-simple{padding-block:52px;}body[data-page="index"] .final-cta-simple .final-cta-inner{gap:24px;}body[data-page="index"] .final-cta-simple h2{font-size:clamp(24px,5.8vw,32px);}body[data-page="index"] .final-cta-simple .button.primary{min-height:56px;font-size:16px;}}

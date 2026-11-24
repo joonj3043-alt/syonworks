@@ -18,3 +18,8 @@ body[data-page="contact"] .sc-form .consent input[type="checkbox"]:focus-visible
 body[data-page="contact"] .sc-form .form-notice{background:transparent;border:0;border-radius:0;box-shadow:none;padding:0;margin:0;text-align:center;color:#b6c9df;font-size:14px;line-height:1.7}
 body[data-page="contact"] .sc-form .sc-actions{width:100%;gap:16px}
 @media(max-width:700px){body[data-page="contact"] .sc-form .sc-fields{grid-template-columns:minmax(0,1fr);gap:24px}body[data-page="contact"] .sc-form .form-row label{font-size:17px}body[data-page="contact"] .sc-form .form-row textarea{min-height:160px}body[data-page="contact"] .sc-form .consent{font-size:14px}body[data-page="contact"] .sc-form .sc-actions{gap:10px}body[data-page="contact"] .sc-form .form-notice{font-size:13px}}
+body[data-page="contact"] .sc-form .sc-actions{display:block;width:100%}
+body[data-page="contact"] .sc-actions .sc-button{width:100%;min-height:60px}
+.sc-sms-panel[hidden],.sc-sms-panel [hidden]{display:none!important}
+.sc-sms-panel{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:28px 20px;border:1px solid #34516d;border-radius:16px;background:#102538;color:#eaf3ff}
+.sc-sms-panel h2{font-size:22px;margin:0}.sc-sms-panel p{margin:0;color:#b6c9df;line-height:1.6}.sc-sms-panel canvas{width:min(100%,420px);height:auto;image-rendering:pixelated}.sc-sms-panel .sc-button{display:flex;align-items:center;justify-content:center;padding:12px 24px;text-decoration:none;min-height:48px}
