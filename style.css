@@ -3572,3 +3572,41 @@ body[data-page="process"] .syon-process-mini-card strong{
     font-size:18px;
   }
 }
+
+/* Process: unified open layout and step navigation */
+body[data-page="process"] .page-hero-b.syon-simple-hero.syon-process-hero{border:0;background:#071120;padding-bottom:0}
+body[data-page="process"] .syon-process-mini-row{max-width:1000px;gap:32px;margin-top:40px;align-items:stretch}
+body[data-page="process"] .syon-process-mini-card{position:relative;gap:14px;padding:8px 0 14px;min-width:0}
+body[data-page="process"] .process-flow-icon{width:52px;height:52px;color:#8abaff}
+body[data-page="process"] .syon-process-mini-card:not(:last-child)::after{content:"\203A";position:absolute;right:-21px;top:20px;color:#6389b6;font-size:28px;font-weight:400;line-height:1;pointer-events:none}
+body[data-page="process"] .syon-process-mini-card:hover strong{color:#9acbff}
+body[data-page="process"] .process-b-steps{background:#071120;border:0;padding:8px 0 62px}
+body[data-page="process"] .process-b-list{max-width:1100px;margin:auto;gap:0;border-top:1px solid #253b54}
+body[data-page="process"] .process-b-list article{background:transparent;border:0;border-bottom:1px solid #253b54;border-radius:0;box-shadow:none;grid-template-columns:60px 150px minmax(0,1fr);gap:22px;padding:26px 12px;min-height:0;align-items:center;scroll-margin-top:125px}
+body[data-page="process"] .process-b-list span{background:transparent;border:0;border-radius:0;color:#8abaff;font-size:24px;font-weight:500;width:auto;height:auto}
+body[data-page="process"] .process-b-list h3{font-size:24px}
+body[data-page="process"] .process-b-list p{font-size:16px;grid-column:auto}
+@media(max-width:700px){body[data-page="process"] .syon-process-mini-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:30px}body[data-page="process"] .process-flow-icon{width:34px;height:34px}body[data-page="process"] .syon-process-mini-card{gap:8px}body[data-page="process"] .syon-process-mini-card strong{font-size:15px}body[data-page="process"] .syon-process-mini-card:not(:last-child)::after{right:-9px;top:15px;font-size:19px}body[data-page="process"] .process-b-steps{padding:4px 0 42px}body[data-page="process"] .process-b-list article{grid-template-columns:38px minmax(0,1fr);gap:7px 12px;padding:20px 4px;align-items:start}body[data-page="process"] .process-b-list span{font-size:19px}body[data-page="process"] .process-b-list h3{font-size:20px}body[data-page="process"] .process-b-list p{grid-column:2;font-size:14px;line-height:1.8}}
+
+/* Process timeline: unified desktop and mobile */
+body[data-page="process"] .syon-process-mini-row{position:relative;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;max-width:1000px;margin:40px auto 0;isolation:isolate}
+body[data-page="process"] .syon-process-mini-row::before{content:"";position:absolute;top:34px;left:12.5%;right:12.5%;height:1px;background:#385f8d;z-index:-1}
+body[data-page="process"] .syon-process-mini-card{padding:0;gap:14px}
+body[data-page="process"] .syon-process-mini-card:not(:last-child)::after{content:none}
+body[data-page="process"] .syon-process-mini-card .process-timeline-number{display:grid;place-items:center;width:68px;height:68px;border:1px solid #5488c8;border-radius:50%;background:#142e50;color:#a5ceff;font-size:23px;font-weight:700;margin:0;line-height:1}
+body[data-page="process"] .process-b-steps{padding:32px 0 62px}
+body[data-page="process"] .process-b-list article{display:grid;grid-template-columns:100px 110px minmax(0,1fr);gap:26px;padding:30px 12px;align-items:center}
+body[data-page="process"] .process-step-symbol{display:flex;flex-direction:column;align-items:center;gap:8px}
+body[data-page="process"] .process-step-symbol .process-flow-icon{width:38px;height:38px}
+body[data-page="process"] .process-step-symbol span{font-size:12px;font-weight:600;letter-spacing:.06em;white-space:nowrap;line-height:1.4}
+body[data-page="process"] .process-b-list article h3,body[data-page="process"] .process-b-list article p{margin:0}
+@media(max-width:700px){
+body[data-page="process"] .syon-process-mini-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:30px}
+body[data-page="process"] .syon-process-mini-row::before{top:22px}
+body[data-page="process"] .syon-process-mini-card{gap:10px}
+body[data-page="process"] .syon-process-mini-card .process-timeline-number{width:44px;height:44px;font-size:16px}
+body[data-page="process"] .process-b-steps{padding:24px 0 42px}
+body[data-page="process"] .process-b-list article{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:28px 12px}
+body[data-page="process"] .process-step-symbol .process-flow-icon{width:42px;height:42px}
+body[data-page="process"] .process-b-list article p{font-size:15px;line-height:1.8;max-width:480px}
+}
