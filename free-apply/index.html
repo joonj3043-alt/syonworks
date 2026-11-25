@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#eef7ff" name="theme-color"/>
-<title>무료제작 신청 | SYON WORKS</title>
+<title>무료상담 문의 | SYON WORKS</title>
 <meta content="우리 가게 홈페이지, 무료로 만들어 보세요. 성함과 연락처만 입력해 주세요." name="description"/>
 <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
 <style>
@@ -29,13 +29,13 @@ button.primary:hover{background:#0055dc}button.primary:focus-visible{outline:3px
 </head>
 <body>
 <main class="card">
-<h1>무료제작 신청</h1>
+<h1>무료상담 문의</h1>
 <p class="lead">우리 가게 홈페이지, 무료로 만들어 보세요.<br/>성함과 연락처만 입력해 주세요.</p>
 <form id="apply-form">
 <label class="field">성함<input autocomplete="name" maxlength="80" name="name" placeholder="예: 홍길동" required=""/></label>
 <label class="field">연락처<input autocomplete="tel" inputmode="tel" maxlength="20" name="phone" pattern="[0-9+() .-]{8,20}" placeholder="예: 010-1234-5678" required="" type="tel"/></label>
 <label class="consent"><input name="consent" required="" type="checkbox"/><span>작성 정보의 처리 안내를 확인했습니다. <a href="../privacy/" rel="noopener noreferrer" target="_blank">보기</a></span></label>
-<button class="primary" type="submit">무료제작 신청 남기기</button>
+<button class="primary" type="submit">무료상담 문의 남기기</button>
 <p class="foot">문자 앱에서 전송 버튼을 눌러 주세요.</p>
 <div aria-live="polite" class="result" hidden="" id="result">
 <p>문자 앱에서 전송을 완료해야 신청이 접수됩니다. 문자 앱이 열리지 않으면 아래 내용을 복사해 보내 주세요.</p>
@@ -54,7 +54,7 @@ form.addEventListener('submit',event=>{
  const name=form.elements.name.value.trim(),contact=form.elements.phone.value.trim();
  if(!name){form.elements.name.setCustomValidity('성함을 입력해 주세요.');form.reportValidity();return;}
  const digits=contact.replace(/\D/g,'');if(digits.length<8||digits.length>15){form.elements.phone.setCustomValidity('연락처를 확인해 주세요.');form.reportValidity();return;}
- const text=`[SYON WORKS 무료제작 신청]\n성함: ${name}\n연락처: ${contact}`;
+ const text=`[SYON WORKS 무료상담 문의]\n성함: ${name}\n연락처: ${contact}`;
  textarea.value=text;
  sms.href=`sms:${phone}${/iPad|iPhone|iPod/.test(navigator.userAgent)?'&':'?'}body=${encodeURIComponent(text)}`;
  result.hidden=false;

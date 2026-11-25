@@ -28,9 +28,3 @@ body[data-page="contact"] .sc-actions .sc-button{width:100%;min-height:60px}
 body[data-page="contact"] .sc-form .sc-actions{display:flex;justify-content:center;align-items:center;width:100%;padding-top:24px}
 body[data-page="contact"] .sc-form .sc-actions .sc-button{display:inline-flex;align-items:center;justify-content:center;width:340px;max-width:100%;min-height:80px;padding:16px 24px;border-radius:6px;font-size:24px;font-weight:700;line-height:1.3;box-sizing:border-box}
 @media(max-width:700px){body[data-page="contact"] .sc-form .sc-actions{padding-top:14px}body[data-page="contact"] .sc-form .sc-actions .sc-button{width:300px;max-width:100%;min-height:68px;font-size:20px;padding:14px 18px}}
-
-/* Equal-sized, larger purpose and production-type choices. */
-body[data-page="contact"] .sc-form .sc-choices.sc-two .sc-choice{min-height:132px;height:100%;padding:22px 12px;font-size:26px;line-height:1.4;box-sizing:border-box}
-body[data-page="contact"] .sc-form .sc-choices.sc-two .sc-choice strong{font-size:inherit;font-weight:700;line-height:1.35}
-body[data-page="contact"] .sc-form .sc-choices.sc-two .sc-choice small{font-size:19px;line-height:1.4;margin-top:8px;word-break:keep-all}
-@media(max-width:700px){body[data-page="contact"] .sc-form .sc-choices.sc-two .sc-choice{min-height:112px;font-size:22px;padding:16px 8px}body[data-page="contact"] .sc-form .sc-choices.sc-two .sc-choice small{font-size:16px;margin-top:6px}}
