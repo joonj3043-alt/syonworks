@@ -3688,3 +3688,36 @@ body[data-page="about"] #main .about-open-management-grid h3{font-size:18px;}
 body[data-page="about"] #main .about-open-why-grid article{padding:14px 0;}
 body[data-page="about"] #main .about-open-why-grid article+article{border-top:1px solid #29445f;padding-top:26px;}
 }
+
+/* Shared SERVICES / PROCESS hero design */
+body[data-page] #main .page-hero-b.syon-unified-hero{background:#071120;color:#fff;border:0;padding:42px 0 24px;}
+body[data-page] #main .syon-unified-hero .syon-simple-hero-panel{background:transparent;border:0;border-radius:0;box-shadow:none;padding:24px 0 28px;text-align:center;}
+body[data-page] #main .syon-unified-hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.04em;color:#8abaff;margin:0 0 16px;text-align:center;}
+body[data-page] #main .syon-unified-hero h1{font-size:clamp(32px,4vw,48px);line-height:1.3;letter-spacing:-.045em;margin:0 auto;color:#fff;word-break:keep-all;}
+body[data-page] #main .syon-unified-hero h1 em{color:inherit;}
+body[data-page] #main .syon-unified-hero .syon-simple-hero-desc{font-size:17px;line-height:1.75;color:#bfd3ec;margin:18px auto 0;max-width:900px;text-align:center;word-break:keep-all;}
+body[data-page] #main .syon-unified-hero :is(.syon-service-mini-grid,.syon-process-mini-row){display:grid;gap:24px;margin:40px auto 0;max-width:1100px;align-items:start;}
+body[data-page] #main .syon-unified-hero .syon-service-mini-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+body[data-page] #main .syon-unified-hero .syon-process-mini-row{grid-template-columns:repeat(4,minmax(0,1fr));}
+body[data-page] #main .syon-unified-hero .syon-process-mini-row::before,body[data-page] #main .syon-unified-hero .syon-process-mini-card::after{content:none;display:none;}
+body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card){display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:14px;padding:8px 4px;background:transparent;border:0;border-radius:0;box-shadow:none;min-width:0;min-height:0;text-align:center;color:#fff;text-decoration:none;}
+body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card):hover{background:transparent;transform:translateY(-2px);}
+body[data-page] #main .syon-unified-hero .syon-service-mini-icon{display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid #385f8d;border-radius:50%;background:#122b46;color:#8abaff;margin:0;box-shadow:none;}
+body[data-page] #main .syon-unified-hero .syon-service-mini-icon svg{display:block;width:30px;height:30px;color:#8abaff;}
+body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card) strong{font-size:clamp(18px,1.8vw,23px);line-height:1.4;color:#fff;font-weight:700;word-break:keep-all;}
+body[data-page] #main .syon-unified-hero .syon-service-mini-description{font-size:15px;line-height:1.65;color:#bfd3ec;margin:0;max-width:280px;text-align:center;word-break:keep-all;}
+body[data-page="services"] #main .services-production-types{border-top:1px solid #29445f;}
+@media(max-width:760px){
+ body[data-page] #main .page-hero-b.syon-unified-hero{padding:24px 0 18px;}
+ body[data-page] #main .syon-unified-hero .syon-simple-hero-panel{padding:16px 0 22px;}
+ body[data-page] #main .syon-unified-hero h1{font-size:32px;}
+ body[data-page] #main .syon-unified-hero .syon-simple-hero-desc{font-size:16px;margin-top:14px;}
+ body[data-page] #main .syon-unified-hero :is(.syon-service-mini-grid,.syon-process-mini-row){margin-top:30px;gap:24px 12px;}
+ body[data-page] #main .syon-unified-hero .syon-service-mini-grid{grid-template-columns:1fr;}
+ body[data-page] #main .syon-unified-hero .syon-process-mini-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+ body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card){gap:10px;}
+ body[data-page] #main .syon-unified-hero .syon-service-mini-icon{width:56px;height:56px;}
+ body[data-page] #main .syon-unified-hero .syon-service-mini-icon svg{width:28px;height:28px;}
+ body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card) strong{font-size:19px;}
+ body[data-page] #main .syon-unified-hero .syon-service-mini-description{font-size:14px;}
+}
