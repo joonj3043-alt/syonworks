@@ -3647,3 +3647,44 @@ body[data-page] main :is(.final-cta-simple .button.primary,.syon-offer-card-butt
 body[data-page="services"] .services-production-types .production-type-actions .button{width:100%}
 body[data-page="contact"] .sc-support{margin-top:48px}}
 @media(max-width:700px){body .mobile-contact-bar:not(.hidden-cta){grid-template-columns:repeat(3,minmax(0,1fr));justify-items:stretch}body .mobile-contact-bar a{min-width:0;text-align:center}}
+
+/* ABOUT: approved open centered layout; scoped to ABOUT only */
+body[data-page="about"] #main{background:#091929;color:#f3f7ff;}
+body[data-page="about"] #main .about-open-section{background:transparent;margin:0;padding:0;border:0;}
+body[data-page="about"] #main .about-open-inner{width:min(1200px,calc(100% - 48px));margin:0 auto;padding:76px 0;text-align:center;border-bottom:1px solid #29445f;}
+body[data-page="about"] #main .about-open-hero .about-open-inner{padding-top:64px;padding-bottom:64px;}
+body[data-page="about"] #main .about-open-cta .about-open-inner{border-bottom:0;}
+body[data-page="about"] #main .eyebrow{color:#8abaff;font-size:13px;letter-spacing:.04em;margin:0 0 16px;text-align:center;}
+body[data-page="about"] #main h1,body[data-page="about"] #main h2,body[data-page="about"] #main h3{color:#f5f9ff;margin:0 auto;line-height:1.4;letter-spacing:-.04em;word-break:keep-all;}
+body[data-page="about"] #main h1{font-size:clamp(34px,4.5vw,56px);font-weight:800;}
+body[data-page="about"] #main h1 em{color:#8abaff;font-style:normal;}
+body[data-page="about"] #main h2{font-size:clamp(28px,3vw,36px);}
+body[data-page="about"] #main h3{font-size:clamp(20px,2vw,26px);}
+body[data-page="about"] #main .about-open-inner p:not(.eyebrow){color:#bfd3ec;font-size:17px;line-height:1.8;word-break:keep-all;margin:10px auto 0;max-width:820px;}
+body[data-page="about"] #main .about-open-inner .about-open-lead{margin-top:22px;font-size:19px;}
+body[data-page="about"] #main .about-open-copy{margin-top:20px;}
+body[data-page="about"] #main .about-open-values,body[data-page="about"] #main .about-open-management-grid,body[data-page="about"] #main .about-open-why-grid{display:grid;gap:32px;margin:40px auto 0;align-items:start;}
+body[data-page="about"] #main .about-open-values{grid-template-columns:repeat(2,minmax(0,1fr));max-width:780px;}
+body[data-page="about"] #main .about-open-management-grid{grid-template-columns:repeat(5,minmax(0,1fr));}
+body[data-page="about"] #main .about-open-why-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1000px;row-gap:42px;}
+body[data-page="about"] #main article{background:transparent;border:0;box-shadow:none;padding:8px 0;margin:0;text-align:center;}
+body[data-page="about"] #main article svg{display:block;width:48px;height:48px;color:#8abaff;margin:0 auto 16px;}
+body[data-page="about"] #main .about-open-management-grid h3{font-size:20px;}
+body[data-page="about"] #main .about-open-why-grid article span{display:block;color:#8abaff;font-size:15px;margin-bottom:10px;}
+body[data-page="about"] #main .about-open-button{display:inline-flex;align-items:center;justify-content:center;gap:16px;width:min(100%,280px);min-height:58px;margin:28px auto 0;border-radius:6px;background:#2d6aef;color:#fff;text-align:center;}
+@media(max-width:760px){
+body[data-page="about"] #main .about-open-inner{width:calc(100% - 36px);padding:48px 0;}
+body[data-page="about"] #main .about-open-hero .about-open-inner{padding:36px 0 44px;}
+body[data-page="about"] #main h1{font-size:clamp(28px,7.5vw,36px);}
+body[data-page="about"] #main h2{font-size:28px;}
+body[data-page="about"] #main h3{font-size:23px;}
+body[data-page="about"] #main .about-open-inner p:not(.eyebrow){font-size:16px;}
+body[data-page="about"] #main .about-open-inner .about-open-lead{font-size:16px;}
+body[data-page="about"] #main .about-open-values,body[data-page="about"] #main .about-open-why-grid{grid-template-columns:1fr;gap:26px;margin-top:28px;}
+body[data-page="about"] #main .about-open-management-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px;margin-top:28px;}
+body[data-page="about"] #main .about-open-management-grid article:last-child{grid-column:1/-1;}
+body[data-page="about"] #main article svg{width:40px;height:40px;margin-bottom:12px;}
+body[data-page="about"] #main .about-open-management-grid h3{font-size:18px;}
+body[data-page="about"] #main .about-open-why-grid article{padding:14px 0;}
+body[data-page="about"] #main .about-open-why-grid article+article{border-top:1px solid #29445f;padding-top:26px;}
+}
