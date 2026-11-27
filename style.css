@@ -3721,3 +3721,13 @@ body[data-page="services"] #main .services-production-types{border-top:1px solid
  body[data-page] #main .syon-unified-hero :is(.syon-service-mini-card,.syon-process-mini-card) strong{font-size:19px;}
  body[data-page] #main .syon-unified-hero .syon-service-mini-description{font-size:14px;}
 }
+
+/* Support services: centered, equal-height cards on all screen sizes. */
+body[data-page="support"] .support-services .support-card-grid { align-items: stretch; grid-auto-rows: 1fr; }
+body[data-page="support"] .support-services .support-card { align-items: center; text-align: center; }
+body[data-page="support"] .support-services .support-card-icon { flex-shrink: 0; }
+body[data-page="support"] .support-services .support-card-icon svg { display: block; width: 55%; height: 55%; }
+body[data-page="support"] .support-services .support-card h3,
+body[data-page="support"] .support-services .support-card p { text-align: center; width: 100%; }
+body[data-page="support"] .support-services .support-status { align-self: center; margin-top: auto; }
+body[data-page="support"] .support-services .support-note { text-align: center; }
